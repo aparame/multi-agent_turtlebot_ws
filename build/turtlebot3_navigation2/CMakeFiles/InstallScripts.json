@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/adi2440/turtlebot_ws/build/turtlebot3_navigation2/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

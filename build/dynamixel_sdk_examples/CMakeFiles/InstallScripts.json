@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/adi2440/turtlebot_ws/build/dynamixel_sdk_examples/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

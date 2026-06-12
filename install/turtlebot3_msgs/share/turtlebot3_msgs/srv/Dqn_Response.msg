@@ -1,4 +1,1 @@
-
-float32[] state
-float32 reward
-bool done
+/home/adi2440/turtlebot_ws/build/turtlebot3_msgs/rosidl_cmake/srv/Dqn_Response.msg

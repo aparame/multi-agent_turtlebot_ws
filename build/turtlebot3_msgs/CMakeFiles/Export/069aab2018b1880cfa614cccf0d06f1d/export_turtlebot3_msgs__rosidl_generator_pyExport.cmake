@@ -7,7 +7,7 @@ if(CMAKE_VERSION VERSION_LESS "2.8.12")
    message(FATAL_ERROR "CMake >= 2.8.12 required")
 endif()
 cmake_policy(PUSH)
-cmake_policy(VERSION 2.8.12...3.29)
+cmake_policy(VERSION 2.8.12...3.31)
 #----------------------------------------------------------------
 # Generated CMake target import file.
 #----------------------------------------------------------------
@@ -59,7 +59,8 @@ endif()
 add_library(turtlebot3_msgs::turtlebot3_msgs__rosidl_generator_py SHARED IMPORTED)
 
 set_target_properties(turtlebot3_msgs::turtlebot3_msgs__rosidl_generator_py PROPERTIES
-  INTERFACE_LINK_LIBRARIES "turtlebot3_msgs::turtlebot3_msgs__rosidl_generator_c;/usr/lib/x86_64-linux-gnu/libpython3.10.so;turtlebot3_msgs::turtlebot3_msgs__rosidl_typesupport_c;action_msgs::action_msgs__rosidl_generator_py;builtin_interfaces::builtin_interfaces__rosidl_generator_py;unique_identifier_msgs::unique_identifier_msgs__rosidl_generator_py;std_msgs::std_msgs__rosidl_generator_py;geometry_msgs::geometry_msgs__rosidl_generator_py"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/adi2440/anaconda3/lib/python3.12/site-packages/numpy/core/include"
+  INTERFACE_LINK_LIBRARIES "turtlebot3_msgs::turtlebot3_msgs__rosidl_generator_c;/home/adi2440/anaconda3/lib/libpython3.12.so;turtlebot3_msgs::turtlebot3_msgs__rosidl_typesupport_c;action_msgs::action_msgs__rosidl_generator_py;builtin_interfaces::builtin_interfaces__rosidl_generator_py;unique_identifier_msgs::unique_identifier_msgs__rosidl_generator_py;std_msgs::std_msgs__rosidl_generator_py;geometry_msgs::geometry_msgs__rosidl_generator_py"
 )
 
 # Load information for each installed configuration.

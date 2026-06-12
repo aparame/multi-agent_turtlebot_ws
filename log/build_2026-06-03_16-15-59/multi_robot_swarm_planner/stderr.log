@@ -1,5 +1,0 @@
-/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/central_fleet_planner.cpp: In constructor ‘multi_robot_swarm_planner::CentralFleetPlanner::CentralFleetPlanner()’:
-/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/central_fleet_planner.cpp:191:33: warning: converting to ‘nav_msgs::msg::Path’ {aka ‘nav_msgs::msg::Path_<std::allocator<void> >’} from initializer list would use explicit constructor ‘nav_msgs::msg::Path_<ContainerAllocator>::Path_(rosidl_runtime_cpp::MessageInitialization) [with ContainerAllocator = std::allocator<void>]’
-  191 |       plans_[robot] = RobotPlan{};
-      |                                 ^
-/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/central_fleet_planner.cpp:191:33: note: in C++11 and above a default constructor can be explicit

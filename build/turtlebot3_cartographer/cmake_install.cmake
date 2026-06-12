@@ -43,70 +43,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_cartographer" TYPE DIRECTORY FILES
-    "/home/adi2440/turtlebot_ws/src/turtlebot3/turtlebot3_cartographer/config"
-    "/home/adi2440/turtlebot_ws/src/turtlebot3/turtlebot3_cartographer/launch"
-    "/home/adi2440/turtlebot_ws/src/turtlebot3/turtlebot3_cartographer/rviz"
-    )
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/adi2440/turtlebot_ws/build/turtlebot3_cartographer/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/turtlebot3_cartographer")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/adi2440/turtlebot_ws/build/turtlebot3_cartographer/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/turtlebot3_cartographer")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_cartographer/environment" TYPE FILE FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_cartographer/environment" TYPE FILE FILES "/home/adi2440/turtlebot_ws/build/turtlebot3_cartographer/ament_cmake_environment_hooks/ament_prefix_path.dsv")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_cartographer/environment" TYPE FILE FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_cartographer/environment" TYPE FILE FILES "/home/adi2440/turtlebot_ws/build/turtlebot3_cartographer/ament_cmake_environment_hooks/path.dsv")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_cartographer" TYPE FILE FILES "/home/adi2440/turtlebot_ws/build/turtlebot3_cartographer/ament_cmake_environment_hooks/local_setup.bash")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_cartographer" TYPE FILE FILES "/home/adi2440/turtlebot_ws/build/turtlebot3_cartographer/ament_cmake_environment_hooks/local_setup.sh")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_cartographer" TYPE FILE FILES "/home/adi2440/turtlebot_ws/build/turtlebot3_cartographer/ament_cmake_environment_hooks/local_setup.zsh")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_cartographer" TYPE FILE FILES "/home/adi2440/turtlebot_ws/build/turtlebot3_cartographer/ament_cmake_environment_hooks/local_setup.dsv")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_cartographer" TYPE FILE FILES "/home/adi2440/turtlebot_ws/build/turtlebot3_cartographer/ament_cmake_environment_hooks/package.dsv")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/adi2440/turtlebot_ws/build/turtlebot3_cartographer/ament_cmake_index/share/ament_index/resource_index/packages/turtlebot3_cartographer")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_cartographer/cmake" TYPE FILE FILES
-    "/home/adi2440/turtlebot_ws/build/turtlebot3_cartographer/ament_cmake_core/turtlebot3_cartographerConfig.cmake"
-    "/home/adi2440/turtlebot_ws/build/turtlebot3_cartographer/ament_cmake_core/turtlebot3_cartographerConfig-version.cmake"
-    )
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_cartographer" TYPE FILE FILES "/home/adi2440/turtlebot_ws/src/turtlebot3/turtlebot3_cartographer/package.xml")
+  include("/home/adi2440/turtlebot_ws/build/turtlebot3_cartographer/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT

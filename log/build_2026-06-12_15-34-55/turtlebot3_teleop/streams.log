@@ -1,0 +1,37 @@
+[0.665s] Invoking command in '/home/adi2440/turtlebot_ws/build/turtlebot3_teleop': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/adi2440/turtlebot_ws/build/turtlebot3_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/adi2440/turtlebot_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/adi2440/turtlebot_ws/build/turtlebot3_teleop/build --no-deps symlink_data
+[0.772s] /home/adi2440/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[0.772s]   warnings.warn(msg)
+[0.795s] /home/adi2440/.local/lib/python3.10/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+[0.795s] !!
+[0.795s] 
+[0.795s]         ********************************************************************************
+[0.795s]         Please consider removing the following classifiers in favor of a SPDX license expression:
+[0.795s] 
+[0.795s]         License :: OSI Approved :: Apache Software License
+[0.795s] 
+[0.795s]         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+[0.795s]         ********************************************************************************
+[0.795s] 
+[0.795s] !!
+[0.795s]   self._finalize_license_expression()
+[0.896s] running develop
+[1.118s] running egg_info
+[1.131s] creating turtlebot3_teleop.egg-info
+[1.131s] writing turtlebot3_teleop.egg-info/PKG-INFO
+[1.131s] writing dependency_links to turtlebot3_teleop.egg-info/dependency_links.txt
+[1.131s] writing entry points to turtlebot3_teleop.egg-info/entry_points.txt
+[1.132s] writing requirements to turtlebot3_teleop.egg-info/requires.txt
+[1.132s] writing top-level names to turtlebot3_teleop.egg-info/top_level.txt
+[1.133s] writing manifest file 'turtlebot3_teleop.egg-info/SOURCES.txt'
+[1.162s] reading manifest file 'turtlebot3_teleop.egg-info/SOURCES.txt'
+[1.162s] writing manifest file 'turtlebot3_teleop.egg-info/SOURCES.txt'
+[1.224s] running build_ext
+[1.224s] Creating /home/adi2440/turtlebot_ws/install/turtlebot3_teleop/lib/python3.10/site-packages/turtlebot3-teleop.egg-link (link to .)
+[1.225s] Installing teleop_keyboard script to /home/adi2440/turtlebot_ws/install/turtlebot3_teleop/lib/turtlebot3_teleop
+[1.226s] 
+[1.226s] Installed /home/adi2440/turtlebot_ws/build/turtlebot3_teleop
+[1.226s] running symlink_data
+[1.226s] creating /home/adi2440/turtlebot_ws/install/turtlebot3_teleop/share/ament_index/resource_index/packages
+[1.226s] symbolically linking /home/adi2440/turtlebot_ws/build/turtlebot3_teleop/resource/turtlebot3_teleop -> /home/adi2440/turtlebot_ws/install/turtlebot3_teleop/share/ament_index/resource_index/packages
+[1.226s] symbolically linking /home/adi2440/turtlebot_ws/build/turtlebot3_teleop/package.xml -> /home/adi2440/turtlebot_ws/install/turtlebot3_teleop/share/turtlebot3_teleop
+[1.269s] Invoked command in '/home/adi2440/turtlebot_ws/build/turtlebot3_teleop' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/adi2440/turtlebot_ws/build/turtlebot3_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/adi2440/turtlebot_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/adi2440/turtlebot_ws/build/turtlebot3_teleop/build --no-deps symlink_data

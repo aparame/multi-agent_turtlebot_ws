@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/adi2440/turtlebot_ws/build/turtlebot3_msgs/cmake_install.cmake",
+		"/home/adi2440/turtlebot_ws/build/turtlebot3_msgs/turtlebot3_msgs__py/cmake_install.cmake",
+		"/home/adi2440/turtlebot_ws/build/turtlebot3_msgs/turtlebot3_msgs__rs/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

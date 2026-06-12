@@ -1,0 +1,54 @@
+{
+	"cmake" : 
+	{
+		"generator" : 
+		{
+			"multiConfig" : false,
+			"name" : "Unix Makefiles"
+		},
+		"paths" : 
+		{
+			"cmake" : "/home/adi2440/anaconda3/lib/python3.12/site-packages/cmake/data/bin/cmake",
+			"cpack" : "/home/adi2440/anaconda3/lib/python3.12/site-packages/cmake/data/bin/cpack",
+			"ctest" : "/home/adi2440/anaconda3/lib/python3.12/site-packages/cmake/data/bin/ctest",
+			"root" : "/home/adi2440/anaconda3/lib/python3.12/site-packages/cmake/data/share/cmake-4.1"
+		},
+		"version" : 
+		{
+			"isDirty" : false,
+			"major" : 4,
+			"minor" : 1,
+			"patch" : 3,
+			"string" : "4.1.3",
+			"suffix" : ""
+		}
+	},
+	"objects" : 
+	[
+		{
+			"jsonFile" : "codemodel-v2-a96c42d65b75808ad146.json",
+			"kind" : "codemodel",
+			"version" : 
+			{
+				"major" : 2,
+				"minor" : 8
+			}
+		}
+	],
+	"reply" : 
+	{
+		"client-colcon-cmake" : 
+		{
+			"codemodel-v2" : 
+			{
+				"jsonFile" : "codemodel-v2-a96c42d65b75808ad146.json",
+				"kind" : "codemodel",
+				"version" : 
+				{
+					"major" : 2,
+					"minor" : 8
+				}
+			}
+		}
+	}
+}

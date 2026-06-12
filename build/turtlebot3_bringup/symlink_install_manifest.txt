@@ -1,5 +1,3 @@
-/home/adi2440/turtlebot_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/launch/__pycache__/robot.launch.cpython-312.pyc
-/home/adi2440/turtlebot_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/launch/__pycache__/turtlebot3_state_publisher.launch.cpython-312.pyc
 /home/adi2440/turtlebot_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/launch/camera.launch.py
 /home/adi2440/turtlebot_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/launch/robot.launch.py
 /home/adi2440/turtlebot_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/launch/rviz2.launch.py

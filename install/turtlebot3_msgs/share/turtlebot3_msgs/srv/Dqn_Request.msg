@@ -1,2 +1,1 @@
-uint8 action
-bool init
+/home/adi2440/turtlebot_ws/build/turtlebot3_msgs/rosidl_cmake/srv/Dqn_Request.msg

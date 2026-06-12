@@ -102,7 +102,7 @@ def generate_launch_description():
         ),
         DeclareLaunchArgument(
             'model_dir',
-            default_value='/home/i2r/shahil_ws/AERO-MARL/transformer_780.pt',
+            default_value='/home/adi2440/turtlebot_ws/models/transformer_800.pt',
             description='AERO-MARL transformer checkpoint path. Must exist before launch.',
         ),
         DeclareLaunchArgument(

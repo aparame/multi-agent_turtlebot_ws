@@ -1,0 +1,83 @@
+[0.021s] Invoking command in '/home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/adi2440/turtlebot_ws/install/turtlebot3_teleop:/home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation:/home/adi2440/turtlebot_ws/install/turtlebot3_example:/home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator:/home/adi2440/turtlebot_ws/install/cv_localization:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /home/adi2440/anaconda3/bin/cmake /home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner
+[0.149s] -- The CXX compiler identification is GNU 11.4.0
+[1.233s] -- The CUDA compiler identification is NVIDIA 13.0.88 with host compiler GNU 11.4.0
+[1.242s] -- Detecting CXX compiler ABI info
+[1.288s] -- Detecting CXX compiler ABI info - done
+[1.299s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.299s] -- Detecting CXX compile features
+[1.300s] -- Detecting CXX compile features - done
+[1.312s] -- Detecting CUDA compiler ABI info
+[1.819s] -- Detecting CUDA compiler ABI info - done
+[1.850s] -- Check for working CUDA compiler: /usr/local/cuda-13.0/bin/nvcc - skipped
+[1.878s] -- Detecting CUDA compile features
+[1.878s] -- Detecting CUDA compile features - done
+[1.886s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.021s] -- Found Python3: /home/adi2440/anaconda3/bin/python3 (found version "3.12.2") found components: Interpreter
+[2.070s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.105s] -- Found action_msgs: 1.2.2 (/opt/ros/humble/share/action_msgs/cmake)
+[2.145s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.150s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.159s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.172s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.189s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.226s] -- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)
+[2.252s] -- Found nav2_msgs: 1.1.20 (/opt/ros/humble/share/nav2_msgs/cmake)
+[2.298s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[2.397s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[2.404s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.476s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")
+[2.504s] -- Found FastRTPS: /opt/ros/humble/include
+[2.541s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.553s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.594s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.595s] -- Found Threads: TRUE
+[2.676s] -- Found rclcpp_action: 16.0.19 (/opt/ros/humble/share/rclcpp_action/cmake)
+[2.700s] -- Found std_srvs: 4.9.1 (/opt/ros/humble/share/std_srvs/cmake)
+[2.720s] -- Found tf2: 0.25.20 (/opt/ros/humble/share/tf2/cmake)
+[2.735s] -- Found tf2_geometry_msgs: 0.25.20 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[2.753s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[2.755s] -- Found Eigen3: TRUE (found version "3.4.0")
+[2.755s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.851s] -- Found visualization_msgs: 4.9.1 (/opt/ros/humble/share/visualization_msgs/cmake)
+[3.020s] -- Configuring done (2.9s)
+[3.042s] -- Generating done (0.0s)
+[3.046s] -- Build files have been written to: /home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner
+[3.054s] Invoked command in '/home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/adi2440/turtlebot_ws/install/turtlebot3_teleop:/home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation:/home/adi2440/turtlebot_ws/install/turtlebot3_example:/home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator:/home/adi2440/turtlebot_ws/install/cv_localization:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /home/adi2440/anaconda3/bin/cmake /home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner
+[3.055s] Invoking command in '/home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/adi2440/turtlebot_ws/install/turtlebot3_teleop:/home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation:/home/adi2440/turtlebot_ws/install/turtlebot3_example:/home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator:/home/adi2440/turtlebot_ws/install/cv_localization:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /home/adi2440/anaconda3/bin/cmake --build /home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner -- -j24 -l24
+[3.157s] [ 11%] [32mBuilding CUDA object CMakeFiles/swarm_mppi.dir/src/swarm_mppi.cu.o[0m
+[3.158s] [ 22%] [32mBuilding CUDA object CMakeFiles/swarm_mppi.dir/src/direct_room_mppi.cu.o[0m
+[5.289s] [ 33%] [1m[32mLinking CUDA static library libswarm_mppi.a[0m
+[5.392s] [ 33%] Built target swarm_mppi
+[5.398s] [ 55%] [32mBuilding CXX object CMakeFiles/mppi_direct_controller.dir/src/mppi_direct_controller.cpp.o[0m
+[5.399s] [ 55%] [32mBuilding CXX object CMakeFiles/central_fleet_planner.dir/src/central_fleet_planner.cpp.o[0m
+[15.019s] [ 66%] [1m[32mLinking CUDA device code CMakeFiles/mppi_direct_controller.dir/cmake_device_link.o[0m
+[15.071s] [ 77%] [1m[32mLinking CXX executable mppi_direct_controller[0m
+[15.600s] [ 77%] Built target mppi_direct_controller
+[16.004s] [ 88%] [1m[32mLinking CUDA device code CMakeFiles/central_fleet_planner.dir/cmake_device_link.o[0m
+[16.053s] [100%] [1m[32mLinking CXX executable central_fleet_planner[0m
+[16.673s] [100%] Built target central_fleet_planner
+[16.676s] Invoked command in '/home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/adi2440/turtlebot_ws/install/turtlebot3_teleop:/home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation:/home/adi2440/turtlebot_ws/install/turtlebot3_example:/home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator:/home/adi2440/turtlebot_ws/install/cv_localization:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /home/adi2440/anaconda3/bin/cmake --build /home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner -- -j24 -l24
+[16.677s] Invoking command in '/home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/adi2440/turtlebot_ws/install/turtlebot3_teleop:/home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation:/home/adi2440/turtlebot_ws/install/turtlebot3_example:/home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator:/home/adi2440/turtlebot_ws/install/cv_localization:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /home/adi2440/anaconda3/bin/cmake --install /home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner
+[16.750s] -- Install configuration: ""
+[16.750s] -- Execute custom install script
+[16.751s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/include/multi_robot_swarm_planner/direct_room_mppi.hpp
+[16.753s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/include/multi_robot_swarm_planner/swarm_mppi.hpp
+[16.754s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/lib/libswarm_mppi.a
+[16.756s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/lib/multi_robot_swarm_planner/central_fleet_planner
+[16.758s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/lib/multi_robot_swarm_planner/mppi_direct_controller
+[16.759s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/ament_index/resource_index/package_run_dependencies/multi_robot_swarm_planner
+[16.761s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/ament_index/resource_index/parent_prefix_path/multi_robot_swarm_planner
+[16.762s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/multi_robot_swarm_planner/environment/ament_prefix_path.sh
+[16.764s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/multi_robot_swarm_planner/environment/ament_prefix_path.dsv
+[16.765s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/multi_robot_swarm_planner/environment/path.sh
+[16.767s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/multi_robot_swarm_planner/environment/path.dsv
+[16.768s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/multi_robot_swarm_planner/local_setup.bash
+[16.770s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/multi_robot_swarm_planner/local_setup.sh
+[16.771s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/multi_robot_swarm_planner/local_setup.zsh
+[16.773s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/multi_robot_swarm_planner/local_setup.dsv
+[16.775s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/multi_robot_swarm_planner/package.dsv
+[16.776s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/ament_index/resource_index/packages/multi_robot_swarm_planner
+[16.778s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/multi_robot_swarm_planner/cmake/multi_robot_swarm_plannerConfig.cmake
+[16.779s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/multi_robot_swarm_planner/cmake/multi_robot_swarm_plannerConfig-version.cmake
+[16.780s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/multi_robot_swarm_planner/package.xml
+[16.783s] Invoked command in '/home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/adi2440/turtlebot_ws/install/turtlebot3_teleop:/home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation:/home/adi2440/turtlebot_ws/install/turtlebot3_example:/home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator:/home/adi2440/turtlebot_ws/install/cv_localization:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /home/adi2440/anaconda3/bin/cmake --install /home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner

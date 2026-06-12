@@ -1,18 +1,1 @@
-#![allow(non_camel_case_types)]
-#![allow(clippy::derive_partial_eq_without_eq)]
-#![allow(clippy::upper_case_acronyms)]
-
-#[path = "msg.rs"]
-mod msg_idiomatic;
-pub mod msg {
-    pub use super::msg_idiomatic::*;
-    pub mod rmw;
-}
-
-#[path = "srv.rs"]
-mod srv_idiomatic;
-pub mod srv {
-    pub use super::srv_idiomatic::*;
-    pub mod rmw;
-}
-
+/home/adi2440/turtlebot_ws/build/dynamixel_sdk_custom_interfaces/rosidl_generator_rs/dynamixel_sdk_custom_interfaces/rust/src/lib.rs

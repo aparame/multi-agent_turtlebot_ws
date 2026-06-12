@@ -1,3 +1,1 @@
-# Messages
-uint8 id
-int32 position
+/home/adi2440/turtlebot_ws/src/DynamixelSDK/ros/dynamixel_sdk_custom_interfaces/msg/SetPosition.msg

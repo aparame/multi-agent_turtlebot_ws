@@ -1,4 +1,0 @@
-[ 20%] Building CUDA object CMakeFiles/swarm_mppi.dir/src/swarm_mppi.cu.o
-[ 40%] Linking CUDA static library libswarm_mppi.a
-[ 40%] Built target swarm_mppi
-[ 60%] Building CXX object CMakeFiles/central_fleet_planner.dir/src/central_fleet_planner.cpp.o

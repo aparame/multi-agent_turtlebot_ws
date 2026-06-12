@@ -1,12 +1,6 @@
 package.xml
 setup.cfg
 setup.py
-../../build/multi_turtlebot_coordinator/multi_turtlebot_coordinator.egg-info/PKG-INFO
-../../build/multi_turtlebot_coordinator/multi_turtlebot_coordinator.egg-info/SOURCES.txt
-../../build/multi_turtlebot_coordinator/multi_turtlebot_coordinator.egg-info/dependency_links.txt
-../../build/multi_turtlebot_coordinator/multi_turtlebot_coordinator.egg-info/requires.txt
-../../build/multi_turtlebot_coordinator/multi_turtlebot_coordinator.egg-info/top_level.txt
-../../build/multi_turtlebot_coordinator/multi_turtlebot_coordinator.egg-info/zip-safe
 launch/multi_nav2_launch.py
 multi_turtlebot_coordinator/__init__.py
 multi_turtlebot_coordinator.egg-info/PKG-INFO

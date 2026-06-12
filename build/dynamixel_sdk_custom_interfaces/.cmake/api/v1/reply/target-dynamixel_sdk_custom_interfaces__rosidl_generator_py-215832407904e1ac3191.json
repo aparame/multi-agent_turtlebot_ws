@@ -1,0 +1,560 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "rosidl_generator_py/dynamixel_sdk_custom_interfaces/libdynamixel_sdk_custom_interfaces__rosidl_generator_py.so"
+		}
+	],
+	"backtrace" : 5,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"include",
+			"ament_execute_extensions",
+			"rosidl_generate_interfaces",
+			"_install",
+			"ament_cmake_symlink_install_targets",
+			"install",
+			"target_link_libraries",
+			"set_target_properties",
+			"find_package",
+			"add_dependencies",
+			"set_lib_properties",
+			"add_definitions",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"/opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake",
+			"/opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake",
+			"/opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake",
+			"CMakeLists.txt",
+			"/opt/ros/humble/share/ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_targets.cmake",
+			"/opt/ros/humble/share/ament_cmake_core/cmake/symlink_install/install.cmake",
+			"/opt/ros/humble/share/rosidl_typesupport_c/cmake/rosidl_typesupport_c_generate_interfaces.cmake",
+			"/opt/ros/humble/share/rosidl_generator_c/cmake/rosidl_generator_c_generate_interfaces.cmake",
+			"/opt/ros/humble/share/rcutils/cmake/rcutilsExport.cmake",
+			"/opt/ros/humble/share/rcutils/cmake/ament_cmake_export_targets-extras.cmake",
+			"/opt/ros/humble/share/rcutils/cmake/rcutilsConfig.cmake",
+			"/opt/ros/humble/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake",
+			"/opt/ros/humble/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake",
+			"/opt/ros/humble/share/builtin_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake",
+			"/opt/ros/humble/share/builtin_interfaces/cmake/builtin_interfacesConfig.cmake",
+			"/opt/ros/humble/share/builtin_interfaces/cmake/export_builtin_interfaces__rosidl_generator_pyExport.cmake",
+			"/opt/ros/humble/share/builtin_interfaces/cmake/ament_cmake_export_targets-extras.cmake",
+			"/opt/ros/humble/share/ament_cmake_ros/cmake/ament_cmake_ros-extras.cmake",
+			"/opt/ros/humble/share/ament_cmake_ros/cmake/ament_cmake_rosConfig.cmake",
+			"/opt/ros/humble/share/rosidl_typesupport_fastrtps_c/cmake/rosidl_typesupport_fastrtps_c_generate_interfaces.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 26,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 286,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 48,
+				"parent" : 2
+			},
+			{
+				"file" : 0,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 166,
+				"parent" : 4
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 302,
+				"parent" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 5,
+				"line" : 37,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 4,
+				"line" : 50,
+				"parent" : 7
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 175,
+				"parent" : 4
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 213,
+				"parent" : 4
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 291,
+				"parent" : 4
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 167,
+				"parent" : 4
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 48,
+				"parent" : 2
+			},
+			{
+				"file" : 6,
+				"parent" : 13
+			},
+			{
+				"command" : 7,
+				"file" : 6,
+				"line" : 130,
+				"parent" : 14
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 48,
+				"parent" : 2
+			},
+			{
+				"file" : 7,
+				"parent" : 16
+			},
+			{
+				"command" : 7,
+				"file" : 7,
+				"line" : 132,
+				"parent" : 17
+			},
+			{
+				"command" : 7,
+				"file" : 7,
+				"line" : 137,
+				"parent" : 17
+			},
+			{
+				"command" : 9,
+				"file" : 3,
+				"line" : 15,
+				"parent" : 0
+			},
+			{
+				"file" : 14,
+				"parent" : 20
+			},
+			{
+				"command" : 1,
+				"file" : 14,
+				"line" : 41,
+				"parent" : 21
+			},
+			{
+				"file" : 13,
+				"parent" : 22
+			},
+			{
+				"command" : 9,
+				"file" : 13,
+				"line" : 21,
+				"parent" : 23
+			},
+			{
+				"file" : 12,
+				"parent" : 24
+			},
+			{
+				"command" : 1,
+				"file" : 12,
+				"line" : 41,
+				"parent" : 25
+			},
+			{
+				"file" : 11,
+				"parent" : 26
+			},
+			{
+				"command" : 9,
+				"file" : 11,
+				"line" : 21,
+				"parent" : 27
+			},
+			{
+				"file" : 10,
+				"parent" : 28
+			},
+			{
+				"command" : 1,
+				"file" : 10,
+				"line" : 41,
+				"parent" : 29
+			},
+			{
+				"file" : 9,
+				"parent" : 30
+			},
+			{
+				"command" : 1,
+				"file" : 9,
+				"line" : 9,
+				"parent" : 31
+			},
+			{
+				"file" : 8,
+				"parent" : 32
+			},
+			{
+				"command" : 8,
+				"file" : 8,
+				"line" : 56,
+				"parent" : 33
+			},
+			{
+				"command" : 1,
+				"file" : 14,
+				"line" : 41,
+				"parent" : 21
+			},
+			{
+				"file" : 16,
+				"parent" : 35
+			},
+			{
+				"command" : 1,
+				"file" : 16,
+				"line" : 9,
+				"parent" : 36
+			},
+			{
+				"file" : 15,
+				"parent" : 37
+			},
+			{
+				"command" : 8,
+				"file" : 15,
+				"line" : 56,
+				"parent" : 38
+			},
+			{
+				"command" : 10,
+				"file" : 0,
+				"line" : 169,
+				"parent" : 4
+			},
+			{
+				"command" : 11,
+				"file" : 0,
+				"line" : 294,
+				"parent" : 4
+			},
+			{
+				"command" : 8,
+				"file" : 0,
+				"line" : 156,
+				"parent" : 41
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 48,
+				"parent" : 2
+			},
+			{
+				"file" : 19,
+				"parent" : 43
+			},
+			{
+				"command" : 9,
+				"file" : 19,
+				"line" : 21,
+				"parent" : 44
+			},
+			{
+				"file" : 18,
+				"parent" : 45
+			},
+			{
+				"command" : 1,
+				"file" : 18,
+				"line" : 41,
+				"parent" : 46
+			},
+			{
+				"file" : 17,
+				"parent" : 47
+			},
+			{
+				"command" : 12,
+				"file" : 17,
+				"line" : 25,
+				"parent" : 48
+			},
+			{
+				"command" : 13,
+				"file" : 0,
+				"line" : 179,
+				"parent" : 4
+			},
+			{
+				"command" : 13,
+				"file" : 0,
+				"line" : 209,
+				"parent" : 4
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-fPIC"
+				},
+				{
+					"backtrace" : 42,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 42,
+					"fragment" : "-Wextra"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 12,
+					"define" : "RCUTILS_ENABLE_FAULT_INJECTION"
+				},
+				{
+					"backtrace" : 49,
+					"define" : "ROS_PACKAGE_NAME=\"dynamixel_sdk_custom_interfaces\""
+				},
+				{
+					"define" : "dynamixel_sdk_custom_interfaces__rosidl_generator_py_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 50,
+					"path" : "/home/adi2440/turtlebot_ws/build/dynamixel_sdk_custom_interfaces/rosidl_generator_c"
+				},
+				{
+					"backtrace" : 50,
+					"path" : "/home/adi2440/turtlebot_ws/build/dynamixel_sdk_custom_interfaces/rosidl_generator_py"
+				},
+				{
+					"backtrace" : 50,
+					"path" : "/home/adi2440/anaconda3/include/python3.12"
+				},
+				{
+					"backtrace" : 51,
+					"path" : "/home/adi2440/anaconda3/lib/python3.12/site-packages/numpy/core/include"
+				},
+				{
+					"backtrace" : 12,
+					"isSystem" : true,
+					"path" : "/opt/ros/humble/include/builtin_interfaces"
+				},
+				{
+					"backtrace" : 12,
+					"isSystem" : true,
+					"path" : "/opt/ros/humble/include/rosidl_runtime_c"
+				},
+				{
+					"backtrace" : 12,
+					"isSystem" : true,
+					"path" : "/opt/ros/humble/include/rcutils"
+				},
+				{
+					"backtrace" : 12,
+					"isSystem" : true,
+					"path" : "/opt/ros/humble/include/rosidl_typesupport_interface"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 40,
+			"id" : "dynamixel_sdk_custom_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 12,
+			"id" : "dynamixel_sdk_custom_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 40,
+			"id" : "dynamixel_sdk_custom_interfaces__py::@5c3fb1e61178127079ca"
+		}
+	],
+	"id" : "dynamixel_sdk_custom_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 8,
+				"path" : "lib"
+			},
+			{
+				"backtrace" : 8,
+				"path" : "lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/home/adi2440/turtlebot_ws/install/dynamixel_sdk_custom_interfaces"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-shared",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,--no-undefined",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/adi2440/anaconda3/lib:/home/adi2440/turtlebot_ws/build/dynamixel_sdk_custom_interfaces:/opt/ros/humble/lib:",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "/home/adi2440/anaconda3/lib/libpython3.12.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "/opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_py.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 15,
+				"fragment" : "/opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 18,
+				"fragment" : "/opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "/opt/ros/humble/lib/librosidl_runtime_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "/opt/ros/humble/lib/librcutils.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 34,
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 34,
+				"fragment" : "-latomic",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 39,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libpython3.10.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Wl,-rpath-link,/opt/ros/humble/lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "C"
+	},
+	"name" : "dynamixel_sdk_custom_interfaces__rosidl_generator_py",
+	"nameOnDisk" : "libdynamixel_sdk_custom_interfaces__rosidl_generator_py.so",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "/home/adi2440/turtlebot_ws/build/dynamixel_sdk_custom_interfaces/rosidl_generator_py/dynamixel_sdk_custom_interfaces/msg/_set_position_s.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "/home/adi2440/turtlebot_ws/build/dynamixel_sdk_custom_interfaces/rosidl_generator_py/dynamixel_sdk_custom_interfaces/srv/_get_position_s.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "SHARED_LIBRARY"
+}

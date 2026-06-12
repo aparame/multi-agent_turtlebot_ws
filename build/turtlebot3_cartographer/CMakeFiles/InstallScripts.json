@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/adi2440/turtlebot_ws/build/turtlebot3_cartographer/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

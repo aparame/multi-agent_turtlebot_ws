@@ -1,3 +1,0 @@
-[ 33%] Built target swarm_mppi
-[ 44%] Building CXX object CMakeFiles/mppi_direct_controller.dir/src/mppi_direct_controller.cpp.o
-[ 77%] Built target central_fleet_planner

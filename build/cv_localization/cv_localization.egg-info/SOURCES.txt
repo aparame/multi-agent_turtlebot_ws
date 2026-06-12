@@ -1,13 +1,6 @@
 package.xml
 setup.cfg
 setup.py
-../../build/cv_localization/cv_localization.egg-info/PKG-INFO
-../../build/cv_localization/cv_localization.egg-info/SOURCES.txt
-../../build/cv_localization/cv_localization.egg-info/dependency_links.txt
-../../build/cv_localization/cv_localization.egg-info/entry_points.txt
-../../build/cv_localization/cv_localization.egg-info/requires.txt
-../../build/cv_localization/cv_localization.egg-info/top_level.txt
-../../build/cv_localization/cv_localization.egg-info/zip-safe
 config/background.jpg
 config/calibration.yaml
 config/config.yaml

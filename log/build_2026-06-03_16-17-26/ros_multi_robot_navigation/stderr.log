@@ -1,3 +1,0 @@
-/home/adi2440/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
-  warnings.warn(msg)
-error: [Errno 2] No such file or directory: '/home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ros_multi_robot_navigation/rviz/fleet_position_goals.rviz'
