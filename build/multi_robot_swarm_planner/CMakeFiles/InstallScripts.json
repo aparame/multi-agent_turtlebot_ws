@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

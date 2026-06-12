@@ -1,0 +1,32 @@
+homography:
+- - 0.0036853752134418903
+  - 1.1479744473856282e-05
+  - -3.3074592467167414
+- - -5.217426645654093e-06
+  - -0.003691637531270089
+  - 1.9568413389625208
+- - -2.537490545968158e-05
+  - 0.00016165878942107865
+  - 1.0
+pixel_corners:
+  top_left:
+  - 481.0
+  - 114.0
+  top_right:
+  - 1305.0
+  - 121.0
+  bottom_right:
+  - 1360.0
+  - 993.0
+  bottom_left:
+  - 418.0
+  - 1005.0
+workspace:
+  width_m: 3.048
+  height_m: 3.048
+world_frame:
+  origin: center of workspace
+  x_axis: right
+  y_axis: up
+  x_range_m: "\xB11.524"
+  y_range_m: "\xB11.524"

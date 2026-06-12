@@ -1,0 +1,7 @@
+/home/adi2440/turtlebot_ws/build/turtlebot3_msgs/rosidl_adapter/turtlebot3_msgs:msg/SensorState.idl
+/home/adi2440/turtlebot_ws/build/turtlebot3_msgs/rosidl_adapter/turtlebot3_msgs:msg/Sound.idl
+/home/adi2440/turtlebot_ws/build/turtlebot3_msgs/rosidl_adapter/turtlebot3_msgs:msg/VersionInfo.idl
+/home/adi2440/turtlebot_ws/build/turtlebot3_msgs/rosidl_adapter/turtlebot3_msgs:srv/Sound.idl
+/home/adi2440/turtlebot_ws/build/turtlebot3_msgs/rosidl_adapter/turtlebot3_msgs:srv/Dqn.idl
+/home/adi2440/turtlebot_ws/build/turtlebot3_msgs/rosidl_adapter/turtlebot3_msgs:srv/Goal.idl
+/home/adi2440/turtlebot_ws/build/turtlebot3_msgs/rosidl_adapter/turtlebot3_msgs:action/Patrol.idl

@@ -1,0 +1,8 @@
+[console_scripts]
+bringup_lab_robots = ros_multi_robot_navigation.bringup_lab_robots:main
+fleet_rviz_bridge = ros_multi_robot_navigation.fleet_rviz_bridge:main
+fleet_status = ros_multi_robot_navigation.fleet_status:main
+robot_diagnostics = ros_multi_robot_navigation.robot_diagnostics:main
+send_fleet_goals = ros_multi_robot_navigation.send_fleet_goals:main
+send_nav_goal = ros_multi_robot_navigation.send_nav_goal:main
+set_initial_pose = ros_multi_robot_navigation.set_initial_pose:main

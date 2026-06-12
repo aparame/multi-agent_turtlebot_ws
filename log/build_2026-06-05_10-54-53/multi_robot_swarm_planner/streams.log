@@ -1,0 +1,18 @@
+[0.008s] Invoking command in '/home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/adi2440/turtlebot_ws/install/turtlebot3_teleop:/home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation:/home/adi2440/turtlebot_ws/install/turtlebot3_example:/home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /home/adi2440/anaconda3/bin/cmake --build /home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner -- -j24 -l24
+[0.093s] [ 33%] Built target swarm_mppi
+[0.102s] [ 44%] Building CXX object CMakeFiles/mppi_direct_controller.dir/src/mppi_direct_controller.cpp.o
+[0.102s] [ 77%] Built target central_fleet_planner
+[1.344s] /home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp: In member function ‘bool multi_robot_swarm_planner::MppiDirectController::pathIntersectsCrossing(const multi_robot_swarm_planner::MppiDirectController::RobotRuntime&) const’:
+[1.344s] /home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:668:45: error: ‘crossing_entry_radius_’ was not declared in this scope; did you mean ‘crossing_entry_radius_m_’?
+[1.344s]   668 |     if (distanceToCrossing(runtime.pose) <= crossing_entry_radius_) {
+[1.344s]       |                                             ^~~~~~~~~~~~~~~~~~~~~~
+[1.344s]       |                                             crossing_entry_radius_m_
+[1.349s] /home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp: In member function ‘std::vector<bool, std::allocator<bool> > multi_robot_swarm_planner::MppiDirectController::applyCrossingGate(std::vector<multi_robot_swarm_planner::DirectMppiControl>&, std::vector<multi_robot_swarm_planner::MppiDirectController::WorldVelocity>&)’:
+[1.349s] /home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:878:25: error: ‘crossing_entry_radius_’ was not declared in this scope; did you mean ‘crossing_entry_radius_m_’?
+[1.349s]   878 |       if (center_dist > crossing_entry_radius_) {
+[1.349s]       |                         ^~~~~~~~~~~~~~~~~~~~~~
+[1.349s]       |                         crossing_entry_radius_m_
+[3.879s] gmake[2]: *** [CMakeFiles/mppi_direct_controller.dir/build.make:79: CMakeFiles/mppi_direct_controller.dir/src/mppi_direct_controller.cpp.o] Error 1
+[3.879s] gmake[1]: *** [CMakeFiles/Makefile2:223: CMakeFiles/mppi_direct_controller.dir/all] Error 2
+[3.880s] gmake: *** [Makefile:146: all] Error 2
+[3.881s] Invoked command in '/home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/adi2440/turtlebot_ws/install/turtlebot3_teleop:/home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation:/home/adi2440/turtlebot_ws/install/turtlebot3_example:/home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /home/adi2440/anaconda3/bin/cmake --build /home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner -- -j24 -l24

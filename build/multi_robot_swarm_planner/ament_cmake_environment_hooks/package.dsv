@@ -1,0 +1,4 @@
+source;share/multi_robot_swarm_planner/local_setup.bash
+source;share/multi_robot_swarm_planner/local_setup.dsv
+source;share/multi_robot_swarm_planner/local_setup.sh
+source;share/multi_robot_swarm_planner/local_setup.zsh

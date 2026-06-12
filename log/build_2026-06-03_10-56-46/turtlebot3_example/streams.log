@@ -1,0 +1,55 @@
+[0.575s] Invoking command in '/home/adi2440/turtlebot_ws/src/turtlebot3/turtlebot3_example': CMAKE_PREFIX_PATH=/home/adi2440/turtlebot_ws/install/turtlebot3_msgs:/home/adi2440/turtlebot_ws/install/turtlebot3:/home/adi2440/turtlebot_ws/install/turtlebot3_bringup:/home/adi2440/turtlebot_ws/install/turtlebot3_node:/home/adi2440/turtlebot_ws/install/turtlebot3_navigation2:/home/adi2440/turtlebot_ws/install/turtlebot3_description:/home/adi2440/turtlebot_ws/install/turtlebot3_cartographer:/home/adi2440/turtlebot_ws/install/dynamixel_sdk_examples:/home/adi2440/turtlebot_ws/install/dynamixel_sdk_custom_interfaces:/home/adi2440/turtlebot_ws/install/dynamixel_sdk:/home/adi2440/ros2_ws/install/zed_ros2:/home/adi2440/ros2_ws/install/zed_wrapper:/home/adi2440/ros2_ws/install/zed_components:/home/adi2440/ros2_ws/install/ur:/home/adi2440/ros2_ws/install/ur_calibration:/home/adi2440/ros2_ws/install/ur_robot_driver:/home/adi2440/ros2_ws/install/ur_moveit_config:/home/adi2440/ros2_ws/install/ur_bringup:/home/adi2440/ros2_ws/install/ur_controllers:/home/adi2440/ros2_ws/install/ur_dashboard_msgs:/home/adi2440/ros2_ws/install/hello_moveit PYTHONPATH=/home/adi2440/turtlebot_ws/build/turtlebot3_example/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/adi2440/turtlebot_ws/install/turtlebot3_example/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/turtlebot3_example build --build-base /home/adi2440/turtlebot_ws/build/turtlebot3_example/build install --record /home/adi2440/turtlebot_ws/build/turtlebot3_example/install.log --single-version-externally-managed install_data
+[0.670s] /home/adi2440/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[0.670s]   warnings.warn(msg)
+[0.690s] /home/adi2440/.local/lib/python3.10/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+[0.690s] !!
+[0.690s] 
+[0.690s]         ********************************************************************************
+[0.690s]         Please consider removing the following classifiers in favor of a SPDX license expression:
+[0.690s] 
+[0.690s]         License :: OSI Approved :: Apache Software License
+[0.690s] 
+[0.690s]         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+[0.690s]         ********************************************************************************
+[0.690s] 
+[0.690s] !!
+[0.690s]   self._finalize_license_expression()
+[0.730s] running egg_info
+[0.739s] writing ../../../build/turtlebot3_example/turtlebot3_example.egg-info/PKG-INFO
+[0.739s] writing dependency_links to ../../../build/turtlebot3_example/turtlebot3_example.egg-info/dependency_links.txt
+[0.739s] writing entry points to ../../../build/turtlebot3_example/turtlebot3_example.egg-info/entry_points.txt
+[0.739s] writing requirements to ../../../build/turtlebot3_example/turtlebot3_example.egg-info/requires.txt
+[0.739s] writing top-level names to ../../../build/turtlebot3_example/turtlebot3_example.egg-info/top_level.txt
+[0.826s] reading manifest file '../../../build/turtlebot3_example/turtlebot3_example.egg-info/SOURCES.txt'
+[0.827s] writing manifest file '../../../build/turtlebot3_example/turtlebot3_example.egg-info/SOURCES.txt'
+[0.827s] running build
+[0.827s] running build_py
+[0.827s] copying turtlebot3_example/__init__.py -> /home/adi2440/turtlebot_ws/build/turtlebot3_example/build/lib/turtlebot3_example
+[0.827s] copying turtlebot3_example/turtlebot3_interactive_marker/turtlebot3_interactive_marker.py -> /home/adi2440/turtlebot_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_interactive_marker
+[0.827s] copying turtlebot3_example/turtlebot3_interactive_marker/__init__.py -> /home/adi2440/turtlebot_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_interactive_marker
+[0.827s] copying turtlebot3_example/turtlebot3_relative_move/turtlebot3_relative_move.py -> /home/adi2440/turtlebot_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_relative_move
+[0.827s] copying turtlebot3_example/turtlebot3_relative_move/__init__.py -> /home/adi2440/turtlebot_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_relative_move
+[0.827s] copying turtlebot3_example/turtlebot3_obstacle_detection/__init__.py -> /home/adi2440/turtlebot_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_obstacle_detection
+[0.827s] copying turtlebot3_example/turtlebot3_obstacle_detection/turtlebot3_obstacle_detection.py -> /home/adi2440/turtlebot_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_obstacle_detection
+[0.827s] copying turtlebot3_example/turtlebot3_patrol/turtlebot3_patrol_client.py -> /home/adi2440/turtlebot_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_patrol
+[0.827s] copying turtlebot3_example/turtlebot3_patrol/turtlebot3_patrol_server.py -> /home/adi2440/turtlebot_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_patrol
+[0.828s] copying turtlebot3_example/turtlebot3_patrol/__init__.py -> /home/adi2440/turtlebot_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_patrol
+[0.828s] copying turtlebot3_example/turtlebot3_absolute_move/turtlebot3_absolute_move.py -> /home/adi2440/turtlebot_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_absolute_move
+[0.828s] copying turtlebot3_example/turtlebot3_absolute_move/__init__.py -> /home/adi2440/turtlebot_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_absolute_move
+[0.828s] running install
+[0.830s] running install_lib
+[0.840s] running install_data
+[0.840s] copying resource/turtlebot3_example -> /home/adi2440/turtlebot_ws/install/turtlebot3_example/share/ament_index/resource_index/packages
+[0.841s] copying package.xml -> /home/adi2440/turtlebot_ws/install/turtlebot3_example/share/turtlebot3_example
+[0.841s] running install_egg_info
+[0.850s] removing '/home/adi2440/turtlebot_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example-2.3.6-py3.10.egg-info' (and everything under it)
+[0.851s] Copying ../../../build/turtlebot3_example/turtlebot3_example.egg-info to /home/adi2440/turtlebot_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example-2.3.6-py3.10.egg-info
+[0.851s] running install_scripts
+[0.874s] Installing turtlebot3_absolute_move script to /home/adi2440/turtlebot_ws/install/turtlebot3_example/lib/turtlebot3_example
+[0.874s] Installing turtlebot3_interactive_marker script to /home/adi2440/turtlebot_ws/install/turtlebot3_example/lib/turtlebot3_example
+[0.874s] Installing turtlebot3_obstacle_detection script to /home/adi2440/turtlebot_ws/install/turtlebot3_example/lib/turtlebot3_example
+[0.875s] Installing turtlebot3_patrol_client script to /home/adi2440/turtlebot_ws/install/turtlebot3_example/lib/turtlebot3_example
+[0.875s] Installing turtlebot3_patrol_server script to /home/adi2440/turtlebot_ws/install/turtlebot3_example/lib/turtlebot3_example
+[0.875s] Installing turtlebot3_relative_move script to /home/adi2440/turtlebot_ws/install/turtlebot3_example/lib/turtlebot3_example
+[0.875s] writing list of installed files to '/home/adi2440/turtlebot_ws/build/turtlebot3_example/install.log'
+[0.890s] Invoked command in '/home/adi2440/turtlebot_ws/src/turtlebot3/turtlebot3_example' returned '0': CMAKE_PREFIX_PATH=/home/adi2440/turtlebot_ws/install/turtlebot3_msgs:/home/adi2440/turtlebot_ws/install/turtlebot3:/home/adi2440/turtlebot_ws/install/turtlebot3_bringup:/home/adi2440/turtlebot_ws/install/turtlebot3_node:/home/adi2440/turtlebot_ws/install/turtlebot3_navigation2:/home/adi2440/turtlebot_ws/install/turtlebot3_description:/home/adi2440/turtlebot_ws/install/turtlebot3_cartographer:/home/adi2440/turtlebot_ws/install/dynamixel_sdk_examples:/home/adi2440/turtlebot_ws/install/dynamixel_sdk_custom_interfaces:/home/adi2440/turtlebot_ws/install/dynamixel_sdk:/home/adi2440/ros2_ws/install/zed_ros2:/home/adi2440/ros2_ws/install/zed_wrapper:/home/adi2440/ros2_ws/install/zed_components:/home/adi2440/ros2_ws/install/ur:/home/adi2440/ros2_ws/install/ur_calibration:/home/adi2440/ros2_ws/install/ur_robot_driver:/home/adi2440/ros2_ws/install/ur_moveit_config:/home/adi2440/ros2_ws/install/ur_bringup:/home/adi2440/ros2_ws/install/ur_controllers:/home/adi2440/ros2_ws/install/ur_dashboard_msgs:/home/adi2440/ros2_ws/install/hello_moveit PYTHONPATH=/home/adi2440/turtlebot_ws/build/turtlebot3_example/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/adi2440/turtlebot_ws/install/turtlebot3_example/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/turtlebot3_example build --build-base /home/adi2440/turtlebot_ws/build/turtlebot3_example/build install --record /home/adi2440/turtlebot_ws/build/turtlebot3_example/install.log --single-version-externally-managed install_data

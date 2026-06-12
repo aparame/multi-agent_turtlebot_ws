@@ -1,0 +1,16 @@
+running develop
+running egg_info
+writing multi_turtlebot_coordinator.egg-info/PKG-INFO
+writing dependency_links to multi_turtlebot_coordinator.egg-info/dependency_links.txt
+writing requirements to multi_turtlebot_coordinator.egg-info/requires.txt
+writing top-level names to multi_turtlebot_coordinator.egg-info/top_level.txt
+reading manifest file 'multi_turtlebot_coordinator.egg-info/SOURCES.txt'
+writing manifest file 'multi_turtlebot_coordinator.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator/lib/python3.10/site-packages/multi-turtlebot-coordinator.egg-link (link to .)
+
+Installed /home/adi2440/turtlebot_ws/build/multi_turtlebot_coordinator
+running symlink_data
+creating /home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator/share/multi_turtlebot_coordinator/rviz
+symbolically linking /home/adi2440/turtlebot_ws/build/multi_turtlebot_coordinator/rviz/multi_robot_view.rviz -> /home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator/share/multi_turtlebot_coordinator/rviz
+symbolically linking /home/adi2440/turtlebot_ws/build/multi_turtlebot_coordinator/scripts/tf_mux.py -> /home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator/lib/multi_turtlebot_coordinator

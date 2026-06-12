@@ -1,0 +1,245 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter
+-- Configuring done (0.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/adi2440/turtlebot_ws/build/dynamixel_sdk
+[  5%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.o[0m
+[ 11%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.o[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_handler.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.o[0m
+[ 55%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_fast_sync_read.cpp.o[0m
+[ 55%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_fast_bulk_read.cpp.o[0m
+[ 61%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_easy_sdk/connector.cpp.o[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_easy_sdk/control_table.cpp.o[0m
+[ 72%] Built target ament_cmake_python_copy_dynamixel_easy_sdk
+[ 77%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_easy_sdk/dynamixel_error.cpp.o[0m
+[ 88%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_easy_sdk/motor.cpp.o[0m
+[ 94%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_easy_sdk/group_executor.cpp.o[0m
+[ 88%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.o[0m
+[ 94%] Built target ament_cmake_python_copy_dynamixel_sdk
+running egg_info
+creating dynamixel_sdk.egg-info
+writing dynamixel_sdk.egg-info/PKG-INFO
+writing dependency_links to dynamixel_sdk.egg-info/dependency_links.txt
+writing top-level names to dynamixel_sdk.egg-info/top_level.txt
+running egg_info
+creating dynamixel_easy_sdk.egg-info
+writing dynamixel_easy_sdk.egg-info/PKG-INFO
+writing dependency_links to dynamixel_easy_sdk.egg-info/dependency_links.txt
+writing top-level names to dynamixel_easy_sdk.egg-info/top_level.txt
+writing manifest file 'dynamixel_sdk.egg-info/SOURCES.txt'
+reading manifest file 'dynamixel_sdk.egg-info/SOURCES.txt'
+writing manifest file 'dynamixel_sdk.egg-info/SOURCES.txt'
+[ 94%] Built target ament_cmake_python_build_dynamixel_sdk_egg
+writing manifest file 'dynamixel_easy_sdk.egg-info/SOURCES.txt'
+reading manifest file 'dynamixel_easy_sdk.egg-info/SOURCES.txt'
+writing manifest file 'dynamixel_easy_sdk.egg-info/SOURCES.txt'
+[ 94%] Built target ament_cmake_python_build_dynamixel_easy_sdk_egg
+[100%] [32m[1mLinking CXX shared library libdynamixel_sdk.so[0m
+[100%] Built target dynamixel_sdk
+-- Install configuration: ""
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include/
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_easy_sdk
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_easy_sdk/control_table.hpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_easy_sdk/connector.hpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_easy_sdk/dynamixel_easy_sdk.hpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_easy_sdk/data_types.hpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_easy_sdk/group_executor.hpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_easy_sdk/motor.hpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_easy_sdk/dynamixel_error.hpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_sdk
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_mac.h
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_sdk/protocol1_packet_handler.h
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_fast_bulk_read.h
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_linux.h
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_write.h
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_read.h
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_read.h
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_handler.h
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_sdk/dynamixel_sdk.h
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_sdk/protocol2_packet_handler.h
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_fast_sync_read.h
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler.h
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_write.h
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_arduino.h
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_sdk/packet_handler.h
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_windows.h
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/lib/libdynamixel_sdk.so
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/ph54_200_s500.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xc330_t288.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/ym080_230_b001.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xl330_m077.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/pm54_040_s250.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/m42_10_s260_ra.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xw540_t260.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xd430_t350.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/ym070_210_r051.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/pm42_010_s260.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xw430_t200.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xw430_t333.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/m54_40_s250_ra.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xd540_t270.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/ym080_230_m001.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/rh_p12_rn.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xl330_m077_fw52.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xc330_m288.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/h42_20_s300_ra.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/pm54_060_s250.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/ym070_210_b001.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/ym080_230_r099.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xc330_m181_fw52.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/mx_64.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/mx_106.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xd540_t150.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xh430_w210.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/ym080_230_r051.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/ym070_210_r099.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xl320.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/h54_100_s500_ra.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xh430_v210.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xh540_v270.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xh430_v350.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xm430_w210.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xc430_w150.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xl330_m288.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xh540_w150.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/2xl430_w250.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xw540_t140.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xd430_t210.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/ym080_230_a051.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xm540_w150.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/ym070_210_m001.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xl330_m288_fw52.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/ym070_210_a051.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/ym080_230_a099.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xh430_w350.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xw540_h260.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/ph42_020_s300.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/h54_200_s500_ra.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/ym070_210_a099.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xc430_w240.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/mx_28.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xm430_w350.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xh540_v150.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/ph54_100_s500.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xc330_m181.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/2xc430_w250.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xc330_t181_fw52.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xc330_t181.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xh540_w270.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xm540_w270.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/dynamixel.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xc330_m288_fw52.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/m54_60_s250_ra.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xl430_w250.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/control_table/xc330_t288_fw52.model
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/pythonpath.sh
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/pythonpath.dsv
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk-4.0.5-py3.10.egg-info
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk-4.0.5-py3.10.egg-info/top_level.txt
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk-4.0.5-py3.10.egg-info/SOURCES.txt
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk-4.0.5-py3.10.egg-info/dependency_links.txt
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk-4.0.5-py3.10.egg-info/PKG-INFO
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_sync_read.cpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/port_handler_mac.cpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/packet_handler.py
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/port_handler.py
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_sync_write.cpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/robotis_def.py
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_bulk_read.py
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_bulk_write.py
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/port_handler.cpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_bulk_read.cpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/protocol1_packet_handler.py
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/port_handler_arduino.cpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/protocol1_packet_handler.cpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/port_handler_linux.cpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/protocol2_packet_handler.cpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/packet_handler.cpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_bulk_write.cpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/port_handler_windows.cpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_fast_bulk_read.cpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/protocol2_packet_handler.py
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_handler.cpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_sync_read.py
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_fast_sync_read.cpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_sync_write.py
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/__init__.py
+Listing '/home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk'...
+Compiling '/home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/__init__.py'...
+Compiling '/home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_bulk_read.py'...
+Compiling '/home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_bulk_write.py'...
+Compiling '/home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_sync_read.py'...
+Compiling '/home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_sync_write.py'...
+Compiling '/home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/packet_handler.py'...
+Compiling '/home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/port_handler.py'...
+Compiling '/home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/protocol1_packet_handler.py'...
+Compiling '/home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/protocol2_packet_handler.py'...
+Compiling '/home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/robotis_def.py'...
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk-4.0.5-py3.10.egg-info
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk-4.0.5-py3.10.egg-info/top_level.txt
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk-4.0.5-py3.10.egg-info/SOURCES.txt
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk-4.0.5-py3.10.egg-info/dependency_links.txt
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk-4.0.5-py3.10.egg-info/PKG-INFO
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk/dynamixel_error.cpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk/data_types.py
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk/motor.cpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk/motor.py
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk/dynamixel_error.py
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk/connector.cpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk/control_table.cpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk/connector.py
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk/group_executor.cpp
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk/control_table.py
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk/group_executor.py
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk/__init__.py
+Listing '/home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk'...
+Compiling '/home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk/__init__.py'...
+Compiling '/home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk/connector.py'...
+Compiling '/home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk/control_table.py'...
+Compiling '/home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk/data_types.py'...
+Compiling '/home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk/dynamixel_error.py'...
+Compiling '/home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk/group_executor.py'...
+Compiling '/home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_easy_sdk/motor.py'...
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.sh
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.dsv
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.sh
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.dsv
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.sh
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.dsv
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.bash
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.sh
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.zsh
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.dsv
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.dsv
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/ament_index/resource_index/packages/dynamixel_sdk
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkExport.cmake
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkExport-noconfig.cmake
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig.cmake
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig-version.cmake
+-- Installing: /home/adi2440/turtlebot_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.xml

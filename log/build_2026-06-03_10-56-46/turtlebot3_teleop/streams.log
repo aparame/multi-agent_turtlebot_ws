@@ -1,0 +1,41 @@
+[0.721s] Invoking command in '/home/adi2440/turtlebot_ws/src/turtlebot3/turtlebot3_teleop': PYTHONPATH=/home/adi2440/turtlebot_ws/build/turtlebot3_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/adi2440/turtlebot_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/turtlebot3_teleop build --build-base /home/adi2440/turtlebot_ws/build/turtlebot3_teleop/build install --record /home/adi2440/turtlebot_ws/build/turtlebot3_teleop/install.log --single-version-externally-managed install_data
+[0.816s] /home/adi2440/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[0.816s]   warnings.warn(msg)
+[0.836s] /home/adi2440/.local/lib/python3.10/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+[0.836s] !!
+[0.836s] 
+[0.836s]         ********************************************************************************
+[0.836s]         Please consider removing the following classifiers in favor of a SPDX license expression:
+[0.836s] 
+[0.836s]         License :: OSI Approved :: Apache Software License
+[0.836s] 
+[0.836s]         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+[0.836s]         ********************************************************************************
+[0.836s] 
+[0.836s] !!
+[0.836s]   self._finalize_license_expression()
+[0.875s] running egg_info
+[0.885s] writing ../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/PKG-INFO
+[0.885s] writing dependency_links to ../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/dependency_links.txt
+[0.885s] writing entry points to ../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/entry_points.txt
+[0.885s] writing requirements to ../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/requires.txt
+[0.885s] writing top-level names to ../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/top_level.txt
+[0.973s] reading manifest file '../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/SOURCES.txt'
+[0.974s] writing manifest file '../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/SOURCES.txt'
+[0.974s] running build
+[0.974s] running build_py
+[0.974s] copying turtlebot3_teleop/__init__.py -> /home/adi2440/turtlebot_ws/build/turtlebot3_teleop/build/lib/turtlebot3_teleop
+[0.974s] copying turtlebot3_teleop/script/teleop_keyboard.py -> /home/adi2440/turtlebot_ws/build/turtlebot3_teleop/build/lib/turtlebot3_teleop/script
+[0.974s] copying turtlebot3_teleop/script/__init__.py -> /home/adi2440/turtlebot_ws/build/turtlebot3_teleop/build/lib/turtlebot3_teleop/script
+[0.974s] running install
+[0.976s] running install_lib
+[0.986s] running install_data
+[0.986s] copying resource/turtlebot3_teleop -> /home/adi2440/turtlebot_ws/install/turtlebot3_teleop/share/ament_index/resource_index/packages
+[0.987s] copying package.xml -> /home/adi2440/turtlebot_ws/install/turtlebot3_teleop/share/turtlebot3_teleop
+[0.987s] running install_egg_info
+[0.997s] removing '/home/adi2440/turtlebot_ws/install/turtlebot3_teleop/lib/python3.10/site-packages/turtlebot3_teleop-2.3.6-py3.10.egg-info' (and everything under it)
+[0.997s] Copying ../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info to /home/adi2440/turtlebot_ws/install/turtlebot3_teleop/lib/python3.10/site-packages/turtlebot3_teleop-2.3.6-py3.10.egg-info
+[0.997s] running install_scripts
+[1.022s] Installing teleop_keyboard script to /home/adi2440/turtlebot_ws/install/turtlebot3_teleop/lib/turtlebot3_teleop
+[1.022s] writing list of installed files to '/home/adi2440/turtlebot_ws/build/turtlebot3_teleop/install.log'
+[1.036s] Invoked command in '/home/adi2440/turtlebot_ws/src/turtlebot3/turtlebot3_teleop' returned '0': PYTHONPATH=/home/adi2440/turtlebot_ws/build/turtlebot3_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/adi2440/turtlebot_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/turtlebot3_teleop build --build-base /home/adi2440/turtlebot_ws/build/turtlebot3_teleop/build install --record /home/adi2440/turtlebot_ws/build/turtlebot3_teleop/install.log --single-version-externally-managed install_data

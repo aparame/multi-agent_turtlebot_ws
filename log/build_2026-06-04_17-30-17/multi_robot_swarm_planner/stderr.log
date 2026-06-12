@@ -1,0 +1,153 @@
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:576:3: error: ‘WorldVelocity’ does not name a type
+  576 |   WorldVelocity controlToWorld(
+      |   ^~~~~~~~~~~~~
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:587:11: error: ‘WorldVelocity’ does not name a type
+  587 |     const WorldVelocity & velocity) const
+      |           ^~~~~~~~~~~~~
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:614:27: error: ‘WorldVelocity’ has not been declared
+  614 |   void clampWorldVelocity(WorldVelocity & velocity) const
+      |                           ^~~~~~~~~~~~~
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:624:40: error: ‘WorldVelocity’ was not declared in this scope; did you mean ‘clampWorldVelocity’?
+  624 |   void applyOrcaLikeFilter(std::vector<WorldVelocity> & velocities) const
+      |                                        ^~~~~~~~~~~~~
+      |                                        clampWorldVelocity
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:624:53: error: template argument 1 is invalid
+  624 |   void applyOrcaLikeFilter(std::vector<WorldVelocity> & velocities) const
+      |                                                     ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:624:53: error: template argument 2 is invalid
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:667:48: error: ‘WorldVelocity’ was not declared in this scope; did you mean ‘clampWorldVelocity’?
+  667 |   void applyBoundaryVelocityFilter(std::vector<WorldVelocity> & velocities) const
+      |                                                ^~~~~~~~~~~~~
+      |                                                clampWorldVelocity
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:667:61: error: template argument 1 is invalid
+  667 |   void applyBoundaryVelocityFilter(std::vector<WorldVelocity> & velocities) const
+      |                                                             ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:667:61: error: template argument 2 is invalid
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp: In member function ‘void multi_robot_swarm_planner::MppiDirectController::runScheduledStep()’:
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:486:34: error: ‘controlToWorld’ was not declared in this scope
+  486 |       world_velocities.push_back(controlToWorld(runtime.pose, preferred));
+      |                                  ^~~~~~~~~~~~~~
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:490:27: error: cannot convert ‘std::vector<multi_robot_swarm_planner::MppiDirectController::WorldVelocity>’ to ‘int&’
+  490 |       applyOrcaLikeFilter(world_velocities);
+      |                           ^~~~~~~~~~~~~~~~
+      |                           |
+      |                           std::vector<multi_robot_swarm_planner::MppiDirectController::WorldVelocity>
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:624:57: note:   initializing argument 1 of ‘void multi_robot_swarm_planner::MppiDirectController::applyOrcaLikeFilter(int&) const’
+  624 |   void applyOrcaLikeFilter(std::vector<WorldVelocity> & velocities) const
+      |                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:492:33: error: cannot convert ‘std::vector<multi_robot_swarm_planner::MppiDirectController::WorldVelocity>’ to ‘int&’
+  492 |     applyBoundaryVelocityFilter(world_velocities);
+      |                                 ^~~~~~~~~~~~~~~~
+      |                                 |
+      |                                 std::vector<multi_robot_swarm_planner::MppiDirectController::WorldVelocity>
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:667:65: note:   initializing argument 1 of ‘void multi_robot_swarm_planner::MppiDirectController::applyBoundaryVelocityFilter(int&) const’
+  667 |   void applyBoundaryVelocityFilter(std::vector<WorldVelocity> & velocities) const
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:496:56: error: cannot convert ‘__gnu_cxx::__alloc_traits<std::allocator<multi_robot_swarm_planner::MppiDirectController::WorldVelocity>, multi_robot_swarm_planner::MppiDirectController::WorldVelocity>::value_type’ {aka ‘multi_robot_swarm_planner::MppiDirectController::WorldVelocity’} to ‘const int&’
+  496 |       const DirectMppiControl filtered = worldToControl(runtime.pose, world_velocities[i]);
+      |                                          ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:587:27: note:   initializing argument 2 of ‘multi_robot_swarm_planner::DirectMppiControl multi_robot_swarm_planner::MppiDirectController::worldToControl(const multi_robot_swarm_planner::DirectMppiState&, const int&) const’
+  587 |     const WorldVelocity & velocity) const
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp: In member function ‘multi_robot_swarm_planner::DirectMppiControl multi_robot_swarm_planner::MppiDirectController::worldToControl(const multi_robot_swarm_planner::DirectMppiState&, const int&) const’:
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:589:46: error: request for member ‘x’ in ‘velocity’, which is of non-class type ‘const int’
+  589 |     const double speed = std::hypot(velocity.x, velocity.y);
+      |                                              ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:589:58: error: request for member ‘y’ in ‘velocity’, which is of non-class type ‘const int’
+  589 |     const double speed = std::hypot(velocity.x, velocity.y);
+      |                                                          ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:595:56: error: request for member ‘y’ in ‘velocity’, which is of non-class type ‘const int’
+  595 |     const double desired_heading = std::atan2(velocity.y, velocity.x);
+      |                                                        ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:595:68: error: request for member ‘x’ in ‘velocity’, which is of non-class type ‘const int’
+  595 |     const double desired_heading = std::atan2(velocity.y, velocity.x);
+      |                                                                    ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp: In member function ‘void multi_robot_swarm_planner::MppiDirectController::clampWorldVelocity(int&) const’:
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:616:46: error: request for member ‘x’ in ‘velocity’, which is of non-class type ‘int’
+  616 |     const double speed = std::hypot(velocity.x, velocity.y);
+      |                                              ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:616:58: error: request for member ‘y’ in ‘velocity’, which is of non-class type ‘int’
+  616 |     const double speed = std::hypot(velocity.x, velocity.y);
+      |                                                          ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:619:16: error: request for member ‘x’ in ‘velocity’, which is of non-class type ‘int’
+  619 |       velocity.x *= max_speed / speed;
+      |                ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:620:16: error: request for member ‘y’ in ‘velocity’, which is of non-class type ‘int’
+  620 |       velocity.y *= max_speed / speed;
+      |                ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp: In member function ‘void multi_robot_swarm_planner::MppiDirectController::applyOrcaLikeFilter(int&) const’:
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:644:38: error: invalid types ‘int[size_t {aka long unsigned int}]’ for array subscript
+  644 |         const double rvx = velocities[i].x - velocities[j].x;
+      |                                      ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:644:56: error: invalid types ‘int[size_t {aka long unsigned int}]’ for array subscript
+  644 |         const double rvx = velocities[i].x - velocities[j].x;
+      |                                                        ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:645:38: error: invalid types ‘int[size_t {aka long unsigned int}]’ for array subscript
+  645 |         const double rvy = velocities[i].y - velocities[j].y;
+      |                                      ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:645:56: error: invalid types ‘int[size_t {aka long unsigned int}]’ for array subscript
+  645 |         const double rvy = velocities[i].y - velocities[j].y;
+      |                                                        ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:655:19: error: invalid types ‘int[size_t {aka long unsigned int}]’ for array subscript
+  655 |         velocities[i].x += correction * ux;
+      |                   ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:656:19: error: invalid types ‘int[size_t {aka long unsigned int}]’ for array subscript
+  656 |         velocities[i].y += correction * uy;
+      |                   ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:657:19: error: invalid types ‘int[size_t {aka long unsigned int}]’ for array subscript
+  657 |         velocities[j].x -= correction * ux;
+      |                   ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:658:19: error: invalid types ‘int[size_t {aka long unsigned int}]’ for array subscript
+  658 |         velocities[j].y -= correction * uy;
+      |                   ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:662:28: error: ‘begin’ was not declared in this scope; did you mean ‘std::begin’?
+  662 |     for (auto & velocity : velocities) {
+      |                            ^~~~~~~~~~
+      |                            std::begin
+In file included from /usr/include/c++/11/string:54,
+                 from /home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/include/multi_robot_swarm_planner/direct_room_mppi.hpp:3,
+                 from /home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:1:
+/usr/include/c++/11/bits/range_access.h:108:37: note: ‘std::begin’ declared here
+  108 |   template<typename _Tp> const _Tp* begin(const valarray<_Tp>&) noexcept;
+      |                                     ^~~~~
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:662:28: error: ‘end’ was not declared in this scope; did you mean ‘std::end’?
+  662 |     for (auto & velocity : velocities) {
+      |                            ^~~~~~~~~~
+      |                            std::end
+In file included from /usr/include/c++/11/string:54,
+                 from /home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/include/multi_robot_swarm_planner/direct_room_mppi.hpp:3,
+                 from /home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:1:
+/usr/include/c++/11/bits/range_access.h:110:37: note: ‘std::end’ declared here
+  110 |   template<typename _Tp> const _Tp* end(const valarray<_Tp>&) noexcept;
+      |                                     ^~~
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp: In member function ‘void multi_robot_swarm_planner::MppiDirectController::applyBoundaryVelocityFilter(int&) const’:
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:673:47: error: invalid types ‘int[size_t {aka long unsigned int}]’ for array subscript
+  673 |       if (pose.x > half - margin && velocities[i].x > 0.0) {
+      |                                               ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:674:19: error: invalid types ‘int[size_t {aka long unsigned int}]’ for array subscript
+  674 |         velocities[i].x *= std::clamp((half - pose.x) / margin, 0.0, 1.0);
+      |                   ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:676:48: error: invalid types ‘int[size_t {aka long unsigned int}]’ for array subscript
+  676 |       if (pose.x < -half + margin && velocities[i].x < 0.0) {
+      |                                                ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:677:19: error: invalid types ‘int[size_t {aka long unsigned int}]’ for array subscript
+  677 |         velocities[i].x *= std::clamp((pose.x + half) / margin, 0.0, 1.0);
+      |                   ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:679:47: error: invalid types ‘int[size_t {aka long unsigned int}]’ for array subscript
+  679 |       if (pose.y > half - margin && velocities[i].y > 0.0) {
+      |                                               ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:680:19: error: invalid types ‘int[size_t {aka long unsigned int}]’ for array subscript
+  680 |         velocities[i].y *= std::clamp((half - pose.y) / margin, 0.0, 1.0);
+      |                   ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:682:48: error: invalid types ‘int[size_t {aka long unsigned int}]’ for array subscript
+  682 |       if (pose.y < -half + margin && velocities[i].y < 0.0) {
+      |                                                ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:683:19: error: invalid types ‘int[size_t {aka long unsigned int}]’ for array subscript
+  683 |         velocities[i].y *= std::clamp((pose.y + half) / margin, 0.0, 1.0);
+      |                   ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:685:36: error: invalid types ‘int[size_t {aka long unsigned int}]’ for array subscript
+  685 |       clampWorldVelocity(velocities[i]);
+      |                                    ^
+gmake[2]: *** [CMakeFiles/mppi_direct_controller.dir/build.make:79: CMakeFiles/mppi_direct_controller.dir/src/mppi_direct_controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:223: CMakeFiles/mppi_direct_controller.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

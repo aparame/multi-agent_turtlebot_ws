@@ -1,0 +1,128 @@
+-- The CXX compiler identification is GNU 11.4.0
+-- The CUDA compiler identification is NVIDIA 13.0.88 with host compiler GNU 11.4.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting CUDA compiler ABI info
+-- Detecting CUDA compiler ABI info - done
+-- Check for working CUDA compiler: /usr/local/cuda-13.0/bin/nvcc - skipped
+-- Detecting CUDA compile features
+-- Detecting CUDA compile features - done
+-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /home/adi2440/anaconda3/bin/python3 (found version "3.12.2") found components: Interpreter
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found action_msgs: 1.2.2 (/opt/ros/humble/share/action_msgs/cmake)
+-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found nav2_msgs: 1.1.20 (/opt/ros/humble/share/nav2_msgs/cmake)
+-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")
+-- Found FastRTPS: /opt/ros/humble/include
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Found rclcpp_action: 16.0.19 (/opt/ros/humble/share/rclcpp_action/cmake)
+-- Found std_srvs: 4.9.1 (/opt/ros/humble/share/std_srvs/cmake)
+-- Found tf2: 0.25.20 (/opt/ros/humble/share/tf2/cmake)
+-- Found tf2_geometry_msgs: 0.25.20 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+-- Found Eigen3: TRUE (found version "3.4.0")
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Found visualization_msgs: 4.9.1 (/opt/ros/humble/share/visualization_msgs/cmake)
+-- Configuring done (2.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner
+[ 20%] Building CUDA object CMakeFiles/swarm_mppi.dir/src/swarm_mppi.cu.o
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/swarm_mppi.cu(441): error: expected a member name
+    do { cudaError_t err = (cudaMalloc(&d_states, num_robots * sizeof(PlannerState))); if (err != cudaSuccess) { std::ostringstream oss; oss << ("cudaMalloc states") << ": " << cudaGetErrorString(err); result.success = false; result."cudaMalloc states" = oss.str(); return result; } } while (0);
+                                                                                                                                                                                                                                         ^
+
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/swarm_mppi.cu(442): error: expected a member name
+    do { cudaError_t err = (cudaMalloc(&d_goals, num_robots * sizeof(PlannerState))); if (err != cudaSuccess) { std::ostringstream oss; oss << ("cudaMalloc goals") << ": " << cudaGetErrorString(err); result.success = false; result."cudaMalloc goals" = oss.str(); return result; } } while (0);
+                                                                                                                                                                                                                                       ^
+
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/swarm_mppi.cu(443): error: expected a member name
+    do { cudaError_t err = (cudaMalloc(&d_last_controls, num_robots * sizeof(DeviceControl))); if (err != cudaSuccess) { std::ostringstream oss; oss << ("cudaMalloc controls") << ": " << cudaGetErrorString(err); result.success = false; result."cudaMalloc controls" = oss.str(); return result; } } while (0);
+                                                                                                                                                                                                                                                   ^
+
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/swarm_mppi.cu(444): error: expected a member name
+    do { cudaError_t err = (cudaMalloc(&d_nominal, nominal.size() * sizeof(DeviceControl))); if (err != cudaSuccess) { std::ostringstream oss; oss << ("cudaMalloc nominal") << ": " << cudaGetErrorString(err); result.success = false; result."cudaMalloc nominal" = oss.str(); return result; } } while (0);
+                                                                                                                                                                                                                                                ^
+
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/swarm_mppi.cu(445): error: expected a member name
+    do { cudaError_t err = (cudaMalloc(&d_sampled, static_cast<size_t>(params.samples) * num_robots * params.horizon * sizeof(DeviceControl))); if (err != cudaSuccess) { std::ostringstream oss; oss << ("cudaMalloc sampled controls") << ": " << cudaGetErrorString(err); result.success = false; result."cudaMalloc sampled controls" = oss.str(); return result; } } while (0)
+                                                                                                                                                                                                                                                                                                            ^
+
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/swarm_mppi.cu(448): error: expected a member name
+    do { cudaError_t err = (cudaMalloc(&d_map, map.data.size() * sizeof(int8_t))); if (err != cudaSuccess) { std::ostringstream oss; oss << ("cudaMalloc map") << ": " << cudaGetErrorString(err); result.success = false; result."cudaMalloc map" = oss.str(); return result; } } while (0);
+                                                                                                                                                                                                                                  ^
+
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/swarm_mppi.cu(449): error: expected a member name
+    do { cudaError_t err = (cudaMalloc(&d_rng, params.samples * sizeof(curandState))); if (err != cudaSuccess) { std::ostringstream oss; oss << ("cudaMalloc rng") << ": " << cudaGetErrorString(err); result.success = false; result."cudaMalloc rng" = oss.str(); return result; } } while (0);
+                                                                                                                                                                                                                                      ^
+
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/swarm_mppi.cu(450): error: expected a member name
+    do { cudaError_t err = (cudaMalloc(&d_costs, params.samples * sizeof(float))); if (err != cudaSuccess) { std::ostringstream oss; oss << ("cudaMalloc costs") << ": " << cudaGetErrorString(err); result.success = false; result."cudaMalloc costs" = oss.str(); return result; } } while (0);
+                                                                                                                                                                                                                                    ^
+
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/swarm_mppi.cu(452): error: expected a member name
+    do { cudaError_t err = (cudaMemcpy(d_goals, goals.data(), num_robots * sizeof(PlannerState), cudaMemcpyHostToDevice)); if (err != cudaSuccess) { std::ostringstream oss; oss << ("copy goals") << ": " << cudaGetErrorString(err); result.success = false; result."copy goals" = oss.str(); return result; } } while (0);
+                                                                                                                                                                                                                                                                      ^
+
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/swarm_mppi.cu(453): error: expected a member name
+    do { cudaError_t err = (cudaMemcpy(d_map, map.data.data(), map.data.size() * sizeof(int8_t), cudaMemcpyHostToDevice)); if (err != cudaSuccess) { std::ostringstream oss; oss << ("copy map") << ": " << cudaGetErrorString(err); result.success = false; result."copy map" = oss.str(); return result; } } while (0);
+                                                                                                                                                                                                                                                                    ^
+
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/swarm_mppi.cu(459): error: expected a member name
+    do { cudaError_t err = (cudaGetLastError()); if (err != cudaSuccess) { std::ostringstream oss; oss << ("launch init rng") << ": " << cudaGetErrorString(err); result.success = false; result."launch init rng" = oss.str(); return result; } } while (0);
+                                                                                                                                                                                                 ^
+
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/swarm_mppi.cu(460): error: expected a member name
+    do { cudaError_t err = (cudaDeviceSynchronize()); if (err != cudaSuccess) { std::ostringstream oss; oss << ("sync init rng") << ": " << cudaGetErrorString(err); result.success = false; result."sync init rng" = oss.str(); return result; } } while (0);
+                                                                                                                                                                                                    ^
+
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/swarm_mppi.cu(464): error: expected a member name
+      do { cudaError_t err = (cudaMemcpy(d_states, states.data(), num_robots * sizeof(PlannerState), cudaMemcpyHostToDevice)); if (err != cudaSuccess) { std::ostringstream oss; oss << ("copy states") << ": " << cudaGetErrorString(err); result.success = false; result."copy states" = oss.str(); return result; } } while (0);
+                                                                                                                                                                                                                                                                           ^
+
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/swarm_mppi.cu(465): error: expected a member name
+      do { cudaError_t err = (cudaMemcpy(d_last_controls, last_controls.data(), num_robots * sizeof(DeviceControl), cudaMemcpyHostToDevice)); if (err != cudaSuccess) { std::ostringstream oss; oss << ("copy last controls") << ": " << cudaGetErrorString(err); result.success = false; result."copy last controls" = oss.str(); return result; } } while (0);
+                                                                                                                                                                                                                                                                                                 ^
+
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/swarm_mppi.cu(466): error: expected a member name
+      do { cudaError_t err = (cudaMemcpy(d_nominal, nominal.data(), nominal.size() * sizeof(DeviceControl), cudaMemcpyHostToDevice)); if (err != cudaSuccess) { std::ostringstream oss; oss << ("copy nominal") << ": " << cudaGetErrorString(err); result.success = false; result."copy nominal" = oss.str(); return result; } } while (0);
+                                                                                                                                                                                                                                                                                   ^
+
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/swarm_mppi.cu(482): error: expected a member name
+        do { cudaError_t err = (cudaGetLastError()); if (err != cudaSuccess) { std::ostringstream oss; oss << ("launch rollout") << ": " << cudaGetErrorString(err); result.success = false; result."launch rollout" = oss.str(); return result; } } while (0);
+                                                                                                                                                                                                    ^
+
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/swarm_mppi.cu(483): error: expected a member name
+        do { cudaError_t err = (cudaDeviceSynchronize()); if (err != cudaSuccess) { std::ostringstream oss; oss << ("sync rollout") << ": " << cudaGetErrorString(err); result.success = false; result."sync rollout" = oss.str(); return result; } } while (0);
+                                                                                                                                                                                                       ^
+
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/swarm_mppi.cu(492): error: expected a member name
+        do { cudaError_t err = (cudaGetLastError()); if (err != cudaSuccess) { std::ostringstream oss; oss << ("launch update") << ": " << cudaGetErrorString(err); result.success = false; result."launch update" = oss.str(); return result; } } while (0);
+                                                                                                                                                                                                   ^
+
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/swarm_mppi.cu(493): error: expected a member name
+        do { cudaError_t err = (cudaDeviceSynchronize()); if (err != cudaSuccess) { std::ostringstream oss; oss << ("sync update") << ": " << cudaGetErrorString(err); result.success = false; result."sync update" = oss.str(); return result; } } while (0);
+                                                                                                                                                                                                      ^
+
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/swarm_mppi.cu(496): error: expected a member name
+      do { cudaError_t err = (cudaMemcpy(nominal.data(), d_nominal, nominal.size() * sizeof(DeviceControl), cudaMemcpyDeviceToHost)); if (err != cudaSuccess) { std::ostringstream oss; oss << ("copy updated nominal") << ": " << cudaGetErrorString(err); result.success = false; result."copy updated nominal" = oss.str(); return result; } } while (0);
+                                                                                                                                                                                                                                                                                           ^
+
+20 errors detected in the compilation of "/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/swarm_mppi.cu".
+gmake[2]: *** [CMakeFiles/swarm_mppi.dir/build.make:80: CMakeFiles/swarm_mppi.dir/src/swarm_mppi.cu.o] Error 2
+gmake[1]: *** [CMakeFiles/Makefile2:156: CMakeFiles/swarm_mppi.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

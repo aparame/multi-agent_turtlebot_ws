@@ -1,0 +1,2 @@
+/usr/bin/ar qc libswarm_mppi.a CMakeFiles/swarm_mppi.dir/src/swarm_mppi.cu.o CMakeFiles/swarm_mppi.dir/src/direct_room_mppi.cu.o
+/usr/bin/ranlib libswarm_mppi.a

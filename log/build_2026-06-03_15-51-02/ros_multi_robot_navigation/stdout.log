@@ -1,0 +1,49 @@
+running egg_info
+writing ../../build/ros_multi_robot_navigation/ros_multi_robot_navigation.egg-info/PKG-INFO
+writing dependency_links to ../../build/ros_multi_robot_navigation/ros_multi_robot_navigation.egg-info/dependency_links.txt
+writing entry points to ../../build/ros_multi_robot_navigation/ros_multi_robot_navigation.egg-info/entry_points.txt
+writing requirements to ../../build/ros_multi_robot_navigation/ros_multi_robot_navigation.egg-info/requires.txt
+writing top-level names to ../../build/ros_multi_robot_navigation/ros_multi_robot_navigation.egg-info/top_level.txt
+reading manifest file '../../build/ros_multi_robot_navigation/ros_multi_robot_navigation.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/ros_multi_robot_navigation/ros_multi_robot_navigation.egg-info/SOURCES.txt'
+running build
+running build_py
+copying ros_multi_robot_navigation/common.py -> /home/adi2440/turtlebot_ws/build/ros_multi_robot_navigation/build/lib/ros_multi_robot_navigation
+copying ros_multi_robot_navigation/robot_diagnostics.py -> /home/adi2440/turtlebot_ws/build/ros_multi_robot_navigation/build/lib/ros_multi_robot_navigation
+copying ros_multi_robot_navigation/bringup_lab_robots.py -> /home/adi2440/turtlebot_ws/build/ros_multi_robot_navigation/build/lib/ros_multi_robot_navigation
+copying ros_multi_robot_navigation/send_fleet_goals.py -> /home/adi2440/turtlebot_ws/build/ros_multi_robot_navigation/build/lib/ros_multi_robot_navigation
+copying ros_multi_robot_navigation/fleet_status.py -> /home/adi2440/turtlebot_ws/build/ros_multi_robot_navigation/build/lib/ros_multi_robot_navigation
+copying ros_multi_robot_navigation/fleet_rviz_bridge.py -> /home/adi2440/turtlebot_ws/build/ros_multi_robot_navigation/build/lib/ros_multi_robot_navigation
+copying ros_multi_robot_navigation/set_initial_pose.py -> /home/adi2440/turtlebot_ws/build/ros_multi_robot_navigation/build/lib/ros_multi_robot_navigation
+copying ros_multi_robot_navigation/send_nav_goal.py -> /home/adi2440/turtlebot_ws/build/ros_multi_robot_navigation/build/lib/ros_multi_robot_navigation
+copying ros_multi_robot_navigation/__init__.py -> /home/adi2440/turtlebot_ws/build/ros_multi_robot_navigation/build/lib/ros_multi_robot_navigation
+running install
+running install_lib
+copying /home/adi2440/turtlebot_ws/build/ros_multi_robot_navigation/build/lib/ros_multi_robot_navigation/bringup_lab_robots.py -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/lib/python3.10/site-packages/ros_multi_robot_navigation
+byte-compiling /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/lib/python3.10/site-packages/ros_multi_robot_navigation/bringup_lab_robots.py to bringup_lab_robots.cpython-310.pyc
+running install_data
+copying resource/ros_multi_robot_navigation -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ament_index/resource_index/packages
+copying package.xml -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ros_multi_robot_navigation
+copying README.md -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ros_multi_robot_navigation
+copying launch/lab_three_robot_nav.launch.py -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ros_multi_robot_navigation/launch
+copying launch/robot_side_bringup.launch.py -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ros_multi_robot_navigation/launch
+copying launch/single_robot_slam.launch.py -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ros_multi_robot_navigation/launch
+copying config/nav2_real_turtlebot3_burger.yaml -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ros_multi_robot_navigation/config
+copying config/slam_toolbox_mapping.yaml -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ros_multi_robot_navigation/config
+copying config/robots.yaml -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ros_multi_robot_navigation/config
+copying maps/map.yaml -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ros_multi_robot_navigation/maps
+copying maps/README.md -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ros_multi_robot_navigation/maps
+copying maps/map.pgm -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ros_multi_robot_navigation/maps
+running install_egg_info
+removing '/home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/lib/python3.10/site-packages/ros_multi_robot_navigation-0.1.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/ros_multi_robot_navigation/ros_multi_robot_navigation.egg-info to /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/lib/python3.10/site-packages/ros_multi_robot_navigation-0.1.0-py3.10.egg-info
+running install_scripts
+Installing bringup_lab_robots script to /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/lib/ros_multi_robot_navigation
+Installing fleet_rviz_bridge script to /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/lib/ros_multi_robot_navigation
+Installing fleet_status script to /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/lib/ros_multi_robot_navigation
+Installing robot_diagnostics script to /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/lib/ros_multi_robot_navigation
+Installing send_fleet_goals script to /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/lib/ros_multi_robot_navigation
+Installing send_nav_goal script to /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/lib/ros_multi_robot_navigation
+Installing set_initial_pose script to /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/lib/ros_multi_robot_navigation
+writing list of installed files to '/home/adi2440/turtlebot_ws/build/ros_multi_robot_navigation/install.log'

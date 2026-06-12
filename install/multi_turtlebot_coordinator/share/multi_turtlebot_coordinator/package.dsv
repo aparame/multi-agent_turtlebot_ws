@@ -1,0 +1,9 @@
+source;share/multi_turtlebot_coordinator/hook/pythonpath.ps1
+source;share/multi_turtlebot_coordinator/hook/pythonpath.dsv
+source;share/multi_turtlebot_coordinator/hook/pythonpath.sh
+source;share/multi_turtlebot_coordinator/hook/ament_prefix_path.ps1
+source;share/multi_turtlebot_coordinator/hook/ament_prefix_path.dsv
+source;share/multi_turtlebot_coordinator/hook/ament_prefix_path.sh
+source;../../build/multi_turtlebot_coordinator/share/multi_turtlebot_coordinator/hook/pythonpath_develop.ps1
+source;../../build/multi_turtlebot_coordinator/share/multi_turtlebot_coordinator/hook/pythonpath_develop.dsv
+source;../../build/multi_turtlebot_coordinator/share/multi_turtlebot_coordinator/hook/pythonpath_develop.sh

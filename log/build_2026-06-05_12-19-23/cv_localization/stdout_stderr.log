@@ -1,0 +1,18 @@
+/home/adi2440/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'test_suite'
+  warnings.warn(msg)
+running develop
+running egg_info
+writing cv_localization.egg-info/PKG-INFO
+writing dependency_links to cv_localization.egg-info/dependency_links.txt
+writing entry points to cv_localization.egg-info/entry_points.txt
+writing requirements to cv_localization.egg-info/requires.txt
+writing top-level names to cv_localization.egg-info/top_level.txt
+reading manifest file 'cv_localization.egg-info/SOURCES.txt'
+writing manifest file 'cv_localization.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/adi2440/turtlebot_ws/install/cv_localization/lib/python3.10/site-packages/cv-localization.egg-link (link to .)
+Installing cv_mppi_direct_gui script to /home/adi2440/turtlebot_ws/install/cv_localization/lib/cv_localization
+Installing cv_rl_direct_controller script to /home/adi2440/turtlebot_ws/install/cv_localization/lib/cv_localization
+
+Installed /home/adi2440/turtlebot_ws/build/cv_localization
+running symlink_data

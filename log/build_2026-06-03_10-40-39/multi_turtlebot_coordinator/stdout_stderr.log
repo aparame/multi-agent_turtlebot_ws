@@ -1,0 +1,30 @@
+running egg_info
+creating ../../build/multi_turtlebot_coordinator/multi_turtlebot_coordinator.egg-info
+writing ../../build/multi_turtlebot_coordinator/multi_turtlebot_coordinator.egg-info/PKG-INFO
+writing dependency_links to ../../build/multi_turtlebot_coordinator/multi_turtlebot_coordinator.egg-info/dependency_links.txt
+writing requirements to ../../build/multi_turtlebot_coordinator/multi_turtlebot_coordinator.egg-info/requires.txt
+writing top-level names to ../../build/multi_turtlebot_coordinator/multi_turtlebot_coordinator.egg-info/top_level.txt
+writing manifest file '../../build/multi_turtlebot_coordinator/multi_turtlebot_coordinator.egg-info/SOURCES.txt'
+reading manifest file '../../build/multi_turtlebot_coordinator/multi_turtlebot_coordinator.egg-info/SOURCES.txt'
+writing manifest file '../../build/multi_turtlebot_coordinator/multi_turtlebot_coordinator.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/adi2440/turtlebot_ws/build/multi_turtlebot_coordinator/build/lib/multi_turtlebot_coordinator
+copying multi_turtlebot_coordinator/__init__.py -> /home/adi2440/turtlebot_ws/build/multi_turtlebot_coordinator/build/lib/multi_turtlebot_coordinator
+running install
+running install_lib
+creating /home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator/lib/python3.10/site-packages/multi_turtlebot_coordinator
+copying /home/adi2440/turtlebot_ws/build/multi_turtlebot_coordinator/build/lib/multi_turtlebot_coordinator/__init__.py -> /home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator/lib/python3.10/site-packages/multi_turtlebot_coordinator
+byte-compiling /home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator/lib/python3.10/site-packages/multi_turtlebot_coordinator/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator/share/ament_index/resource_index/packages
+copying resource/multi_turtlebot_coordinator -> /home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator/share/ament_index/resource_index/packages
+copying package.xml -> /home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator/share/multi_turtlebot_coordinator
+creating /home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator/share/multi_turtlebot_coordinator/launch
+copying launch/multi_nav2_launch.py -> /home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator/share/multi_turtlebot_coordinator/launch
+creating /home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator/lib/multi_turtlebot_coordinator
+copying scripts/initialize_and_navigate.py -> /home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator/lib/multi_turtlebot_coordinator
+running install_egg_info
+Copying ../../build/multi_turtlebot_coordinator/multi_turtlebot_coordinator.egg-info to /home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator/lib/python3.10/site-packages/multi_turtlebot_coordinator-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/adi2440/turtlebot_ws/build/multi_turtlebot_coordinator/install.log'

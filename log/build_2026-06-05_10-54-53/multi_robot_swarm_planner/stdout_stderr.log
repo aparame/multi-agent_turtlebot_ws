@@ -1,0 +1,16 @@
+[ 33%] Built target swarm_mppi
+[ 44%] Building CXX object CMakeFiles/mppi_direct_controller.dir/src/mppi_direct_controller.cpp.o
+[ 77%] Built target central_fleet_planner
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp: In member function ‘bool multi_robot_swarm_planner::MppiDirectController::pathIntersectsCrossing(const multi_robot_swarm_planner::MppiDirectController::RobotRuntime&) const’:
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:668:45: error: ‘crossing_entry_radius_’ was not declared in this scope; did you mean ‘crossing_entry_radius_m_’?
+  668 |     if (distanceToCrossing(runtime.pose) <= crossing_entry_radius_) {
+      |                                             ^~~~~~~~~~~~~~~~~~~~~~
+      |                                             crossing_entry_radius_m_
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp: In member function ‘std::vector<bool, std::allocator<bool> > multi_robot_swarm_planner::MppiDirectController::applyCrossingGate(std::vector<multi_robot_swarm_planner::DirectMppiControl>&, std::vector<multi_robot_swarm_planner::MppiDirectController::WorldVelocity>&)’:
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:878:25: error: ‘crossing_entry_radius_’ was not declared in this scope; did you mean ‘crossing_entry_radius_m_’?
+  878 |       if (center_dist > crossing_entry_radius_) {
+      |                         ^~~~~~~~~~~~~~~~~~~~~~
+      |                         crossing_entry_radius_m_
+gmake[2]: *** [CMakeFiles/mppi_direct_controller.dir/build.make:79: CMakeFiles/mppi_direct_controller.dir/src/mppi_direct_controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:223: CMakeFiles/mppi_direct_controller.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

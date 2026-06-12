@@ -1,0 +1,36 @@
+/home/adi2440/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+  warnings.warn(msg)
+running develop
+running egg_info
+writing ros_multi_robot_navigation.egg-info/PKG-INFO
+writing dependency_links to ros_multi_robot_navigation.egg-info/dependency_links.txt
+writing entry points to ros_multi_robot_navigation.egg-info/entry_points.txt
+writing requirements to ros_multi_robot_navigation.egg-info/requires.txt
+writing top-level names to ros_multi_robot_navigation.egg-info/top_level.txt
+reading manifest file 'ros_multi_robot_navigation.egg-info/SOURCES.txt'
+writing manifest file 'ros_multi_robot_navigation.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/lib/python3.10/site-packages/ros-multi-robot-navigation.egg-link (link to .)
+Installing bringup_lab_robots script to /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/lib/ros_multi_robot_navigation
+Installing fleet_rviz_bridge script to /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/lib/ros_multi_robot_navigation
+Installing fleet_status script to /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/lib/ros_multi_robot_navigation
+Installing robot_diagnostics script to /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/lib/ros_multi_robot_navigation
+Installing send_fleet_goals script to /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/lib/ros_multi_robot_navigation
+Installing send_nav_goal script to /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/lib/ros_multi_robot_navigation
+Installing set_initial_pose script to /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/lib/ros_multi_robot_navigation
+
+Installed /home/adi2440/turtlebot_ws/build/ros_multi_robot_navigation
+running symlink_data
+symbolically linking /home/adi2440/turtlebot_ws/src/multi_robot_navigation_ROS2/resource/ros_multi_robot_navigation -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ament_index/resource_index/packages
+symbolically linking /home/adi2440/turtlebot_ws/src/multi_robot_navigation_ROS2/package.xml -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ros_multi_robot_navigation
+symbolically linking /home/adi2440/turtlebot_ws/src/multi_robot_navigation_ROS2/README.md -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ros_multi_robot_navigation
+symbolically linking /home/adi2440/turtlebot_ws/src/multi_robot_navigation_ROS2/launch/lab_three_robot_nav.launch.py -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ros_multi_robot_navigation/launch
+symbolically linking /home/adi2440/turtlebot_ws/src/multi_robot_navigation_ROS2/launch/robot_side_bringup.launch.py -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ros_multi_robot_navigation/launch
+symbolically linking /home/adi2440/turtlebot_ws/src/multi_robot_navigation_ROS2/launch/single_robot_slam.launch.py -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ros_multi_robot_navigation/launch
+symbolically linking /home/adi2440/turtlebot_ws/src/multi_robot_navigation_ROS2/config/nav2_real_turtlebot3_burger.yaml -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ros_multi_robot_navigation/config
+symbolically linking /home/adi2440/turtlebot_ws/src/multi_robot_navigation_ROS2/config/slam_toolbox_mapping.yaml -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ros_multi_robot_navigation/config
+symbolically linking /home/adi2440/turtlebot_ws/src/multi_robot_navigation_ROS2/config/robots.yaml -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ros_multi_robot_navigation/config
+symbolically linking /home/adi2440/turtlebot_ws/src/multi_robot_navigation_ROS2/maps/map.yaml -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ros_multi_robot_navigation/maps
+symbolically linking /home/adi2440/turtlebot_ws/src/multi_robot_navigation_ROS2/maps/README.md -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ros_multi_robot_navigation/maps
+symbolically linking /home/adi2440/turtlebot_ws/src/multi_robot_navigation_ROS2/maps/map.pgm -> /home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ros_multi_robot_navigation/maps
+error: [Errno 2] No such file or directory: '/home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/share/ros_multi_robot_navigation/rviz/fleet_position_goals.rviz'

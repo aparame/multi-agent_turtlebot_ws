@@ -1,0 +1,34 @@
+[0.007s] Invoking command in '/home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/adi2440/turtlebot_ws/install/turtlebot3_teleop:/home/adi2440/turtlebot_ws/install/turtlebot3_example:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /home/adi2440/anaconda3/bin/cmake --build /home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner -- -j24 -l24
+[0.091s] [ 40%] Built target swarm_mppi
+[0.103s] [ 60%] Building CXX object CMakeFiles/central_fleet_planner.dir/src/central_fleet_planner.cpp.o
+[1.480s] /home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/central_fleet_planner.cpp: In constructor ‘multi_robot_swarm_planner::CentralFleetPlanner::CentralFleetPlanner()’:
+[1.480s] /home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/central_fleet_planner.cpp:191:33: warning: converting to ‘nav_msgs::msg::Path’ {aka ‘nav_msgs::msg::Path_<std::allocator<void> >’} from initializer list would use explicit constructor ‘nav_msgs::msg::Path_<ContainerAllocator>::Path_(rosidl_runtime_cpp::MessageInitialization) [with ContainerAllocator = std::allocator<void>]’
+[1.480s]   191 |       plans_[robot] = RobotPlan{};
+[1.480s]       |                                 ^
+[1.480s] /home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/central_fleet_planner.cpp:191:33: note: in C++11 and above a default constructor can be explicit
+[8.776s] [ 80%] Linking CUDA device code CMakeFiles/central_fleet_planner.dir/cmake_device_link.o
+[8.827s] [100%] Linking CXX executable central_fleet_planner
+[9.362s] [100%] Built target central_fleet_planner
+[9.372s] Invoked command in '/home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/adi2440/turtlebot_ws/install/turtlebot3_teleop:/home/adi2440/turtlebot_ws/install/turtlebot3_example:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /home/adi2440/anaconda3/bin/cmake --build /home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner -- -j24 -l24
+[9.445s] Invoking command in '/home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/adi2440/turtlebot_ws/install/turtlebot3_teleop:/home/adi2440/turtlebot_ws/install/turtlebot3_example:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /home/adi2440/anaconda3/bin/cmake --install /home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner
+[9.515s] -- Install configuration: ""
+[9.515s] -- Execute custom install script
+[9.515s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/include/multi_robot_swarm_planner/swarm_mppi.hpp
+[9.517s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/lib/libswarm_mppi.a
+[9.519s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/lib/multi_robot_swarm_planner/central_fleet_planner
+[9.521s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/ament_index/resource_index/package_run_dependencies/multi_robot_swarm_planner
+[9.522s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/ament_index/resource_index/parent_prefix_path/multi_robot_swarm_planner
+[9.524s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/multi_robot_swarm_planner/environment/ament_prefix_path.sh
+[9.526s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/multi_robot_swarm_planner/environment/ament_prefix_path.dsv
+[9.527s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/multi_robot_swarm_planner/environment/path.sh
+[9.529s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/multi_robot_swarm_planner/environment/path.dsv
+[9.531s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/multi_robot_swarm_planner/local_setup.bash
+[9.532s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/multi_robot_swarm_planner/local_setup.sh
+[9.534s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/multi_robot_swarm_planner/local_setup.zsh
+[9.536s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/multi_robot_swarm_planner/local_setup.dsv
+[9.537s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/multi_robot_swarm_planner/package.dsv
+[9.539s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/ament_index/resource_index/packages/multi_robot_swarm_planner
+[9.540s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/multi_robot_swarm_planner/cmake/multi_robot_swarm_plannerConfig.cmake
+[9.542s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/multi_robot_swarm_planner/cmake/multi_robot_swarm_plannerConfig-version.cmake
+[9.543s] -- Symlinking: /home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner/share/multi_robot_swarm_planner/package.xml
+[9.545s] Invoked command in '/home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/adi2440/turtlebot_ws/install/turtlebot3_teleop:/home/adi2440/turtlebot_ws/install/turtlebot3_example:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /home/adi2440/anaconda3/bin/cmake --install /home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner

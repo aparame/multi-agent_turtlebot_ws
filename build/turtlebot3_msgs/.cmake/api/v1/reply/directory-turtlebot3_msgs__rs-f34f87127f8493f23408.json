@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "turtlebot3_msgs__rs",
+		"source" : "/home/adi2440/turtlebot_ws/build/turtlebot3_msgs/turtlebot3_msgs__rs"
+	}
+}

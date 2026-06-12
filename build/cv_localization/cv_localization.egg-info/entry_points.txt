@@ -1,0 +1,3 @@
+[console_scripts]
+cv_mppi_direct_gui = cv_localization.cv_mppi_direct_gui:main
+cv_rl_direct_controller = cv_localization.cv_rl_direct_controller:main

@@ -1,0 +1,28 @@
+[ 20%] Building CUDA object CMakeFiles/swarm_mppi.dir/src/swarm_mppi.cu.o
+[ 40%] Linking CUDA static library libswarm_mppi.a
+[ 40%] Built target swarm_mppi
+[ 60%] Building CXX object CMakeFiles/central_fleet_planner.dir/src/central_fleet_planner.cpp.o
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/central_fleet_planner.cpp: In constructor ‘multi_robot_swarm_planner::CentralFleetPlanner::CentralFleetPlanner()’:
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/central_fleet_planner.cpp:191:33: warning: converting to ‘nav_msgs::msg::Path’ {aka ‘nav_msgs::msg::Path_<std::allocator<void> >’} from initializer list would use explicit constructor ‘nav_msgs::msg::Path_<ContainerAllocator>::Path_(rosidl_runtime_cpp::MessageInitialization) [with ContainerAllocator = std::allocator<void>]’
+  191 |       plans_[robot] = RobotPlan{};
+      |                                 ^
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/central_fleet_planner.cpp:191:33: note: in C++11 and above a default constructor can be explicit
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/central_fleet_planner.cpp: In member function ‘void multi_robot_swarm_planner::CentralFleetPlanner::handleGoal(const string&, const PointStamped&)’:
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/central_fleet_planner.cpp:265:50: error: ‘class rclcpp::Time’ has no member named ‘to_msg’
+  265 |     goal.header.stamp = this->get_clock()->now().to_msg();
+      |                                                  ^~~~~~
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/central_fleet_planner.cpp: In member function ‘nav_msgs::msg::Path multi_robot_swarm_planner::CentralFleetPlanner::buildPath(const string&, const std::vector<multi_robot_swarm_planner::PlannerState>&)’:
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/central_fleet_planner.cpp:424:50: error: ‘class rclcpp::Time’ has no member named ‘to_msg’
+  424 |     path.header.stamp = this->get_clock()->now().to_msg();
+      |                                                  ^~~~~~
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/central_fleet_planner.cpp: In member function ‘visualization_msgs::msg::Marker multi_robot_swarm_planner::CentralFleetPlanner::baseMarker(const string&, int, int32_t)’:
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/central_fleet_planner.cpp:718:52: error: ‘class rclcpp::Time’ has no member named ‘to_msg’
+  718 |     marker.header.stamp = this->get_clock()->now().to_msg();
+      |                                                    ^~~~~~
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/central_fleet_planner.cpp: In member function ‘void multi_robot_swarm_planner::CentralFleetPlanner::addDeleteAll(visualization_msgs::msg::MarkerArray&)’:
+/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/central_fleet_planner.cpp:735:52: error: ‘class rclcpp::Time’ has no member named ‘to_msg’
+  735 |     marker.header.stamp = this->get_clock()->now().to_msg();
+      |                                                    ^~~~~~
+gmake[2]: *** [CMakeFiles/central_fleet_planner.dir/build.make:79: CMakeFiles/central_fleet_planner.dir/src/central_fleet_planner.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:188: CMakeFiles/central_fleet_planner.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

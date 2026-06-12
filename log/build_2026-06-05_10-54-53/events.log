@@ -1,0 +1,78 @@
+[0.000000] (-) TimerEvent: {}
+[0.000143] (-) JobUnselected: {'identifier': 'cv_localization'}
+[0.000169] (-) JobUnselected: {'identifier': 'dynamixel_sdk'}
+[0.000184] (-) JobUnselected: {'identifier': 'dynamixel_sdk_custom_interfaces'}
+[0.000192] (-) JobUnselected: {'identifier': 'dynamixel_sdk_examples'}
+[0.000198] (-) JobUnselected: {'identifier': 'multi_turtlebot_coordinator'}
+[0.000212] (-) JobUnselected: {'identifier': 'ros_multi_robot_navigation'}
+[0.000219] (-) JobUnselected: {'identifier': 'turtlebot3'}
+[0.000225] (-) JobUnselected: {'identifier': 'turtlebot3_bringup'}
+[0.000231] (-) JobUnselected: {'identifier': 'turtlebot3_cartographer'}
+[0.000237] (-) JobUnselected: {'identifier': 'turtlebot3_description'}
+[0.000243] (-) JobUnselected: {'identifier': 'turtlebot3_example'}
+[0.000249] (-) JobUnselected: {'identifier': 'turtlebot3_msgs'}
+[0.000255] (-) JobUnselected: {'identifier': 'turtlebot3_navigation2'}
+[0.000268] (-) JobUnselected: {'identifier': 'turtlebot3_node'}
+[0.000274] (-) JobUnselected: {'identifier': 'turtlebot3_teleop'}
+[0.000282] (multi_robot_swarm_planner) JobQueued: {'identifier': 'multi_robot_swarm_planner', 'dependencies': OrderedDict()}
+[0.000290] (multi_robot_swarm_planner) JobStarted: {'identifier': 'multi_robot_swarm_planner'}
+[0.006095] (multi_robot_swarm_planner) JobProgress: {'identifier': 'multi_robot_swarm_planner', 'progress': 'cmake'}
+[0.006651] (multi_robot_swarm_planner) JobProgress: {'identifier': 'multi_robot_swarm_planner', 'progress': 'build'}
+[0.007242] (multi_robot_swarm_planner) Command: {'cmd': ['/home/adi2440/anaconda3/bin/cmake', '--build', '/home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner', '--', '-j24', '-l24'], 'cwd': '/home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/home/adi2440'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('CONDA_PROMPT_MODIFIER', '(base)'), ('CODEX_CI', '1'), ('USER', 'adi2440'), ('CODEX_INTERNAL_ORIGINATOR_OVERRIDE', 'codex_vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/usr/share/antigravity/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('XDG_SESSION_TYPE', 'x11'), ('DEBUG', 'release'), ('ISAACSIM_PATH', '/home/adi2440/isaacsim'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/home/adi2440/turtlebot_ws/install/turtlebot3_msgs/lib:/home/adi2440/turtlebot_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/adi2440/turtlebot_ws/install/dynamixel_sdk/lib:/home/adi2440/ros2_ws/install/ur_dashboard_msgs/lib:/usr/local/cuda-13.0/lib64{LD_LIBRARY_PATH:+:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/rti.com/rti_connext_dds-6.0.1/lib/x64Linux4gcc7.3.0:/opt/rti.com/rti_connext_dds-6.0.1/bin:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/adi2440/ros2_ws/install/zed_components/lib:/home/adi2440/ros2_ws/install/ur_robot_driver/lib:/home/adi2440/ros2_ws/install/ur_controllers/lib:/home/adi2440/ros2_ws/install/ur_dashboard_msgs/lib}'), ('HOME', '/home/adi2440'), ('CHROME_DESKTOP', 'antigravity.desktop'), ('CONDA_SHLVL', '1'), ('DESKTOP_SESSION', 'ubuntu'), ('CONNEXTDDS_DIR', '/opt/rti.com/rti_connext_dds-6.0.1'), ('VSCODE_IPC_HOOK', '/run/user/1002/vscode-e8b5562a-1.10-main.sock'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/antigravity.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('NDDSHOME', '/opt/rti.com/rti_connext_dds-6.0.1'), ('PAGER', 'cat'), ('MANAGERPID', '4855'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '5055'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1002/bus'), ('COLORTERM', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3791872'), ('VSCODE_CRASH_REPORTER_PROCESS_TYPE', 'extensionHost'), ('IM_CONFIG_PHASE', '1'), ('VSCODE_L10N_BUNDLE_LOCATION', ''), ('COLCON_PREFIX_PATH', '/home/adi2440/turtlebot_ws/install:/home/adi2440/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'adi2440'), ('JOURNAL_STREAM', '8:57169'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('RUST_LOG', 'warn'), ('USERNAME', 'adi2440'), ('TERM', 'dumb'), ('FLIR_GENTL64_CTI', '/opt/spinnaker/lib/flir-gentl/FLIR_GenTL.cti'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('CARLA_UNREAL_ENGINE_PATH', '/media/adi2440/Samsung_SSD/UnrealEngine'), ('PATH', '/home/adi2440/.local/bin:/home/adi2440/.codex/tmp/arg0/codex-arg0Term4y:/home/adi2440/.local/bin:/usr/local/cuda-13.0/bin:/opt/rti.com/rti_connext_dds-6.0.1/lib/x64Linux4gcc7.3.0:/opt/rti.com/rti_connext_dds-6.0.1/bin:/opt/ros/humble/bin:/home/adi2440/ros2_ws/install/ur_robot_driver/bin:/home/adi2440/anaconda3/bin:/home/adi2440/anaconda3/condabin:/home/adi2440/.local/bin:/opt/spinnaker/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/cuda-12.0/bin:/home/administrator/androidSDK/tools:/home/administrator/androidSDK/tools/bin:/snap/bin:/snap/bin:/opt/thinlinc/bin:/opt/thinlinc/sbin:/home/adi2440/.antigravity/extensions/openai.chatgpt-26.601.20914-linux-x64/bin/linux-x86_64'), ('SESSION_MANAGER', 'local/administrator-Alienware-Aurora-R13:@/tmp/.ICE-unix/5020,unix/administrator-Alienware-Aurora-R13:/tmp/.ICE-unix/5020'), ('INVOCATION_ID', 'b4b06e16f7ef41e19e00d2db12c3fbe3'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1002'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1002/gdm/Xauthority'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1002/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/home/adi2440/anaconda3/share/glib-2.0/schemas'), ('AMENT_PREFIX_PATH', '/home/adi2440/turtlebot_ws/install/turtlebot3:/home/adi2440/turtlebot_ws/install/turtlebot3_teleop:/home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation:/home/adi2440/turtlebot_ws/install/turtlebot3_bringup:/home/adi2440/turtlebot_ws/install/turtlebot3_node:/home/adi2440/turtlebot_ws/install/turtlebot3_navigation2:/home/adi2440/turtlebot_ws/install/turtlebot3_example:/home/adi2440/turtlebot_ws/install/turtlebot3_msgs:/home/adi2440/turtlebot_ws/install/turtlebot3_description:/home/adi2440/turtlebot_ws/install/turtlebot3_cartographer:/home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator:/home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner:/home/adi2440/turtlebot_ws/install/dynamixel_sdk_examples:/home/adi2440/turtlebot_ws/install/dynamixel_sdk_custom_interfaces:/home/adi2440/turtlebot_ws/install/dynamixel_sdk:/opt/ros/humble:/home/adi2440/ros2_ws/install/zed_ros2:/home/adi2440/ros2_ws/install/zed_wrapper:/home/adi2440/ros2_ws/install/zed_components:/home/adi2440/ros2_ws/install/ur:/home/adi2440/ros2_ws/install/ur_calibration:/home/adi2440/ros2_ws/install/ur_robot_driver:/home/adi2440/ros2_ws/install/ur_moveit_config:/home/adi2440/ros2_ws/install/ur_bringup:/home/adi2440/ros2_ws/install/ur_controllers:/home/adi2440/ros2_ws/install/ur_dashboard_msgs:/home/adi2440/ros2_ws/install/hello_moveit'), ('CONDA_PYTHON_EXE', '/home/adi2440/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('ELECTRON_RUN_AS_NODE', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('CODEX_THREAD_ID', '019e9819-9091-7751-8ee7-887e142d8b30'), ('GPG_AGENT_INFO', '/run/user/1002/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('CONNEXTDDS_ARCH', 'x64Linux4gcc7.3.0'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-11-openjdk-amd64'), ('PWD', '/home/adi2440/turtlebot_ws/build/multi_robot_swarm_planner'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'C.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/adi2440/anaconda3/bin/conda'), ('VSCODE_CODE_CACHE_PATH', '/home/adi2440/.config/Antigravity/CachedData/15487b3041e65228cae24980a3f796c905ef582c'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/adi2440/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('UE4_ROOT', '/media/adi2440/Samsung_SSD/UnrealEngine'), ('PYTHONPATH', '/home/adi2440/turtlebot_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/adi2440/turtlebot_ws/build/ros_multi_robot_navigation:/home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/lib/python3.10/site-packages:/home/adi2440/turtlebot_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/adi2440/turtlebot_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/adi2440/turtlebot_ws/build/multi_turtlebot_coordinator:/home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator/lib/python3.10/site-packages:/home/adi2440/turtlebot_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages:/home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/adi2440/ros2_ws/install/ur_robot_driver/local/lib/python3.10/dist-packages:/home/adi2440/ros2_ws/install/ur_moveit_config/local/lib/python3.10/dist-packages:/home/adi2440/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages'), ('CONDA_PREFIX', '/home/adi2440/anaconda3'), ('COLCON', '1'), ('GENICAM_GENTL64_PATH', '/opt/spinnaker/lib/flir-gentl'), ('CMAKE_PREFIX_PATH', '/home/adi2440/turtlebot_ws/install/turtlebot3:/home/adi2440/turtlebot_ws/install/turtlebot3_bringup:/home/adi2440/turtlebot_ws/install/turtlebot3_node:/home/adi2440/turtlebot_ws/install/turtlebot3_navigation2:/home/adi2440/turtlebot_ws/install/turtlebot3_msgs:/home/adi2440/turtlebot_ws/install/turtlebot3_description:/home/adi2440/turtlebot_ws/install/turtlebot3_cartographer:/home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner:/home/adi2440/turtlebot_ws/install/dynamixel_sdk_examples:/home/adi2440/turtlebot_ws/install/dynamixel_sdk_custom_interfaces:/home/adi2440/turtlebot_ws/install/dynamixel_sdk:/home/adi2440/ros2_ws/install/zed_ros2:/home/adi2440/ros2_ws/install/zed_wrapper:/home/adi2440/ros2_ws/install/zed_components:/home/adi2440/ros2_ws/install/ur:/home/adi2440/ros2_ws/install/ur_calibration:/home/adi2440/ros2_ws/install/ur_robot_driver:/home/adi2440/ros2_ws/install/ur_moveit_config:/home/adi2440/ros2_ws/install/ur_bringup:/home/adi2440/ros2_ws/install/ur_controllers:/home/adi2440/ros2_ws/install/ur_dashboard_msgs:/home/adi2440/ros2_ws/install/hello_moveit:/home/adi2440/turtlebot_ws/install/turtlebot3_teleop:/home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation:/home/adi2440/turtlebot_ws/install/turtlebot3_example:/home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator:/opt/ros/humble'), ('VSCODE_PID', '3791872')]), 'shell': False}
+[0.093584] (multi_robot_swarm_planner) StdoutLine: {'line': b'[ 33%] Built target swarm_mppi\n'}
+[0.099756] (-) TimerEvent: {}
+[0.102590] (multi_robot_swarm_planner) StdoutLine: {'line': b'[ 44%] Building CXX object CMakeFiles/mppi_direct_controller.dir/src/mppi_direct_controller.cpp.o\n'}
+[0.102737] (multi_robot_swarm_planner) StdoutLine: {'line': b'[ 77%] Built target central_fleet_planner\n'}
+[0.199921] (-) TimerEvent: {}
+[0.300084] (-) TimerEvent: {}
+[0.400237] (-) TimerEvent: {}
+[0.500475] (-) TimerEvent: {}
+[0.600714] (-) TimerEvent: {}
+[0.700942] (-) TimerEvent: {}
+[0.801176] (-) TimerEvent: {}
+[0.901413] (-) TimerEvent: {}
+[1.001646] (-) TimerEvent: {}
+[1.101874] (-) TimerEvent: {}
+[1.202026] (-) TimerEvent: {}
+[1.302167] (-) TimerEvent: {}
+[1.344028] (multi_robot_swarm_planner) StderrLine: {'line': b'/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp: In member function \xe2\x80\x98bool multi_robot_swarm_planner::MppiDirectController::pathIntersectsCrossing(const multi_robot_swarm_planner::MppiDirectController::RobotRuntime&) const\xe2\x80\x99:\n'}
+[1.344163] (multi_robot_swarm_planner) StderrLine: {'line': b'/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:668:45: error: \xe2\x80\x98crossing_entry_radius_\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98crossing_entry_radius_m_\xe2\x80\x99?\n'}
+[1.344195] (multi_robot_swarm_planner) StderrLine: {'line': b'  668 |     if (distanceToCrossing(runtime.pose) <= crossing_entry_radius_) {\n'}
+[1.344219] (multi_robot_swarm_planner) StderrLine: {'line': b'      |                                             ^~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.344241] (multi_robot_swarm_planner) StderrLine: {'line': b'      |                                             crossing_entry_radius_m_\n'}
+[1.349355] (multi_robot_swarm_planner) StderrLine: {'line': b'/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp: In member function \xe2\x80\x98std::vector<bool, std::allocator<bool> > multi_robot_swarm_planner::MppiDirectController::applyCrossingGate(std::vector<multi_robot_swarm_planner::DirectMppiControl>&, std::vector<multi_robot_swarm_planner::MppiDirectController::WorldVelocity>&)\xe2\x80\x99:\n'}
+[1.349427] (multi_robot_swarm_planner) StderrLine: {'line': b'/home/adi2440/turtlebot_ws/src/multi_robot_swarm_planner/src/mppi_direct_controller.cpp:878:25: error: \xe2\x80\x98crossing_entry_radius_\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98crossing_entry_radius_m_\xe2\x80\x99?\n'}
+[1.349456] (multi_robot_swarm_planner) StderrLine: {'line': b'  878 |       if (center_dist > crossing_entry_radius_) {\n'}
+[1.349479] (multi_robot_swarm_planner) StderrLine: {'line': b'      |                         ^~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.349502] (multi_robot_swarm_planner) StderrLine: {'line': b'      |                         crossing_entry_radius_m_\n'}
+[1.402250] (-) TimerEvent: {}
+[1.502488] (-) TimerEvent: {}
+[1.602665] (-) TimerEvent: {}
+[1.702864] (-) TimerEvent: {}
+[1.803118] (-) TimerEvent: {}
+[1.903296] (-) TimerEvent: {}
+[2.003530] (-) TimerEvent: {}
+[2.103706] (-) TimerEvent: {}
+[2.203968] (-) TimerEvent: {}
+[2.304218] (-) TimerEvent: {}
+[2.404477] (-) TimerEvent: {}
+[2.504734] (-) TimerEvent: {}
+[2.605076] (-) TimerEvent: {}
+[2.705351] (-) TimerEvent: {}
+[2.805570] (-) TimerEvent: {}
+[2.905812] (-) TimerEvent: {}
+[3.006079] (-) TimerEvent: {}
+[3.106232] (-) TimerEvent: {}
+[3.206420] (-) TimerEvent: {}
+[3.306672] (-) TimerEvent: {}
+[3.406921] (-) TimerEvent: {}
+[3.507133] (-) TimerEvent: {}
+[3.607301] (-) TimerEvent: {}
+[3.707476] (-) TimerEvent: {}
+[3.807724] (-) TimerEvent: {}
+[3.879550] (multi_robot_swarm_planner) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/mppi_direct_controller.dir/build.make:79: CMakeFiles/mppi_direct_controller.dir/src/mppi_direct_controller.cpp.o] Error 1\n'}
+[3.879666] (multi_robot_swarm_planner) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:223: CMakeFiles/mppi_direct_controller.dir/all] Error 2\n'}
+[3.879813] (multi_robot_swarm_planner) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[3.881121] (multi_robot_swarm_planner) CommandEnded: {'returncode': 2}
+[3.888857] (multi_robot_swarm_planner) JobEnded: {'identifier': 'multi_robot_swarm_planner', 'rc': 2}
+[3.899250] (-) EventReactorShutdown: {}

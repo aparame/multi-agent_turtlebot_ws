@@ -1,0 +1,1 @@
+  -L"/usr/local/cuda-13.0/targets/x86_64-linux/lib/stubs"  -L"/usr/local/cuda-13.0/targets/x86_64-linux/lib"  libswarm_mppi.a  -ldl -latomic -lcudadevrt -lcudart_static -lrt -lpthread 

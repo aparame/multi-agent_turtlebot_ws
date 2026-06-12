@@ -1,0 +1,9 @@
+source;share/cv_localization/hook/pythonpath.ps1
+source;share/cv_localization/hook/pythonpath.dsv
+source;share/cv_localization/hook/pythonpath.sh
+source;share/cv_localization/hook/ament_prefix_path.ps1
+source;share/cv_localization/hook/ament_prefix_path.dsv
+source;share/cv_localization/hook/ament_prefix_path.sh
+source;../../build/cv_localization/share/cv_localization/hook/pythonpath_develop.ps1
+source;../../build/cv_localization/share/cv_localization/hook/pythonpath_develop.dsv
+source;../../build/cv_localization/share/cv_localization/hook/pythonpath_develop.sh

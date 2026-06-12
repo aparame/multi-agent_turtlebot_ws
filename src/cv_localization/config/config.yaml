@@ -1,0 +1,140 @@
+# ============================================================
+# CV Localization Configuration — Marker-Free
+# ============================================================
+
+# ---- Camera ----
+# USB Live camera (Sonix, usb-0000:00:14.0-4) — overhead view
+camera:
+  device: "/dev/v4l/by-id/usb-Sonix_Technology_Co.__Ltd._USB_Live_camera_SN0001-video-index0"
+  width: 1920                 # Max: 1920×1080
+  height: 1080
+  fps: 30
+  fourcc: "MJPG"
+
+# ---- Workspace (physical) ----
+workspace:
+  width_m: 3.048              # 10 ft in metres
+  height_m: 3.048             # 10 ft in metres
+
+# ---- Detection (marker-free) ----
+detection:
+  num_robots: 3
+
+  # Background subtraction threshold (pixel intensity difference)
+  background_diff_threshold: 40
+
+  # Absolute dark threshold — robots are dark objects on lighter floor
+  # Pixels darker than this are candidates (0=black, 255=white)
+  robot_dark_threshold: 60
+
+  # Blob area filters (in pixels) — tune for camera height/resolution
+  # TurtleBot3 Burger is ~14cm wide → at 1280×960 over 3m workspace,
+  # roughly ~60px wide → area ~2800px². Allow generous range.
+  min_blob_area: 800
+  max_blob_area: 15000
+
+  # Morphological cleanup kernel size
+  morph_kernel_size: 7
+
+  # Max pixel distance for frame-to-frame blob matching
+  max_match_distance_px: 150
+
+# ---- Tracking ----
+tracking:
+  publish_rate_hz: 30         # TF publish rate
+  smoothing_alpha: 0.7        # EMA smoothing (1.0 = no smoothing)
+  max_stale_sec: 2.0          # Keep publishing if detection drops briefly
+  position_history_size: 8     # Recent centroid samples used for ID prediction
+  prediction_horizon_sec: 1.0  # Max seconds to extrapolate a lost/close track
+  prediction_weight: 0.8       # Blend predicted position vs last observed pixel
+  missed_track_cost_px: 187.5  # Prefer stale pose over a very unlikely blob match
+
+# ---- EKF Fusion ----
+fusion:
+  # Camera supplies x/y. Initial yaw is clicked in the GUI. /tb_N/odom
+  # supplies yaw deltas after that initial estimate.
+  initial_xy_std_m: 0.05
+  initial_yaw_std_rad: 0.25
+  position_measurement_std_m: 0.035
+  position_process_std_m: 0.02
+  yaw_process_std_rad: 0.03
+
+# ---- Direct Scheduled Multi-Agent Controller ----
+mppi:
+  control_rate_hz: 20.0
+  pose_timeout_s: 0.5
+  min_live_spacing_m: 0.25
+  control_mode: "scheduled"       # scheduled or mppi
+  planner_algorithm: "cbs"        # cbs or prioritized
+
+  dt: 0.05
+  room_size_m: 3.048
+  goal_radius_m: 0.12
+  wall_margin_m: 0.20
+
+  max_v_mps: 0.1
+  allow_reverse: true
+  max_reverse_v_mps: 0.1
+  max_w_radps: 0.5
+  max_dv_step: 0.03
+  max_dw_step: 0.18
+
+  safety_distance_m: 0.25
+  planning_clearance_m: 0.45
+  # MPPI-only settings, kept for control_mode: "mppi" comparison runs.
+  horizon: 256
+  samples: 512
+  mppi_iterations: 6
+
+  # Offline CBS/temporal-A* schedule. The scheduled controller tracks these
+  # timed waypoints directly so intersection conflicts become waits/passes.
+  offline_planner_enabled: true
+  offline_grid_resolution_m: 0.05
+  offline_time_step_s: 1.00
+  offline_max_time_steps: 180
+  offline_wait_penalty: 0.05
+  cbs_max_nodes: 512
+  waypoint_reached_m: 0.14
+  waypoint_lookahead_m: 0.5
+
+  # Deterministic path follower and ORCA-style runtime velocity filter.
+  path_heading_gain: 2.0
+  reverse_heading_threshold_rad: 2.20
+  path_slow_heading_rad: 0.70
+  path_stop_heading_rad: 1.40
+  path_goal_slowdown_m: 0.35
+  orca_filter_enabled: true
+  orca_radius_m: 0.2
+  orca_neighbor_dist_m: 1.5
+  orca_time_horizon_s: 3.0
+  orca_avoidance_gain: 3.0
+  orca_priority_enabled: true
+  orca_priority_strength: 5.0
+  orca_priority_fixed_bias: 0.25
+  orca_priority_wait_gain: 0.6
+  orca_priority_schedule_lag_gain: 0.2
+  orca_priority_min_share: 0.10
+  orca_priority_wait_speed_mps: 0.02
+  orca_priority_wait_decay_gain: 2.0
+  boundary_slowdown_margin_m: 0.15
+
+  # Optional central crossing critical-section gate. Leave disabled for
+  # map-wide priority-aware ORCA, enable for a known physical bottleneck.
+  crossing_gate_enabled: false
+  crossing_center_x_m: 0.0
+  crossing_center_y_m: 0.0
+  crossing_zone_radius_m: 0.36
+  crossing_entry_radius_m: 0.62
+  crossing_release_radius_m: 0.50
+  crossing_progress_timeout_s: 4.0
+  crossing_progress_epsilon_m: 0.03
+
+  # Publishes /fleet_mppi/velocity_status and /tb_N/cv_measured_velocity.
+  velocity_status_period_s: 1.0
+
+# ---- ROS2 ----
+ros:
+  global_frame: "map"
+  base_frame_pattern: "tb_{id}/base_footprint"
+  pose_topic_pattern: "/tb_{id}/cv_pose"
+  boundary_margin_m: 0.20     # Goals must be at least this far from workspace edges.
