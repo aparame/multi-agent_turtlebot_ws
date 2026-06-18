@@ -93,6 +93,21 @@ run as a failure, or `x` to stop collection. Dataset sampling is controlled by
 `overhead.png` frames are cropped to the calibrated workspace and resized to
 224x224 by default.
 
+#### Option D: RL-Based Policy With Live MA-VLCM Critic Monitor
+To run the same MARL policy while MA-VLCM live-plots and critiques the policy
+against cumulative reward, use the MA-VLCM convenience launcher:
+```bash
+cd /home/adi2440/Desktop/MARL_Shahil_Aditya/MA-VLCM
+export ROS_DOMAIN_ID=30
+bash scripts/run_tb3_vlcm_live_monitor.sh \
+  /home/adi2440/Desktop/MARL_Shahil_Aditya/MA-VLCM/checkpoints/NewFinal_0.5B.pt
+```
+
+The script starts `cv_rl_direct.launch.py`, MA-VLCM live inference on the
+`/fleet_vlcm` and `/tb_N` topics, and a small live plot of predicted return
+versus cumulative reward. Predictions are also logged to
+`MA-VLCM/outputs/results/tb3_live_predictions.csv`.
+
 ---
 
 ### Add to Huggingface
