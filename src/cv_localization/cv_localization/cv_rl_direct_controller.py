@@ -68,6 +68,8 @@ class RlControllerParams:
     min_live_spacing_m: float = 0.25
     room_size_m: float = 3.048
     goal_radius_m: float = 0.12
+    goal_termination_v_mps: float = 0.0
+    goal_termination_w_radps: float = 0.0
     max_v_mps: float = 0.1
     max_w_radps: float = 1.0
     max_dv_step: float = 0.03
@@ -516,6 +518,30 @@ def filter_commands_for_safety(
     return filtered.astype(np.float32)
 
 
+def goal_reached(pose: Pose2D, goal: Optional[Pose2D], params: RlControllerParams) -> bool:
+    if goal is None:
+        return False
+    return float(np.linalg.norm(pose.xy - goal.xy)) <= params.goal_radius_m
+
+
+def apply_goal_termination_commands(
+    poses: Sequence[Pose2D],
+    goals: Sequence[Optional[Pose2D]],
+    commands: np.ndarray,
+    params: RlControllerParams,
+) -> np.ndarray:
+    out = np.asarray(commands, dtype=np.float32).copy()
+    terminal_v = float(np.clip(params.goal_termination_v_mps, 0.0, params.max_v_mps))
+    terminal_w = float(
+        np.clip(params.goal_termination_w_radps, -params.max_w_radps, params.max_w_radps)
+    )
+    for i, (pose, goal) in enumerate(zip(poses, goals)):
+        if goal_reached(pose, goal, params):
+            out[i, 0] = terminal_v
+            out[i, 1] = terminal_w
+    return out.astype(np.float32)
+
+
 def slew_limit_commands(
     commands: np.ndarray,
     previous_commands: np.ndarray,
@@ -540,6 +566,22 @@ def slew_limit_commands(
     return out.astype(np.float32)
 
 
+def validate_aero_marl_root(aero_root: Path) -> Path:
+    if not aero_root.exists():
+        raise FileNotFoundError(f"AERO-MARL root does not exist: {aero_root}")
+    if not aero_root.is_dir():
+        raise NotADirectoryError(
+            "aero_marl_root must be the AERO-MARL repository directory containing "
+            f"mat/config.py, not a checkpoint file: {aero_root}"
+        )
+    if not (aero_root / "mat" / "config.py").exists():
+        raise FileNotFoundError(
+            "aero_marl_root must point to the AERO-MARL repository root containing "
+            f"mat/config.py; got: {aero_root}"
+        )
+    return aero_root
+
+
 class MatPolicyAdapter:
     """Small direct wrapper around AERO-MARL TransformerPolicy."""
 
@@ -553,9 +595,7 @@ class MatPolicyAdapter:
         model_path = Path(params.model_dir).expanduser()
         if not model_path.exists():
             raise FileNotFoundError(f"RL checkpoint does not exist: {model_path}")
-        aero_root = Path(params.aero_marl_root).expanduser()
-        if not aero_root.exists():
-            raise FileNotFoundError(f"AERO-MARL root does not exist: {aero_root}")
+        aero_root = validate_aero_marl_root(Path(params.aero_marl_root).expanduser())
         root_str = str(aero_root)
         if root_str not in sys.path:
             sys.path.insert(0, root_str)
@@ -844,6 +884,8 @@ class CVRlDirectController(Node):
         declare("min_live_spacing_m", 0.25)
         declare("room_size_m", 3.048)
         declare("goal_radius_m", 0.12)
+        declare("goal_termination_v_mps", 0.0)
+        declare("goal_termination_w_radps", 0.0)
         declare("max_v_mps", 0.1)
         declare("max_w_radps", 1.0)
         declare("max_dv_step", 0.03)
@@ -883,6 +925,8 @@ class CVRlDirectController(Node):
             min_live_spacing_m=float(get("min_live_spacing_m")),
             room_size_m=float(get("room_size_m")),
             goal_radius_m=float(get("goal_radius_m")),
+            goal_termination_v_mps=float(get("goal_termination_v_mps")),
+            goal_termination_w_radps=float(get("goal_termination_w_radps")),
             max_v_mps=float(get("max_v_mps")),
             max_w_radps=float(get("max_w_radps")),
             max_dv_step=float(get("max_dv_step")),
@@ -1087,10 +1131,13 @@ class CVRlDirectController(Node):
             [scale_policy_action(action, self.params) for action in motion_actions],
             dtype=np.float32,
         )
+        commands = apply_goal_termination_commands(poses, goals, commands, self.params)
         self.update_priority_wait(commands)
         priorities = self.compute_priorities()
         commands = filter_commands_for_safety(poses, commands, self.params, priorities)
+        commands = apply_goal_termination_commands(poses, goals, commands, self.params)
         commands = slew_limit_commands(commands, previous, self.params)
+        commands = apply_goal_termination_commands(poses, goals, commands, self.params)
         for i, robot in enumerate(self.robot_names):
             self.publish_control(robot, commands[i])
         self.publish_velocity_status()

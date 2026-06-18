@@ -2,6 +2,7 @@
 """Camera GUI for marker-free CV localization and direct MPPI control."""
 
 import argparse
+import json
 import math
 import os
 import sys
@@ -18,10 +19,13 @@ import rclpy
 from rclpy.executors import ExternalShutdownException
 from rclpy.node import Node
 from rclpy.utilities import remove_ros_args
+from sensor_msgs.msg import CompressedImage
+from std_msgs.msg import String
 from std_srvs.srv import Trigger
 from tf2_ros import TransformBroadcaster
 
 from cv_localization.detector import ROBOT_COLORS, RobotDetector
+from cv_localization.image_utils import crop_resize_workspace_frame
 
 
 COLORS = ROBOT_COLORS
@@ -118,6 +122,7 @@ class CVMppiDirectGui(Node):
         track_cfg = cfg.get('tracking', {})
         workspace_cfg = cfg.get('workspace', {})
         mppi_cfg = cfg.get('mppi', {})
+        collection_cfg = cfg.get('vlcm_collection', {})
         self.fusion_cfg = cfg.get('fusion', {})
 
         self.global_frame = ros_cfg.get('global_frame', 'map')
@@ -186,6 +191,16 @@ class CVMppiDirectGui(Node):
         self.stop_client = self.create_client(Trigger, '/fleet_mppi/stop')
         self.clear_client = self.create_client(Trigger, '/fleet_mppi/clear_goals')
         self.plan_client = self.create_client(Trigger, '/fleet_mppi/plan')
+        self.collection_frame_pub = self.create_publisher(
+            CompressedImage, '/fleet_vlcm/overhead/compressed', 10)
+        self.collection_key_pub = self.create_publisher(
+            String, '/fleet_vlcm/key_event', 10)
+        self.create_subscription(
+            String,
+            '/fleet_vlcm/pending_goals',
+            self._collection_goals_cb,
+            10,
+        )
 
         self.identities_initialized = False
         self.next_identity_index = 0
@@ -197,6 +212,24 @@ class CVMppiDirectGui(Node):
         self.latest_blobs = []
         self.latest_poses = {}
         self.last_goal_publish = 0.0
+        self.collection_goal_preview = {}
+        self.collection_goal_state = ''
+        self.vlcm_frame_publish_hz = float(
+            self.declare_parameter(
+                'vlcm_frame_publish_hz',
+                float(collection_cfg.get('sample_rate_hz', 30.0)),
+            ).value)
+        self.vlcm_crop_to_workspace = bool(
+            self.declare_parameter(
+                'vlcm_crop_to_workspace',
+                bool(collection_cfg.get('crop_to_workspace', True)),
+            ).value)
+        self.vlcm_frame_size_px = int(
+            self.declare_parameter(
+                'vlcm_frame_size_px',
+                int(collection_cfg.get('image_size_px', 224)),
+            ).value)
+        self.last_collection_frame_publish = 0.0
         self.should_exit = False
 
         self.window_name = 'CV Scheduled Multi-Agent Control'
@@ -232,6 +265,29 @@ class CVMppiDirectGui(Node):
             (pose.pose.position.x, pose.pose.position.y)
             for pose in msg.poses
         ]
+
+    def _collection_goals_cb(self, msg):
+        try:
+            payload = json.loads(msg.data)
+        except json.JSONDecodeError:
+            self.get_logger().warning('Ignored malformed VLCM goal preview message.')
+            return
+        state = payload.get('state', '')
+        if state == 'clear':
+            self.collection_goal_preview = {}
+            self.collection_goal_state = ''
+            return
+        preview = {}
+        for item in payload.get('goals', []):
+            robot = str(item.get('robot', ''))
+            if robot.startswith('tb_'):
+                try:
+                    rid = int(robot.split('_', 1)[1])
+                    preview[rid] = (float(item['x']), float(item['y']))
+                except (KeyError, TypeError, ValueError):
+                    continue
+        self.collection_goal_preview = preview
+        self.collection_goal_state = state
 
     def _mouse_cb(self, event, x, y, _flags, _param):
         if event != cv2.EVENT_LBUTTONDOWN:
@@ -340,6 +396,7 @@ class CVMppiDirectGui(Node):
         if not ret:
             self.get_logger().warning('Camera read failed')
             return
+        self._publish_collection_frame(frame)
 
         if not self.identities_initialized:
             self.latest_blobs = self.detector._detect_blobs(frame)
@@ -413,6 +470,8 @@ class CVMppiDirectGui(Node):
                 f'Click goal for tb_{rid} (>= {self.boundary_margin_m:.2f} m from boundary)')
         else:
             lines.append('Goals ready. Enter=start, Space/Esc=stop, r=clear goals, q=quit')
+        if self.collection_goal_preview:
+            lines.append('VLCM: a=accept, n=new goals, f=fail run, x=stop collection')
         lines.append('Fusion: camera x/y + clicked initial yaw + odom yaw deltas')
         lines.append('Control: direct velocity + runtime safety filter')
         lines.append('Fixed background mode: runtime recapture disabled')
@@ -440,6 +499,18 @@ class CVMppiDirectGui(Node):
                            markerSize=28, thickness=3)
             cv2.circle(vis, (px, py), 18, color, 2)
             cv2.putText(vis, f'tb_{rid} goal', (px + 22, py - 10),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.55, color, 2)
+
+        for rid, (wx, wy) in self.collection_goal_preview.items():
+            color = COLORS.get(rid, (255, 255, 255))
+            px, py = self.detector.world_to_pixel(wx, wy)
+            cv2.drawMarker(vis, (px, py), color, markerType=cv2.MARKER_TILTED_CROSS,
+                           markerSize=30, thickness=3)
+            cv2.circle(vis, (px, py), 24, color, 2)
+            label = f'VLCM tb_{rid}'
+            if self.collection_goal_state:
+                label += f' {self.collection_goal_state}'
+            cv2.putText(vis, label, (px + 24, py + 18),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.55, color, 2)
 
         for rid, pose in self.latest_poses.items():
@@ -487,6 +558,8 @@ class CVMppiDirectGui(Node):
     def _handle_key(self, key):
         if key in (255, -1):
             return
+        if key in (ord('a'), ord('n'), ord('f'), ord('x')):
+            self._publish_collection_key(chr(key))
         if key in (13, 10):
             if len(self.goals) == len(self.robot_ids):
                 self._call_trigger(self.start_client, 'start')
@@ -503,6 +576,40 @@ class CVMppiDirectGui(Node):
         elif key == ord('q'):
             self._call_trigger(self.stop_client, 'stop')
             self.should_exit = True
+
+    def _publish_collection_key(self, key):
+        msg = String()
+        msg.data = key
+        self.collection_key_pub.publish(msg)
+
+    def _publish_collection_frame(self, frame):
+        now = time.monotonic()
+        if self.vlcm_frame_publish_hz <= 0.0:
+            return
+        if now - self.last_collection_frame_publish < 1.0 / self.vlcm_frame_publish_hz:
+            return
+        frame_to_save = self._prepare_collection_frame(frame)
+        ok, encoded = cv2.imencode('.png', frame_to_save)
+        if not ok:
+            self.get_logger().warning('Failed to encode VLCM overhead frame.')
+            return
+        msg = CompressedImage()
+        msg.header.stamp = self.get_clock().now().to_msg()
+        msg.header.frame_id = self.global_frame
+        msg.format = 'png'
+        msg.data = encoded.tobytes()
+        self.collection_frame_pub.publish(msg)
+        self.last_collection_frame_publish = now
+
+    def _prepare_collection_frame(self, frame):
+        size_px = max(1, int(self.vlcm_frame_size_px))
+        if self.vlcm_crop_to_workspace:
+            return crop_resize_workspace_frame(
+                frame,
+                self.detector.workspace_pixel_corners,
+                size_px,
+            )
+        return cv2.resize(frame, (size_px, size_px), interpolation=cv2.INTER_AREA)
 
     def _republish_goals(self):
         now = time.monotonic()

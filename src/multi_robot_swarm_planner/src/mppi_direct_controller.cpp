@@ -323,6 +323,28 @@ private:
     rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr offline_path_pub;
   };
 
+  struct ClosePassYieldPeer
+  {
+    size_t yield_index{0};
+    int initial_lateral_sign{0};
+    double initial_forward_m{0.0};
+  };
+
+  struct ClosePassYieldState
+  {
+    size_t pass_index{0};
+    std::vector<ClosePassYieldPeer> peers;
+    rclcpp::Time acquired_time{0, 0, RCL_ROS_TIME};
+  };
+
+  struct ClosePassGeometry
+  {
+    double distance_m{0.0};
+    double forward_m{0.0};
+    double lateral_m{0.0};
+    int lateral_sign{0};
+  };
+
   void handlePose(const std::string & robot, const geometry_msgs::msg::PoseStamped & msg)
   {
     auto & state = robots_[robot];
@@ -393,6 +415,8 @@ private:
       state.orca_priority_wait_s = 0.0;
       plan_requested_ = true;
       resetCrossingGate();
+      close_pass_yield_.reset();
+      close_pass_cooldown_group_.reset();
       publishStatus(
         "stored " + robot + " direct goal x=" + std::to_string(msg.point.x) +
         " y=" + std::to_string(msg.point.y),
@@ -490,9 +514,19 @@ private:
       return;
     }
 
+    std::vector<DirectMppiControl> controls = result.controls;
+    std::vector<WorldVelocity> world_velocities;
+    world_velocities.reserve(robot_names_.size());
+    for (size_t i = 0; i < robot_names_.size(); ++i) {
+      world_velocities.push_back(controlToWorld(robots_.at(robot_names_[i]).pose, controls[i]));
+    }
+    const std::vector<bool> close_pass_holds =
+      updateClosePassYield(controls, world_velocities, computeOrcaPriorityScores());
+
     for (size_t i = 0; i < robot_names_.size(); ++i) {
       auto & runtime = robots_.at(robot_names_[i]);
-      runtime.last_control = publishControl(runtime, result.controls[i]);
+      const DirectMppiControl control = close_pass_holds[i] ? DirectMppiControl{} : controls[i];
+      runtime.last_control = publishControl(runtime, control);
     }
     publishVelocityStatus();
   }
@@ -532,17 +566,25 @@ private:
       applyCrossingGate(preferred_controls, world_velocities);
     updateOrcaPriorityAging(preferred_controls, crossing_gate_holds);
     const std::vector<double> orca_priorities = computeOrcaPriorityScores();
+    const std::vector<bool> close_pass_holds =
+      updateClosePassYield(preferred_controls, world_velocities, orca_priorities);
+    const std::vector<bool> hard_holds = combineHolds(crossing_gate_holds, close_pass_holds);
+    applyVelocityHolds(world_velocities, hard_holds);
     if (orca_filter_enabled_) {
-      applyOrcaLikeFilter(world_velocities, crossing_gate_holds, orca_priorities);
+      applyOrcaLikeFilter(world_velocities, hard_holds, orca_priorities);
     }
+    applyVelocityHolds(world_velocities, hard_holds);
     applyBoundaryVelocityFilter(world_velocities);
+    applyVelocityHolds(world_velocities, hard_holds);
 
     for (size_t i = 0; i < robot_names_.size(); ++i) {
       auto & runtime = robots_.at(robot_names_[i]);
-      const DirectMppiControl filtered = mergeFilteredLinearWithPreferredTurn(
-        runtime.pose,
-        preferred_controls[i],
-        world_velocities[i]);
+      const DirectMppiControl filtered = close_pass_holds[i] ?
+        DirectMppiControl{} :
+        mergeFilteredLinearWithPreferredTurn(
+          runtime.pose,
+          preferred_controls[i],
+          world_velocities[i]);
       runtime.last_control = publishControl(runtime, filtered);
     }
     publishVelocityStatus();
@@ -637,6 +679,485 @@ private:
     return WorldVelocity{
       static_cast<double>(control.v) * std::cos(static_cast<double>(pose.theta)),
       static_cast<double>(control.v) * std::sin(static_cast<double>(pose.theta))};
+  }
+
+  double closePassTriggerDistance() const
+  {
+    const double safety_trigger =
+      static_cast<double>(planner_params_.safety_distance_m) + kClosePassTriggerPaddingM;
+    const double radius_trigger = 2.0 * orca_radius_m_ + kClosePassRadiusPaddingM;
+    return std::max(min_live_spacing_m_, std::max(safety_trigger, radius_trigger));
+  }
+
+  double closePassReleaseDistance() const
+  {
+    return closePassTriggerDistance() + kClosePassReleasePaddingM;
+  }
+
+  double closePassAxisHeading(
+    size_t pass_index,
+    const std::vector<WorldVelocity> & velocities,
+    const std::vector<DirectMppiControl> & controls) const
+  {
+    if (pass_index < velocities.size()) {
+      const auto & velocity = velocities[pass_index];
+      if (std::hypot(velocity.x, velocity.y) > std::max(1e-3, orca_priority_wait_speed_mps_)) {
+        return std::atan2(velocity.y, velocity.x);
+      }
+    }
+
+    const auto & runtime = robots_.at(robot_names_[pass_index]);
+    double heading = static_cast<double>(runtime.pose.theta);
+    if (pass_index < controls.size() && controls[pass_index].v < 0.0f) {
+      heading = normalizeAngle(heading + M_PI);
+    }
+    return heading;
+  }
+
+  ClosePassGeometry closePassGeometry(
+    size_t pass_index,
+    size_t yield_index,
+    const std::vector<WorldVelocity> & velocities,
+    const std::vector<DirectMppiControl> & controls) const
+  {
+    const auto & pass_pose = robots_.at(robot_names_[pass_index]).pose;
+    const auto & yield_pose = robots_.at(robot_names_[yield_index]).pose;
+    const double dx = static_cast<double>(yield_pose.x - pass_pose.x);
+    const double dy = static_cast<double>(yield_pose.y - pass_pose.y);
+    const double axis = closePassAxisHeading(pass_index, velocities, controls);
+    const double cos_axis = std::cos(axis);
+    const double sin_axis = std::sin(axis);
+
+    ClosePassGeometry geometry;
+    geometry.distance_m = std::hypot(dx, dy);
+    geometry.forward_m = dx * cos_axis + dy * sin_axis;
+    geometry.lateral_m = -dx * sin_axis + dy * cos_axis;
+    if (geometry.lateral_m > kClosePassLateralReleaseM) {
+      geometry.lateral_sign = 1;
+    } else if (geometry.lateral_m < -kClosePassLateralReleaseM) {
+      geometry.lateral_sign = -1;
+    }
+    return geometry;
+  }
+
+  bool wantsClosePassProgress(
+    const RobotRuntime & runtime,
+    const DirectMppiControl & control) const
+  {
+    if (!runtime.has_goal ||
+      distance2d(runtime.pose, runtime.goal) <= planner_params_.goal_radius_m)
+    {
+      return false;
+    }
+    return std::abs(static_cast<double>(control.v)) > 0.005;
+  }
+
+  bool componentWantsProgress(
+    const std::vector<size_t> & component,
+    const std::vector<DirectMppiControl> & preferred_controls) const
+  {
+    for (const size_t index : component) {
+      if (index < preferred_controls.size() &&
+        wantsClosePassProgress(robots_.at(robot_names_[index]), preferred_controls[index]))
+      {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  double componentMinimumSpacing(const std::vector<size_t> & component) const
+  {
+    double best = std::numeric_limits<double>::infinity();
+    for (size_t i = 0; i < component.size(); ++i) {
+      for (size_t j = i + 1; j < component.size(); ++j) {
+        best = std::min(
+          best,
+          distance2d(
+            robots_.at(robot_names_[component[i]]).pose,
+            robots_.at(robot_names_[component[j]]).pose));
+      }
+    }
+    return best;
+  }
+
+  static bool containsIndex(const std::vector<size_t> & indices, size_t index)
+  {
+    return std::find(indices.begin(), indices.end(), index) != indices.end();
+  }
+
+  bool componentOverlapsCooldown(const std::vector<size_t> & component) const
+  {
+    if (!close_pass_cooldown_group_) {
+      return false;
+    }
+    for (const size_t index : component) {
+      if (containsIndex(*close_pass_cooldown_group_, index)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  void updateClosePassCooldown(double trigger_m)
+  {
+    if (!close_pass_cooldown_group_) {
+      return;
+    }
+
+    const auto group = *close_pass_cooldown_group_;
+    bool still_close = false;
+    for (size_t i = 0; i < group.size() && !still_close; ++i) {
+      for (size_t j = i + 1; j < group.size(); ++j) {
+        if (group[i] >= robot_names_.size() || group[j] >= robot_names_.size()) {
+          continue;
+        }
+        const double distance = distance2d(
+          robots_.at(robot_names_[group[i]]).pose,
+          robots_.at(robot_names_[group[j]]).pose);
+        if (distance < trigger_m) {
+          still_close = true;
+          break;
+        }
+      }
+    }
+    if (!still_close) {
+      close_pass_cooldown_group_.reset();
+    }
+  }
+
+  std::vector<size_t> closePassComponentContaining(size_t root, double edge_threshold_m) const
+  {
+    std::vector<size_t> component;
+    if (root >= robot_names_.size()) {
+      return component;
+    }
+
+    std::vector<bool> visited(robot_names_.size(), false);
+    std::queue<size_t> queue;
+    visited[root] = true;
+    queue.push(root);
+    while (!queue.empty()) {
+      const size_t current = queue.front();
+      queue.pop();
+      component.push_back(current);
+
+      for (size_t other = 0; other < robot_names_.size(); ++other) {
+        if (visited[other] || other == current) {
+          continue;
+        }
+        const double distance = distance2d(
+          robots_.at(robot_names_[current]).pose,
+          robots_.at(robot_names_[other]).pose);
+        if (distance <= edge_threshold_m) {
+          visited[other] = true;
+          queue.push(other);
+        }
+      }
+    }
+    return component;
+  }
+
+  std::vector<std::vector<size_t>> closePassComponents(double edge_threshold_m) const
+  {
+    std::vector<std::vector<size_t>> components;
+    std::vector<bool> visited(robot_names_.size(), false);
+    for (size_t root = 0; root < robot_names_.size(); ++root) {
+      if (visited[root]) {
+        continue;
+      }
+
+      std::vector<size_t> component;
+      std::queue<size_t> queue;
+      visited[root] = true;
+      queue.push(root);
+      while (!queue.empty()) {
+        const size_t current = queue.front();
+        queue.pop();
+        component.push_back(current);
+
+        for (size_t other = 0; other < robot_names_.size(); ++other) {
+          if (visited[other] || other == current) {
+            continue;
+          }
+          const double distance = distance2d(
+            robots_.at(robot_names_[current]).pose,
+            robots_.at(robot_names_[other]).pose);
+          if (distance <= edge_threshold_m) {
+            visited[other] = true;
+            queue.push(other);
+          }
+        }
+      }
+
+      if (component.size() > 1) {
+        components.push_back(std::move(component));
+      }
+    }
+    return components;
+  }
+
+  size_t chooseClosePassWinner(
+    const std::vector<size_t> & component,
+    const std::vector<DirectMppiControl> & preferred_controls,
+    const std::vector<double> & priorities) const
+  {
+    size_t best = component.front();
+    for (const size_t candidate : component) {
+      const bool candidate_wants = candidate < preferred_controls.size() &&
+        wantsClosePassProgress(robots_.at(robot_names_[candidate]), preferred_controls[candidate]);
+      const bool best_wants = best < preferred_controls.size() &&
+        wantsClosePassProgress(robots_.at(robot_names_[best]), preferred_controls[best]);
+      if (candidate_wants != best_wants) {
+        if (candidate_wants) {
+          best = candidate;
+        }
+        continue;
+      }
+
+      if (priorities.size() == robot_names_.size() &&
+        std::abs(priorities[candidate] - priorities[best]) > 1e-6)
+      {
+        if (priorities[candidate] > priorities[best]) {
+          best = candidate;
+        }
+        continue;
+      }
+
+      const double candidate_speed = candidate < preferred_controls.size() ?
+        std::abs(static_cast<double>(preferred_controls[candidate].v)) :
+        0.0;
+      const double best_speed = best < preferred_controls.size() ?
+        std::abs(static_cast<double>(preferred_controls[best].v)) :
+        0.0;
+      if (std::abs(candidate_speed - best_speed) > 1e-6) {
+        if (candidate_speed > best_speed) {
+          best = candidate;
+        }
+        continue;
+      }
+
+      if (candidate < best) {
+        best = candidate;
+      }
+    }
+    return best;
+  }
+
+  ClosePassYieldPeer makeClosePassPeer(
+    size_t pass_index,
+    size_t yield_index,
+    const std::vector<WorldVelocity> & velocities,
+    const std::vector<DirectMppiControl> & controls) const
+  {
+    const auto geometry = closePassGeometry(pass_index, yield_index, velocities, controls);
+    ClosePassYieldPeer peer;
+    peer.yield_index = yield_index;
+    peer.initial_lateral_sign = geometry.lateral_sign;
+    peer.initial_forward_m = geometry.forward_m;
+    return peer;
+  }
+
+  void syncClosePassPeers(
+    ClosePassYieldState & state,
+    const std::vector<size_t> & component,
+    const std::vector<WorldVelocity> & velocities,
+    const std::vector<DirectMppiControl> & controls) const
+  {
+    for (const size_t index : component) {
+      if (index == state.pass_index) {
+        continue;
+      }
+      const auto found = std::find_if(
+        state.peers.begin(),
+        state.peers.end(),
+        [index](const ClosePassYieldPeer & peer) {
+          return peer.yield_index == index;
+        });
+      if (found == state.peers.end()) {
+        state.peers.push_back(makeClosePassPeer(state.pass_index, index, velocities, controls));
+      }
+    }
+  }
+
+  bool closePassPeerClear(
+    const ClosePassYieldState & state,
+    const ClosePassYieldPeer & peer,
+    const std::vector<WorldVelocity> & velocities,
+    const std::vector<DirectMppiControl> & controls) const
+  {
+    const auto geometry = closePassGeometry(
+      state.pass_index, peer.yield_index, velocities, controls);
+    const bool distance_clear = geometry.distance_m >= closePassReleaseDistance();
+    const bool side_flipped =
+      peer.initial_lateral_sign != 0 &&
+      geometry.lateral_sign != 0 &&
+      geometry.lateral_sign != peer.initial_lateral_sign &&
+      geometry.distance_m >= min_live_spacing_m_;
+    const bool pass_ahead =
+      peer.initial_forward_m >= -kClosePassForwardReleaseM &&
+      geometry.forward_m <= -kClosePassForwardReleaseM &&
+      geometry.distance_m >= min_live_spacing_m_;
+    return distance_clear || side_flipped || pass_ahead;
+  }
+
+  std::string closePassHoldList(
+    const std::vector<size_t> & component,
+    size_t pass_index) const
+  {
+    std::ostringstream stream;
+    bool first = true;
+    for (const size_t index : component) {
+      if (index == pass_index) {
+        continue;
+      }
+      if (!first) {
+        stream << ",";
+      }
+      stream << robot_names_[index];
+      first = false;
+    }
+    return stream.str();
+  }
+
+  std::vector<bool> updateClosePassYield(
+    const std::vector<DirectMppiControl> & preferred_controls,
+    const std::vector<WorldVelocity> & preferred_world_velocities,
+    const std::vector<double> & priorities)
+  {
+    std::vector<bool> held(robot_names_.size(), false);
+    const double trigger_m = closePassTriggerDistance();
+    const double release_m = closePassReleaseDistance();
+    const auto now = this->now();
+
+    updateClosePassCooldown(trigger_m);
+
+    if (close_pass_yield_) {
+      auto state = *close_pass_yield_;
+      if (state.pass_index >= robot_names_.size()) {
+        close_pass_yield_.reset();
+      } else {
+        std::vector<size_t> component =
+          closePassComponentContaining(state.pass_index, release_m);
+        if (component.size() <= 1) {
+          close_pass_cooldown_group_.reset();
+          close_pass_yield_.reset();
+        } else {
+          syncClosePassPeers(state, component, preferred_world_velocities, preferred_controls);
+
+          bool all_clear = true;
+          for (const auto & peer : state.peers) {
+            if (!containsIndex(component, peer.yield_index)) {
+              continue;
+            }
+            if (!closePassPeerClear(state, peer, preferred_world_velocities, preferred_controls)) {
+              all_clear = false;
+              break;
+            }
+          }
+
+          const bool pass_reached_goal =
+            distance2d(
+              robots_.at(robot_names_[state.pass_index]).pose,
+              robots_.at(robot_names_[state.pass_index]).goal) <= planner_params_.goal_radius_m;
+          const bool timed_out =
+            (now - state.acquired_time).seconds() >= kClosePassTimeoutS;
+
+          if (all_clear || pass_reached_goal || timed_out) {
+            publishStatus(
+              "close-pass cluster released after " + robot_names_[state.pass_index] +
+              " passed",
+              true);
+            close_pass_cooldown_group_ = component;
+            close_pass_yield_.reset();
+          } else {
+            for (const size_t index : component) {
+              if (index != state.pass_index && index < held.size()) {
+                held[index] = true;
+              }
+            }
+            close_pass_yield_ = state;
+            return held;
+          }
+        }
+      }
+    }
+
+    const auto components = closePassComponents(trigger_m);
+    double best_distance = std::numeric_limits<double>::infinity();
+    std::vector<size_t> best_component;
+    for (const auto & component : components) {
+      if (componentOverlapsCooldown(component) ||
+        !componentWantsProgress(component, preferred_controls))
+      {
+        continue;
+      }
+
+      const double min_spacing = componentMinimumSpacing(component);
+      if (min_spacing < best_distance) {
+        best_distance = min_spacing;
+        best_component = component;
+      }
+    }
+
+    if (best_component.empty()) {
+      return held;
+    }
+
+    const size_t pass_index =
+      chooseClosePassWinner(best_component, preferred_controls, priorities);
+    ClosePassYieldState state;
+    state.pass_index = pass_index;
+    state.acquired_time = now;
+    syncClosePassPeers(state, best_component, preferred_world_velocities, preferred_controls);
+
+    bool needs_hold = false;
+    for (const auto & peer : state.peers) {
+      if (!closePassPeerClear(state, peer, preferred_world_velocities, preferred_controls)) {
+        needs_hold = true;
+        break;
+      }
+    }
+    if (!needs_hold) {
+      close_pass_cooldown_group_ = best_component;
+      return held;
+    }
+
+    for (const size_t index : best_component) {
+      if (index != pass_index && index < held.size()) {
+        held[index] = true;
+      }
+    }
+    close_pass_yield_ = state;
+
+    std::ostringstream stream;
+    stream << "close-pass cluster: holding " << closePassHoldList(best_component, pass_index)
+           << " so " << robot_names_[pass_index] << " can pass"
+           << " (spacing=" << std::fixed << std::setprecision(2) << best_distance << " m)";
+    publishStatus(stream.str(), true);
+    return held;
+  }
+
+  static std::vector<bool> combineHolds(
+    const std::vector<bool> & a,
+    const std::vector<bool> & b)
+  {
+    std::vector<bool> combined(std::max(a.size(), b.size()), false);
+    for (size_t i = 0; i < combined.size(); ++i) {
+      combined[i] = (i < a.size() && a[i]) || (i < b.size() && b[i]);
+    }
+    return combined;
+  }
+
+  void applyVelocityHolds(
+    std::vector<WorldVelocity> & velocities,
+    const std::vector<bool> & holds) const
+  {
+    for (size_t i = 0; i < velocities.size() && i < holds.size(); ++i) {
+      if (holds[i]) {
+        velocities[i] = WorldVelocity{};
+      }
+    }
   }
 
   double distanceToCrossing(const DirectMppiState & pose) const
@@ -2002,6 +2523,8 @@ private:
     active_ = false;
     schedule_start_time_.reset();
     resetCrossingGate();
+    close_pass_yield_.reset();
+    close_pass_cooldown_group_.reset();
     for (auto & entry : robots_) {
       entry.second.last_control = DirectMppiControl{0.0f, 0.0f};
       entry.second.orca_priority_wait_s = 0.0;
@@ -2150,6 +2673,8 @@ private:
   rclcpp::Time last_status_time_{0, 0, RCL_ROS_TIME};
   rclcpp::Time last_velocity_status_time_{0, 0, RCL_ROS_TIME};
   std::optional<rclcpp::Time> schedule_start_time_;
+  std::optional<ClosePassYieldState> close_pass_yield_;
+  std::optional<std::vector<size_t>> close_pass_cooldown_group_;
   std::optional<std::string> crossing_token_robot_;
   std::optional<std::string> crossing_last_token_robot_;
   bool crossing_token_entered_zone_{false};
@@ -2167,6 +2692,13 @@ private:
   rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr clear_srv_;
   rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr plan_srv_;
   rclcpp::TimerBase::SharedPtr timer_;
+
+  static constexpr double kClosePassTriggerPaddingM = 0.12;
+  static constexpr double kClosePassRadiusPaddingM = 0.08;
+  static constexpr double kClosePassReleasePaddingM = 0.17;
+  static constexpr double kClosePassLateralReleaseM = 0.03;
+  static constexpr double kClosePassForwardReleaseM = 0.10;
+  static constexpr double kClosePassTimeoutS = 5.0;
 };
 
 }  // namespace multi_robot_swarm_planner

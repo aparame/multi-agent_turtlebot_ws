@@ -43,6 +43,8 @@ source install/setup.bash
 ### 3. Remote Robot Bringup (Terminal A)
 Ensure the robots and your PC share the same domain and start remote hardware bringup over SSH:
 ```bash
+cd ~/turtlebot_ws
+source install/setup.bash
 export ROS_DOMAIN_ID=30
 ros2 run ros_multi_robot_navigation bringup_lab_robots \
   --identity-file ~/.ssh/turtlebot_lab_ed25519
@@ -53,18 +55,51 @@ Start the central operator control node using one of the two modes:
 
 #### Option A: Model-Based (Scheduled CBS & ORCA Planner)
 ```bash
+cd ~/turtlebot_ws
+source install/setup.bash
+export ROS_DOMAIN_ID=30
 ros2 launch cv_localization cv_mppi_direct.launch.py
 ```
 
 #### Option B: RL-Based (AERO-MARL Checkpoint Policy)
 To evaluate the MARL policy, run the launch file pointing to the repository's saved model checkpoint:
 ```bash
+cd ~/turtlebot_ws
+source install/setup.bash
+export ROS_DOMAIN_ID=30
 ros2 launch cv_localization cv_rl_direct.launch.py \
   model_dir:=/home/adi2440/turtlebot_ws/models/transformer_800.pt \
-  aero_marl_root:=models/transformer_800.pt
+  aero_marl_root:=/home/adi2440/Desktop/MARL_Shahil_Aditya/AERO-MARL
 ```
 
+#### Option C: RL-Based Live MA-VLCM Data Collection
+To collect TurtleBot lab episodes for MA-VLCM fine tuning, launch the RL controller,
+GUI, and WebDataset collector together:
+```bash
+cd ~/turtlebot_ws
+source install/setup.bash
+export ROS_DOMAIN_ID=30
+ros2 launch cv_localization cv_rl_vlcm_collect.launch.py \
+  model_dir:=/home/adi2440/turtlebot_ws/models/transformer_800.pt \
+  aero_marl_root:=/home/adi2440/Desktop/MARL_Shahil_Aditya/AERO-MARL \
+  episodes:=100 \
+  dataset_dir:=/home/adi2440/Desktop/MARL_Shahil_Aditya/MA-VLCM/data/tb3_lab
+```
+
+After robot identity and heading setup in the GUI, the collector previews random
+goals. Press `a` to accept/start, `n` to regenerate, `f` to save the current
+run as a failure, or `x` to stop collection. Dataset sampling is controlled by
+`vlcm_collection.sample_rate_hz` in `config.yaml` and defaults to 30 Hz. Saved
+`overhead.png` frames are cropped to the calibrated workspace and resized to
+224x224 by default.
+
 ---
+
+### Add to Huggingface
+```bash
+cd /home/adi2440/Desktop/MARL_Shahil_Aditya/MA-VLCM
+python scripts/upload_tb3_lab_dataset.py data/tb3_lab --repo-id adi2440/tb3-lab-vlcm
+```
 
 ## 🎮 Operator GUI Workflow
 

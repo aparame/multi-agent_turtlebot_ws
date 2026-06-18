@@ -49,6 +49,12 @@ tracking:
   prediction_weight: 0.8       # Blend predicted position vs last observed pixel
   missed_track_cost_px: 187.5  # Prefer stale pose over a very unlikely blob match
 
+# ---- Live MA-VLCM Dataset Collection ----
+vlcm_collection:
+  sample_rate_hz: 20.0         # WebDataset frame/state sampling rate
+  crop_to_workspace: true      # Save only the calibrated workspace region
+  image_size_px: 224           # Saved overhead.png size is image_size_px square
+
 # ---- EKF Fusion ----
 fusion:
   # Camera supplies x/y. Initial yaw is clicked in the GUI. /tb_N/odom
@@ -63,23 +69,25 @@ fusion:
 mppi:
   control_rate_hz: 20.0
   pose_timeout_s: 0.5
-  min_live_spacing_m: 0.25
+  min_live_spacing_m: 0.22
   control_mode: "scheduled"       # scheduled or mppi
-  planner_algorithm: "cbs"        # cbs or prioritized
+  planner_algorithm: "prioritized"        # cbs or prioritized
 
   dt: 0.05
   room_size_m: 3.048
   goal_radius_m: 0.12
-  wall_margin_m: 0.20
+  goal_termination_v_mps: 0.0
+  goal_termination_w_radps: 0.0
+  wall_margin_m: 0.15
 
   max_v_mps: 0.1
   allow_reverse: true
-  max_reverse_v_mps: 0.1
+  max_reverse_v_mps: 0.15
   max_w_radps: 0.5
   max_dv_step: 0.03
   max_dw_step: 0.18
 
-  safety_distance_m: 0.25
+  safety_distance_m: 0.2
   planning_clearance_m: 0.45
   # MPPI-only settings, kept for control_mode: "mppi" comparison runs.
   horizon: 256

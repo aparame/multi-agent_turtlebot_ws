@@ -9,6 +9,8 @@ cv_localization/calibrate_workspace.py
 cv_localization/cv_mppi_direct_gui.py
 cv_localization/cv_rl_direct_controller.py
 cv_localization/detector.py
+cv_localization/image_utils.py
+cv_localization/tb3_vlcm_live_collector.py
 cv_localization/test_detector.py
 cv_localization.egg-info/PKG-INFO
 cv_localization.egg-info/SOURCES.txt
@@ -19,4 +21,5 @@ cv_localization.egg-info/top_level.txt
 cv_localization.egg-info/zip-safe
 launch/cv_mppi_direct.launch.py
 launch/cv_rl_direct.launch.py
+launch/cv_rl_vlcm_collect.launch.py
 resource/cv_localization

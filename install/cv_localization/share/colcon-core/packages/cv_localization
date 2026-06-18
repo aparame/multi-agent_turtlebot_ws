@@ -1,1 +1,1 @@
-ament_index_python:geometry_msgs:multi_robot_swarm_planner:nav_msgs:python3-numpy:python3-opencv:python3-yaml:rclpy:std_msgs:std_srvs:tf2_ros
+ament_index_python:geometry_msgs:multi_robot_swarm_planner:nav_msgs:python3-numpy:python3-opencv:python3-yaml:rclpy:sensor_msgs:std_msgs:std_srvs:tf2_ros

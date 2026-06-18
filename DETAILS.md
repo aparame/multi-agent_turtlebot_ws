@@ -235,12 +235,18 @@ src/cv_localization/config/config.yaml
 | :--- | :--- | :--- |
 | `mppi.control_mode` | `scheduled` | Default controller mode (`scheduled` or legacy `mppi`). RL launch ignores this and uses the RL node directly. |
 | `mppi.planner_algorithm` | `cbs` | Choice of planner (`cbs` or `prioritized`). |
-| `mppi.max_v_mps` | `0.1` | Maximum forward linear velocity (m/s). |
+| `mppi.goal_radius_m` | `0.12` | Distance threshold where a robot is considered to have reached its goal. |
+| `mppi.goal_termination_v_mps` | `0.0` | Linear velocity commanded to an RL robot after it reaches its goal. |
+| `mppi.goal_termination_w_radps` | `0.0` | Angular velocity commanded to an RL robot after it reaches its goal. |
+| `mppi.max_v_mps` | `0.2` | Maximum forward linear velocity (m/s). |
 | `mppi.allow_reverse` | `true` | Allows planning and tracking reverse motions. |
-| `mppi.max_reverse_v_mps`| `0.1` | Maximum reverse linear velocity (m/s). |
+| `mppi.max_reverse_v_mps`| `0.15` | Maximum reverse linear velocity (m/s). |
 | `mppi.max_w_radps` | `1.0` | Maximum angular velocity (rad/s). |
 | `mppi.wall_margin_m` | `0.20` | Minimum allowed distance from boundaries (m). |
 | `mppi.min_live_spacing_m`| `0.35` | Spacing threshold under which all motion is halted. |
+| `vlcm_collection.sample_rate_hz` | `30.0` | Live MA-VLCM WebDataset frame/state sampling rate. |
+| `vlcm_collection.crop_to_workspace` | `true` | Save calibrated workspace-only overhead frames. |
+| `vlcm_collection.image_size_px` | `224` | Square output size for saved `overhead.png` frames. |
 | `mppi.safety_distance_m` | `0.25` | Spacing limit before trigger safety overrides. |
 | `mppi.max_dv_step` | `0.05` | Linear acceleration slew limit (change per control tick). |
 | `mppi.max_dw_step` | `0.5` | Angular acceleration slew limit (change per control tick). |
@@ -269,6 +275,7 @@ Both Scheduled and RL controllers pipe commands through a defensive hardware saf
 * **Stale Odometry**: Odometry feedback from any robot stops.
 * **Proximity Violation**: Distance between any two robots drops below `min_live_spacing_m`.
 * **Goal Completion**: All robots arrive within the goal threshold.
+* **RL Per-Agent Goal Hold**: In RL checkpoint mode, each robot inside `mppi.goal_radius_m` receives the configured terminal velocity, which defaults to zero linear and angular motion while the rest of the fleet finishes.
 
 ---
 

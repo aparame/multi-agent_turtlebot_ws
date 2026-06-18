@@ -1,0 +1,350 @@
+[0.000000] (-) TimerEvent: {}
+[0.000044] (-) JobUnselected: {'identifier': 'dynamixel_sdk'}
+[0.000061] (-) JobUnselected: {'identifier': 'dynamixel_sdk_custom_interfaces'}
+[0.000104] (-) JobUnselected: {'identifier': 'dynamixel_sdk_examples'}
+[0.000187] (-) JobUnselected: {'identifier': 'multi_robot_swarm_planner'}
+[0.000324] (-) JobUnselected: {'identifier': 'multi_turtlebot_coordinator'}
+[0.000406] (-) JobUnselected: {'identifier': 'ros_multi_robot_navigation'}
+[0.000498] (-) JobUnselected: {'identifier': 'turtlebot3'}
+[0.000521] (-) JobUnselected: {'identifier': 'turtlebot3_bringup'}
+[0.000540] (-) JobUnselected: {'identifier': 'turtlebot3_cartographer'}
+[0.000558] (-) JobUnselected: {'identifier': 'turtlebot3_description'}
+[0.000575] (-) JobUnselected: {'identifier': 'turtlebot3_example'}
+[0.000598] (-) JobUnselected: {'identifier': 'turtlebot3_msgs'}
+[0.000621] (-) JobUnselected: {'identifier': 'turtlebot3_navigation2'}
+[0.000638] (-) JobUnselected: {'identifier': 'turtlebot3_node'}
+[0.000656] (-) JobUnselected: {'identifier': 'turtlebot3_teleop'}
+[0.000675] (cv_localization) JobQueued: {'identifier': 'cv_localization', 'dependencies': OrderedDict([('multi_robot_swarm_planner', '/home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner')])}
+[0.000696] (cv_localization) JobStarted: {'identifier': 'cv_localization'}
+[0.099904] (-) TimerEvent: {}
+[0.200040] (-) TimerEvent: {}
+[0.300451] (-) TimerEvent: {}
+[0.400628] (-) TimerEvent: {}
+[0.500784] (-) TimerEvent: {}
+[0.600931] (-) TimerEvent: {}
+[0.701244] (-) TimerEvent: {}
+[0.801495] (-) TimerEvent: {}
+[0.901627] (-) TimerEvent: {}
+[1.001934] (-) TimerEvent: {}
+[1.102342] (-) TimerEvent: {}
+[1.202546] (-) TimerEvent: {}
+[1.302827] (-) TimerEvent: {}
+[1.403135] (-) TimerEvent: {}
+[1.503279] (-) TimerEvent: {}
+[1.603549] (-) TimerEvent: {}
+[1.703681] (-) TimerEvent: {}
+[1.803897] (-) TimerEvent: {}
+[1.904139] (-) TimerEvent: {}
+[2.004270] (-) TimerEvent: {}
+[2.104387] (-) TimerEvent: {}
+[2.204593] (-) TimerEvent: {}
+[2.304808] (-) TimerEvent: {}
+[2.405022] (-) TimerEvent: {}
+[2.505154] (-) TimerEvent: {}
+[2.605317] (-) TimerEvent: {}
+[2.705437] (-) TimerEvent: {}
+[2.805604] (-) TimerEvent: {}
+[2.905805] (-) TimerEvent: {}
+[3.006079] (-) TimerEvent: {}
+[3.106204] (-) TimerEvent: {}
+[3.206348] (-) TimerEvent: {}
+[3.306547] (-) TimerEvent: {}
+[3.406806] (-) TimerEvent: {}
+[3.507167] (-) TimerEvent: {}
+[3.607400] (-) TimerEvent: {}
+[3.707537] (-) TimerEvent: {}
+[3.807796] (-) TimerEvent: {}
+[3.908197] (-) TimerEvent: {}
+[4.008436] (-) TimerEvent: {}
+[4.108621] (-) TimerEvent: {}
+[4.208967] (-) TimerEvent: {}
+[4.309297] (-) TimerEvent: {}
+[4.409451] (-) TimerEvent: {}
+[4.509785] (-) TimerEvent: {}
+[4.610016] (-) TimerEvent: {}
+[4.710201] (-) TimerEvent: {}
+[4.810411] (-) TimerEvent: {}
+[4.910694] (-) TimerEvent: {}
+[5.010911] (-) TimerEvent: {}
+[5.111200] (-) TimerEvent: {}
+[5.211401] (-) TimerEvent: {}
+[5.311607] (-) TimerEvent: {}
+[5.411822] (-) TimerEvent: {}
+[5.512092] (-) TimerEvent: {}
+[5.612354] (-) TimerEvent: {}
+[5.712553] (-) TimerEvent: {}
+[5.812760] (-) TimerEvent: {}
+[5.912937] (-) TimerEvent: {}
+[6.013110] (-) TimerEvent: {}
+[6.113307] (-) TimerEvent: {}
+[6.213474] (-) TimerEvent: {}
+[6.313638] (-) TimerEvent: {}
+[6.413868] (-) TimerEvent: {}
+[6.514100] (-) TimerEvent: {}
+[6.614247] (-) TimerEvent: {}
+[6.714377] (-) TimerEvent: {}
+[6.814574] (-) TimerEvent: {}
+[6.914806] (-) TimerEvent: {}
+[7.015277] (-) TimerEvent: {}
+[7.115471] (-) TimerEvent: {}
+[7.215624] (-) TimerEvent: {}
+[7.315923] (-) TimerEvent: {}
+[7.416189] (-) TimerEvent: {}
+[7.516327] (-) TimerEvent: {}
+[7.616524] (-) TimerEvent: {}
+[7.716679] (-) TimerEvent: {}
+[7.816900] (-) TimerEvent: {}
+[7.917072] (-) TimerEvent: {}
+[8.017310] (-) TimerEvent: {}
+[8.117526] (-) TimerEvent: {}
+[8.217784] (-) TimerEvent: {}
+[8.318084] (-) TimerEvent: {}
+[8.418207] (-) TimerEvent: {}
+[8.518386] (-) TimerEvent: {}
+[8.618575] (-) TimerEvent: {}
+[8.718700] (-) TimerEvent: {}
+[8.818899] (-) TimerEvent: {}
+[8.919216] (-) TimerEvent: {}
+[9.019421] (-) TimerEvent: {}
+[9.119873] (-) TimerEvent: {}
+[9.220186] (-) TimerEvent: {}
+[9.320347] (-) TimerEvent: {}
+[9.420572] (-) TimerEvent: {}
+[9.520939] (-) TimerEvent: {}
+[9.621258] (-) TimerEvent: {}
+[9.721515] (-) TimerEvent: {}
+[9.821698] (-) TimerEvent: {}
+[9.922139] (-) TimerEvent: {}
+[10.022295] (-) TimerEvent: {}
+[10.122467] (-) TimerEvent: {}
+[10.222644] (-) TimerEvent: {}
+[10.322900] (-) TimerEvent: {}
+[10.423129] (-) TimerEvent: {}
+[10.523363] (-) TimerEvent: {}
+[10.623626] (-) TimerEvent: {}
+[10.724032] (-) TimerEvent: {}
+[10.824164] (-) TimerEvent: {}
+[10.924487] (-) TimerEvent: {}
+[11.024912] (-) TimerEvent: {}
+[11.125192] (-) TimerEvent: {}
+[11.225286] (-) TimerEvent: {}
+[11.325458] (-) TimerEvent: {}
+[11.425636] (-) TimerEvent: {}
+[11.525772] (-) TimerEvent: {}
+[11.625935] (-) TimerEvent: {}
+[11.726101] (-) TimerEvent: {}
+[11.826257] (-) TimerEvent: {}
+[11.926409] (-) TimerEvent: {}
+[12.026586] (-) TimerEvent: {}
+[12.126736] (-) TimerEvent: {}
+[12.226887] (-) TimerEvent: {}
+[12.327048] (-) TimerEvent: {}
+[12.427269] (-) TimerEvent: {}
+[12.527474] (-) TimerEvent: {}
+[12.627706] (-) TimerEvent: {}
+[12.728146] (-) TimerEvent: {}
+[12.828461] (-) TimerEvent: {}
+[12.928777] (-) TimerEvent: {}
+[13.029117] (-) TimerEvent: {}
+[13.129380] (-) TimerEvent: {}
+[13.229594] (-) TimerEvent: {}
+[13.329908] (-) TimerEvent: {}
+[13.430136] (-) TimerEvent: {}
+[13.530310] (-) TimerEvent: {}
+[13.630463] (-) TimerEvent: {}
+[13.730678] (-) TimerEvent: {}
+[13.830832] (-) TimerEvent: {}
+[13.930991] (-) TimerEvent: {}
+[14.031212] (-) TimerEvent: {}
+[14.131342] (-) TimerEvent: {}
+[14.231513] (-) TimerEvent: {}
+[14.331767] (-) TimerEvent: {}
+[14.431945] (-) TimerEvent: {}
+[14.532218] (-) TimerEvent: {}
+[14.632392] (-) TimerEvent: {}
+[14.732622] (-) TimerEvent: {}
+[14.832870] (-) TimerEvent: {}
+[14.933124] (-) TimerEvent: {}
+[15.033410] (-) TimerEvent: {}
+[15.133639] (-) TimerEvent: {}
+[15.233802] (-) TimerEvent: {}
+[15.334089] (-) TimerEvent: {}
+[15.434275] (-) TimerEvent: {}
+[15.534412] (-) TimerEvent: {}
+[15.634662] (-) TimerEvent: {}
+[15.734786] (-) TimerEvent: {}
+[15.834932] (-) TimerEvent: {}
+[15.935146] (-) TimerEvent: {}
+[16.035267] (-) TimerEvent: {}
+[16.135383] (-) TimerEvent: {}
+[16.235540] (-) TimerEvent: {}
+[16.335661] (-) TimerEvent: {}
+[16.435814] (-) TimerEvent: {}
+[16.535999] (-) TimerEvent: {}
+[16.636177] (-) TimerEvent: {}
+[16.736327] (-) TimerEvent: {}
+[16.836561] (-) TimerEvent: {}
+[16.936959] (-) TimerEvent: {}
+[17.037425] (-) TimerEvent: {}
+[17.137584] (-) TimerEvent: {}
+[17.237982] (-) TimerEvent: {}
+[17.338463] (-) TimerEvent: {}
+[17.438886] (-) TimerEvent: {}
+[17.539169] (-) TimerEvent: {}
+[17.639301] (-) TimerEvent: {}
+[17.739514] (-) TimerEvent: {}
+[17.839696] (-) TimerEvent: {}
+[17.939927] (-) TimerEvent: {}
+[18.040208] (-) TimerEvent: {}
+[18.140360] (-) TimerEvent: {}
+[18.240570] (-) TimerEvent: {}
+[18.340785] (-) TimerEvent: {}
+[18.441069] (-) TimerEvent: {}
+[18.541274] (-) TimerEvent: {}
+[18.641407] (-) TimerEvent: {}
+[18.741599] (-) TimerEvent: {}
+[18.842159] (-) TimerEvent: {}
+[18.942355] (-) TimerEvent: {}
+[19.042527] (-) TimerEvent: {}
+[19.142735] (-) TimerEvent: {}
+[19.243055] (-) TimerEvent: {}
+[19.343355] (-) TimerEvent: {}
+[19.443580] (-) TimerEvent: {}
+[19.543828] (-) TimerEvent: {}
+[19.643980] (-) TimerEvent: {}
+[19.744240] (-) TimerEvent: {}
+[19.844364] (-) TimerEvent: {}
+[19.944549] (-) TimerEvent: {}
+[20.044694] (-) TimerEvent: {}
+[20.145051] (-) TimerEvent: {}
+[20.245288] (-) TimerEvent: {}
+[20.345439] (-) TimerEvent: {}
+[20.445692] (-) TimerEvent: {}
+[20.545920] (-) TimerEvent: {}
+[20.646150] (-) TimerEvent: {}
+[20.746359] (-) TimerEvent: {}
+[20.846524] (-) TimerEvent: {}
+[20.946727] (-) TimerEvent: {}
+[21.047119] (-) TimerEvent: {}
+[21.147347] (-) TimerEvent: {}
+[21.247510] (-) TimerEvent: {}
+[21.347752] (-) TimerEvent: {}
+[21.447998] (-) TimerEvent: {}
+[21.548387] (-) TimerEvent: {}
+[21.648525] (-) TimerEvent: {}
+[21.748767] (-) TimerEvent: {}
+[21.849074] (-) TimerEvent: {}
+[21.949375] (-) TimerEvent: {}
+[22.049600] (-) TimerEvent: {}
+[22.149879] (-) TimerEvent: {}
+[22.250272] (-) TimerEvent: {}
+[22.350570] (-) TimerEvent: {}
+[22.450873] (-) TimerEvent: {}
+[22.551157] (-) TimerEvent: {}
+[22.651342] (-) TimerEvent: {}
+[22.751517] (-) TimerEvent: {}
+[22.851685] (-) TimerEvent: {}
+[22.951912] (-) TimerEvent: {}
+[23.052039] (-) TimerEvent: {}
+[23.152240] (-) TimerEvent: {}
+[23.252377] (-) TimerEvent: {}
+[23.352524] (-) TimerEvent: {}
+[23.452752] (-) TimerEvent: {}
+[23.552920] (-) TimerEvent: {}
+[23.653148] (-) TimerEvent: {}
+[23.753303] (-) TimerEvent: {}
+[23.853476] (-) TimerEvent: {}
+[23.953681] (-) TimerEvent: {}
+[24.053943] (-) TimerEvent: {}
+[24.154138] (-) TimerEvent: {}
+[24.254393] (-) TimerEvent: {}
+[24.354543] (-) TimerEvent: {}
+[24.454901] (-) TimerEvent: {}
+[24.555128] (-) TimerEvent: {}
+[24.655307] (-) TimerEvent: {}
+[24.755473] (-) TimerEvent: {}
+[24.855596] (-) TimerEvent: {}
+[24.955939] (-) TimerEvent: {}
+[25.056143] (-) TimerEvent: {}
+[25.156448] (-) TimerEvent: {}
+[25.256758] (-) TimerEvent: {}
+[25.357014] (-) TimerEvent: {}
+[25.457156] (-) TimerEvent: {}
+[25.557301] (-) TimerEvent: {}
+[25.657456] (-) TimerEvent: {}
+[25.757571] (-) TimerEvent: {}
+[25.857721] (-) TimerEvent: {}
+[25.957874] (-) TimerEvent: {}
+[26.058056] (-) TimerEvent: {}
+[26.158199] (-) TimerEvent: {}
+[26.258338] (-) TimerEvent: {}
+[26.358504] (-) TimerEvent: {}
+[26.458656] (-) TimerEvent: {}
+[26.559135] (-) TimerEvent: {}
+[26.659317] (-) TimerEvent: {}
+[26.759506] (-) TimerEvent: {}
+[26.859672] (-) TimerEvent: {}
+[26.959797] (-) TimerEvent: {}
+[27.060232] (-) TimerEvent: {}
+[27.160356] (-) TimerEvent: {}
+[27.260568] (-) TimerEvent: {}
+[27.360792] (-) TimerEvent: {}
+[27.461251] (-) TimerEvent: {}
+[27.561428] (-) TimerEvent: {}
+[27.661642] (-) TimerEvent: {}
+[27.761923] (-) TimerEvent: {}
+[27.862209] (-) TimerEvent: {}
+[27.962346] (-) TimerEvent: {}
+[28.062527] (-) TimerEvent: {}
+[28.162716] (-) TimerEvent: {}
+[28.263023] (-) TimerEvent: {}
+[28.363344] (-) TimerEvent: {}
+[28.463530] (-) TimerEvent: {}
+[28.563817] (-) TimerEvent: {}
+[28.664073] (-) TimerEvent: {}
+[28.764266] (-) TimerEvent: {}
+[28.864477] (-) TimerEvent: {}
+[28.964785] (-) TimerEvent: {}
+[29.065043] (-) TimerEvent: {}
+[29.165224] (-) TimerEvent: {}
+[29.265379] (-) TimerEvent: {}
+[29.365564] (-) TimerEvent: {}
+[29.465798] (-) TimerEvent: {}
+[29.566231] (-) TimerEvent: {}
+[29.666507] (-) TimerEvent: {}
+[29.766957] (-) TimerEvent: {}
+[29.867063] (-) TimerEvent: {}
+[29.967260] (-) TimerEvent: {}
+[30.067414] (-) TimerEvent: {}
+[30.100568] (<colcon_parallel_executor.executor.parallel.ParallelExecutorExtension object at 0x7fbff94ff070>) ParallelStatus: {'processing': ('cv_localization',)}
+[30.167559] (-) TimerEvent: {}
+[30.267717] (-) TimerEvent: {}
+[30.367943] (-) TimerEvent: {}
+[30.468088] (-) TimerEvent: {}
+[30.568229] (-) TimerEvent: {}
+[30.591490] (cv_localization) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/adi2440/turtlebot_ws/build/cv_localization/build', '--no-deps', 'symlink_data'], 'cwd': '/home/adi2440/turtlebot_ws/build/cv_localization', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/home/adi2440', 'VSCODE_ESM_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'CONDA_PROMPT_MODIFIER': '(base)', 'CODEX_CI': '1', 'USER': 'adi2440', 'CODEX_INTERNAL_ORIGINATOR_OVERRIDE': 'codex_vscode', 'VSCODE_NLS_CONFIG': '{"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/usr/share/antigravity/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'XDG_SESSION_TYPE': 'x11', 'DEBUG': 'release', 'ISAACSIM_PATH': '/home/adi2440/isaacsim', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/home/adi2440/turtlebot_ws/install/turtlebot3_msgs/lib:/home/adi2440/turtlebot_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/adi2440/turtlebot_ws/install/dynamixel_sdk/lib:/home/adi2440/ros2_ws/install/ur_dashboard_msgs/lib:/usr/local/cuda-13.0/lib64{LD_LIBRARY_PATH:+:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/rti.com/rti_connext_dds-6.0.1/lib/x64Linux4gcc7.3.0:/opt/rti.com/rti_connext_dds-6.0.1/bin:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/adi2440/ros2_ws/install/zed_components/lib:/home/adi2440/ros2_ws/install/ur_robot_driver/lib:/home/adi2440/ros2_ws/install/ur_controllers/lib:/home/adi2440/ros2_ws/install/ur_dashboard_msgs/lib}', 'HOME': '/home/adi2440', 'CHROME_DESKTOP': 'antigravity.desktop', 'CONDA_SHLVL': '1', 'DESKTOP_SESSION': 'ubuntu', 'CONNEXTDDS_DIR': '/opt/rti.com/rti_connext_dds-6.0.1', 'VSCODE_IPC_HOOK': '/run/user/1002/vscode-e8b5562a-1.10-main.sock', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/antigravity.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'NDDSHOME': '/opt/rti.com/rti_connext_dds-6.0.1', 'PAGER': 'cat', 'MANAGERPID': '4855', 'LC_CTYPE': 'C.UTF-8', 'SYSTEMD_EXEC_PID': '5055', 'NO_COLOR': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': '', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '241090', 'VSCODE_CRASH_REPORTER_PROCESS_TYPE': 'extensionHost', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/adi2440/turtlebot_ws/install:/home/adi2440/ros2_ws/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'adi2440', 'JOURNAL_STREAM': '8:57169', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'RUST_LOG': 'warn', 'USERNAME': 'adi2440', 'TERM': 'dumb', 'FLIR_GENTL64_CTI': '/opt/spinnaker/lib/flir-gentl/FLIR_GenTL.cti', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'FC_FONTATIONS': '1', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'CARLA_UNREAL_ENGINE_PATH': '/media/adi2440/Samsung_SSD/UnrealEngine', 'PATH': '/home/adi2440/.local/bin:/home/adi2440/.codex/tmp/arg0/codex-arg09A9AQl:/home/adi2440/.local/bin:/usr/local/cuda-13.0/bin:/opt/rti.com/rti_connext_dds-6.0.1/lib/x64Linux4gcc7.3.0:/opt/rti.com/rti_connext_dds-6.0.1/bin:/opt/ros/humble/bin:/home/adi2440/ros2_ws/install/ur_robot_driver/bin:/home/adi2440/anaconda3/bin:/home/adi2440/anaconda3/condabin:/home/adi2440/.local/bin:/opt/spinnaker/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/cuda-12.0/bin:/home/administrator/androidSDK/tools:/home/administrator/androidSDK/tools/bin:/snap/bin:/snap/bin:/opt/thinlinc/bin:/opt/thinlinc/sbin:/home/adi2440/.antigravity/extensions/openai.chatgpt-26.602.71036-linux-x64/bin/linux-x86_64', 'SESSION_MANAGER': 'local/administrator-Alienware-Aurora-R13:@/tmp/.ICE-unix/5020,unix/administrator-Alienware-Aurora-R13:/tmp/.ICE-unix/5020', 'INVOCATION_ID': 'b4b06e16f7ef41e19e00d2db12c3fbe3', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1002', 'GDK_BACKEND': 'x11', 'DISPLAY': ':1', 'CODEX_SANDBOX_NETWORK_DISABLED': '1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'XMODIFIERS': '@im=ibus', 'GH_PAGER': 'cat', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1002/gdm/Xauthority', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/adi2440/anaconda3/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/home/adi2440/turtlebot_ws/install/turtlebot3:/home/adi2440/turtlebot_ws/install/turtlebot3_teleop:/home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation:/home/adi2440/turtlebot_ws/install/turtlebot3_bringup:/home/adi2440/turtlebot_ws/install/turtlebot3_node:/home/adi2440/turtlebot_ws/install/turtlebot3_navigation2:/home/adi2440/turtlebot_ws/install/turtlebot3_example:/home/adi2440/turtlebot_ws/install/turtlebot3_msgs:/home/adi2440/turtlebot_ws/install/turtlebot3_description:/home/adi2440/turtlebot_ws/install/turtlebot3_cartographer:/home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator:/home/adi2440/turtlebot_ws/install/cv_localization:/home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner:/home/adi2440/turtlebot_ws/install/dynamixel_sdk_examples:/home/adi2440/turtlebot_ws/install/dynamixel_sdk_custom_interfaces:/home/adi2440/turtlebot_ws/install/dynamixel_sdk:/opt/ros/humble:/home/adi2440/ros2_ws/install/zed_ros2:/home/adi2440/ros2_ws/install/zed_wrapper:/home/adi2440/ros2_ws/install/zed_components:/home/adi2440/ros2_ws/install/ur:/home/adi2440/ros2_ws/install/ur_calibration:/home/adi2440/ros2_ws/install/ur_robot_driver:/home/adi2440/ros2_ws/install/ur_moveit_config:/home/adi2440/ros2_ws/install/ur_bringup:/home/adi2440/ros2_ws/install/ur_controllers:/home/adi2440/ros2_ws/install/ur_dashboard_msgs:/home/adi2440/ros2_ws/install/hello_moveit', 'CONDA_PYTHON_EXE': '/home/adi2440/anaconda3/bin/python', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'ELECTRON_RUN_AS_NODE': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CONDA_DEFAULT_ENV': 'base', 'CODEX_THREAD_ID': '019ecc7a-9211-7901-8682-db44fa40620b', 'GPG_AGENT_INFO': '/run/user/1002/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'CONNEXTDDS_ARCH': 'x64Linux4gcc7.3.0', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'ibus', 'JAVA_HOME': '/usr/lib/jvm/java-11-openjdk-amd64', 'PWD': '/home/adi2440/turtlebot_ws/build/cv_localization', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CONDA_EXE': '/home/adi2440/anaconda3/bin/conda', 'VSCODE_CODE_CACHE_PATH': '/home/adi2440/.config/Antigravity/CachedData/15487b3041e65228cae24980a3f796c905ef582c', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/home/adi2440/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'UE4_ROOT': '/media/adi2440/Samsung_SSD/UnrealEngine', 'PYTHONPATH': '/home/adi2440/turtlebot_ws/build/cv_localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/adi2440/turtlebot_ws/install/cv_localization/lib/python3.10/site-packages:/home/adi2440/turtlebot_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/adi2440/turtlebot_ws/build/ros_multi_robot_navigation:/home/adi2440/turtlebot_ws/install/ros_multi_robot_navigation/lib/python3.10/site-packages:/home/adi2440/turtlebot_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/adi2440/turtlebot_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/adi2440/turtlebot_ws/build/multi_turtlebot_coordinator:/home/adi2440/turtlebot_ws/install/multi_turtlebot_coordinator/lib/python3.10/site-packages:/home/adi2440/turtlebot_ws/build/cv_localization:/home/adi2440/turtlebot_ws/install/cv_localization/lib/python3.10/site-packages:/home/adi2440/turtlebot_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages:/home/adi2440/turtlebot_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/adi2440/ros2_ws/install/ur_robot_driver/local/lib/python3.10/dist-packages:/home/adi2440/ros2_ws/install/ur_moveit_config/local/lib/python3.10/dist-packages:/home/adi2440/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages', 'CONDA_PREFIX': '/home/adi2440/anaconda3', 'COLCON': '1', 'GENICAM_GENTL64_PATH': '/opt/spinnaker/lib/flir-gentl', 'CMAKE_PREFIX_PATH': '/home/adi2440/turtlebot_ws/install/multi_robot_swarm_planner:/home/adi2440/turtlebot_ws/install/turtlebot3:/home/adi2440/turtlebot_ws/install/turtlebot3_bringup:/home/adi2440/turtlebot_ws/install/turtlebot3_node:/home/adi2440/turtlebot_ws/install/turtlebot3_navigation2:/home/adi2440/turtlebot_ws/install/turtlebot3_msgs:/home/adi2440/turtlebot_ws/install/turtlebot3_description:/home/adi2440/turtlebot_ws/install/turtlebot3_cartographer:/home/adi2440/turtlebot_ws/install/dynamixel_sdk_examples:/home/adi2440/turtlebot_ws/install/dynamixel_sdk_custom_interfaces:/home/adi2440/turtlebot_ws/install/dynamixel_sdk:/home/adi2440/ros2_ws/install/zed_ros2:/home/adi2440/ros2_ws/install/zed_wrapper:/home/adi2440/ros2_ws/install/zed_components:/home/adi2440/ros2_ws/install/ur:/home/adi2440/ros2_ws/install/ur_calibration:/home/adi2440/ros2_ws/install/ur_robot_driver:/home/adi2440/ros2_ws/install/ur_moveit_config:/home/adi2440/ros2_ws/install/ur_bringup:/home/adi2440/ros2_ws/install/ur_controllers:/home/adi2440/ros2_ws/install/ur_dashboard_msgs:/home/adi2440/ros2_ws/install/hello_moveit', 'VSCODE_PID': '241090'}, 'shell': False}
+[30.668386] (-) TimerEvent: {}
+[30.768525] (-) TimerEvent: {}
+[30.842112] (cv_localization) StdoutLine: {'line': b'running develop\n'}
+[30.868625] (-) TimerEvent: {}
+[30.968825] (-) TimerEvent: {}
+[31.022887] (cv_localization) StdoutLine: {'line': b'running egg_info\n'}
+[31.035353] (cv_localization) StdoutLine: {'line': b'writing cv_localization.egg-info/PKG-INFO\n'}
+[31.035711] (cv_localization) StdoutLine: {'line': b'writing dependency_links to cv_localization.egg-info/dependency_links.txt\n'}
+[31.035866] (cv_localization) StdoutLine: {'line': b'writing entry points to cv_localization.egg-info/entry_points.txt\n'}
+[31.035938] (cv_localization) StdoutLine: {'line': b'writing requirements to cv_localization.egg-info/requires.txt\n'}
+[31.036001] (cv_localization) StdoutLine: {'line': b'writing top-level names to cv_localization.egg-info/top_level.txt\n'}
+[31.063658] (cv_localization) StdoutLine: {'line': b"reading manifest file 'cv_localization.egg-info/SOURCES.txt'\n"}
+[31.064438] (cv_localization) StdoutLine: {'line': b"writing manifest file 'cv_localization.egg-info/SOURCES.txt'\n"}
+[31.068958] (-) TimerEvent: {}
+[31.106587] (cv_localization) StdoutLine: {'line': b'running build_ext\n'}
+[31.106730] (cv_localization) StdoutLine: {'line': b'Creating /home/adi2440/turtlebot_ws/install/cv_localization/lib/python3.10/site-packages/cv-localization.egg-link (link to .)\n'}
+[31.107238] (cv_localization) StdoutLine: {'line': b'Installing cv_mppi_direct_gui script to /home/adi2440/turtlebot_ws/install/cv_localization/lib/cv_localization\n'}
+[31.107366] (cv_localization) StdoutLine: {'line': b'Installing cv_rl_direct_controller script to /home/adi2440/turtlebot_ws/install/cv_localization/lib/cv_localization\n'}
+[31.107542] (cv_localization) StdoutLine: {'line': b'Installing tb3_vlcm_live_collector script to /home/adi2440/turtlebot_ws/install/cv_localization/lib/cv_localization\n'}
+[31.107629] (cv_localization) StdoutLine: {'line': b'\n'}
+[31.107696] (cv_localization) StdoutLine: {'line': b'Installed /home/adi2440/turtlebot_ws/build/cv_localization\n'}
+[31.107759] (cv_localization) StdoutLine: {'line': b'running symlink_data\n'}
+[31.131839] (cv_localization) CommandEnded: {'returncode': 0}
+[31.140246] (cv_localization) JobEnded: {'identifier': 'cv_localization', 'rc': 0}
+[31.140631] (-) EventReactorShutdown: {}

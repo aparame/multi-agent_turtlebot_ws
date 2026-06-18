@@ -36,6 +36,8 @@ def _rl_params_from_config(config_path, robot_names, model_dir, aero_marl_root):
         'min_live_spacing_m': float(mppi_cfg.get('min_live_spacing_m', 0.25)),
         'room_size_m': float(mppi_cfg.get('room_size_m', workspace_cfg.get('width_m', 3.048))),
         'goal_radius_m': float(mppi_cfg.get('goal_radius_m', 0.12)),
+        'goal_termination_v_mps': float(mppi_cfg.get('goal_termination_v_mps', 0.0)),
+        'goal_termination_w_radps': float(mppi_cfg.get('goal_termination_w_radps', 0.0)),
         'max_v_mps': float(mppi_cfg.get('max_v_mps', 0.10)),
         'max_w_radps': float(mppi_cfg.get('max_w_radps', 1.0)),
         'max_dv_step': float(mppi_cfg.get('max_dv_step', 0.03)),
