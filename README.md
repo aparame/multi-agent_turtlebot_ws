@@ -19,7 +19,7 @@ The system operates centrally without the overhead of AMCL, Nav2, map servers, p
 
 Here is the TurtleBot3 Burger fleet navigating conflicts and reaching target goals using our localization and control stack:
 
-| **Episode 1** (0:02 - 0:28) | **Episode 2** (0:39 - 1:26) | **Episode 3** (1:35 - 2:09) |
+| **Episode 1** | **Episode 2** | **Episode 3** |
 | :---: | :---: | :---: |
 | ![Episode 1](videos/episode_1.gif) | ![Episode 2](videos/episode_2.gif) | ![Episode 3](videos/episode_3.gif) |
 
