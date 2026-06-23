@@ -15,27 +15,10 @@ The system operates centrally without the overhead of AMCL, Nav2, map servers, p
 
 ---
 
-## 🎬 Multi-Agent Control in Action
-
-Here is the TurtleBot3 Burger fleet navigating conflicts and reaching target goals using our localization and control stack:
-
-### Episode 1 (0:02 - 0:28)
-![Episode 1](videos/episode_1.gif)
-
-### Episode 2 (0:39 - 1:26)
-![Episode 2](videos/episode_2.gif)
-
-### Episode 3 (1:35 - 2:09)
-![Episode 3](videos/episode_3.gif)
-
-
----
-
 ## ✨ Features
 
 * **Real-time Overhead Localization**: Fuses overhead camera coordinates with local odometry yaw deltas using an Extended Kalman Filter (EKF).
 * **Scheduled Planner Mode**: Generates conflict-free joint schedules offline using Conflict-Based Search (CBS) or Prioritized Planning, tracked by a path follower and priority-aware ORCA local velocity filter.
-* **RL Checkpoint Mode**: Evaluates an AERO-MARL graph-based Transformer policy directly on physical hardware, wrapped in robust runtime safety filters.
 * **Interactive Operator GUI**: Facilitates easy point-and-click robot localization, initial heading setup, target assignment, and real-time path visualization.
 
 ---
@@ -67,9 +50,7 @@ ros2 run ros_multi_robot_navigation bringup_lab_robots \
 ```
 
 ### 4. Run the Fleet Controller (Terminal B)
-Start the central operator control node using one of the two modes:
-
-#### Option A: Model-Based (Scheduled CBS & ORCA Planner)
+Start the central operator control node:
 ```bash
 cd ~/turtlebot_ws
 source install/setup.bash
@@ -77,60 +58,7 @@ export ROS_DOMAIN_ID=30
 ros2 launch cv_localization cv_mppi_direct.launch.py
 ```
 
-#### Option B: RL-Based (AERO-MARL Checkpoint Policy)
-To evaluate the MARL policy, run the launch file pointing to the repository's saved model checkpoint:
-```bash
-cd ~/turtlebot_ws
-source install/setup.bash
-export ROS_DOMAIN_ID=30
-ros2 launch cv_localization cv_rl_direct.launch.py \
-  model_dir:=/home/adi2440/turtlebot_ws/models/transformer_800.pt \
-  aero_marl_root:=/home/adi2440/Desktop/MARL_Shahil_Aditya/AERO-MARL
-```
-
-#### Option C: RL-Based Live MA-VLCM Data Collection
-To collect TurtleBot lab episodes for MA-VLCM fine tuning, launch the RL controller,
-GUI, and WebDataset collector together:
-```bash
-cd ~/turtlebot_ws
-source install/setup.bash
-export ROS_DOMAIN_ID=30
-ros2 launch cv_localization cv_rl_vlcm_collect.launch.py \
-  model_dir:=/home/adi2440/turtlebot_ws/models/transformer_800.pt \
-  aero_marl_root:=/home/adi2440/Desktop/MARL_Shahil_Aditya/AERO-MARL \
-  episodes:=100 \
-  dataset_dir:=/home/adi2440/Desktop/MARL_Shahil_Aditya/MA-VLCM/data/tb3_lab
-```
-
-After robot identity and heading setup in the GUI, the collector previews random
-goals. Press `a` to accept/start, `n` to regenerate, `f` to save the current
-run as a failure, or `x` to stop collection. Dataset sampling is controlled by
-`vlcm_collection.sample_rate_hz` in `config.yaml` and defaults to 30 Hz. Saved
-`overhead.png` frames are cropped to the calibrated workspace and resized to
-224x224 by default.
-
-#### Option D: RL-Based Policy With Live MA-VLCM Critic Monitor
-To run the same MARL policy while MA-VLCM live-plots and critiques the policy
-against cumulative reward, use the MA-VLCM convenience launcher:
-```bash
-cd /home/adi2440/Desktop/MARL_Shahil_Aditya/MA-VLCM
-export ROS_DOMAIN_ID=30
-bash scripts/run_tb3_vlcm_live_monitor.sh \
-  /home/adi2440/Desktop/MARL_Shahil_Aditya/MA-VLCM/checkpoints/NewFinal_0.5B.pt
-```
-
-The script starts `cv_rl_direct.launch.py`, MA-VLCM live inference on the
-`/fleet_vlcm` and `/tb_N` topics, and a small live plot of predicted return
-versus cumulative reward. Predictions are also logged to
-`MA-VLCM/outputs/results/tb3_live_predictions.csv`.
-
 ---
-
-### Add to Huggingface
-```bash
-cd /home/adi2440/Desktop/MARL_Shahil_Aditya/MA-VLCM
-python scripts/upload_tb3_lab_dataset.py data/tb3_lab --repo-id adi2440/tb3-lab-vlcm
-```
 
 ## 🎮 Operator GUI Workflow
 
@@ -184,14 +112,14 @@ Configuration file location: `src/multi_robot_navigation_ROS2/config/robots.yaml
 
 ## 📚 Advanced References & Configuration
 
-All system architecture, package structure details, configuration matrices, and setup tools are located in **[DETAILS.md](file:///home/adi2440/turtlebot_ws/DETAILS.md)**:
+All system architecture, package structure details, configuration matrices, and setup tools are located in **[DETAILS.md](DETAILS.md)**:
 
-* 📐 **[System Architecture](file:///home/adi2440/turtlebot_ws/DETAILS.md#1-system-architecture)**: Signal flow, camera tracking pipeline, and safety loop diagram.
-* 📁 **[Workspace Layout](file:///home/adi2440/turtlebot_ws/DETAILS.md#2-workspace-layout)**: Detailed outline of repository directories and internal package boundaries.
-* 🧠 **[Algorithm & Reinforcement Learning Planners](file:///home/adi2440/turtlebot_ws/DETAILS.md#3-algorithm--rl-framework-deep-dive)**: Deep dive into CBS, SIPP, ORCA, and AERO-MARL graph neural network contracts.
-* 🔑 **[SSH Passwordless Configuration](file:///home/adi2440/turtlebot_ws/DETAILS.md#4-ssh-setup-for-robot-bringup)**: Setting up secure, automated remote bringup.
-* 📷 **[Workspace & Homography Calibration](file:///home/adi2440/turtlebot_ws/DETAILS.md#5-workspace--camera-calibration)**: How to align camera pixels to physical world coordinates.
-* 🖼️ **[Static Background Capture](file:///home/adi2440/turtlebot_ws/DETAILS.md#6-one-time-background-capture)**: Setting up static background subtraction.
-* ⚙️ **[Planner & Control Parameters Reference](file:///home/adi2440/turtlebot_ws/DETAILS.md#7-planning-control-parameters-reference)**: Descriptions of variables in `config.yaml`.
-* 🛡️ **[Safety Envelope Guards](file:///home/adi2440/turtlebot_ws/DETAILS.md#8-safety-behavior)**: Trigger bounds and automatic shutdown triggers.
-* 🩺 **[Troubleshooting & Diagnostics](file:///home/adi2440/turtlebot_ws/DETAILS.md#9-troubleshooting-guide)**: Common errors, detection adjustments, and networking resolutions.
+* 📐 **[System Architecture](DETAILS.md#1-system-architecture)**: Signal flow, camera tracking pipeline, and safety loop diagram.
+* 📁 **[Workspace Layout](DETAILS.md#2-workspace-layout)**: Detailed outline of repository directories and internal package boundaries.
+* 🧠 **[Algorithm Planners](DETAILS.md#3-algorithm-deep-dive)**: Deep dive into CBS, SIPP, and ORCA.
+* 🔑 **[SSH Passwordless Configuration](DETAILS.md#4-ssh-setup-for-robot-bringup)**: Setting up secure, automated remote bringup.
+* 📷 **[Workspace & Homography Calibration](DETAILS.md#5-workspace--camera-calibration)**: How to align camera pixels to physical world coordinates.
+* 🖼️ **[Static Background Capture](DETAILS.md#6-one-time-background-capture)**: Setting up static background subtraction.
+* ⚙️ **[Planner & Control Parameters Reference](DETAILS.md#7-planning-control-parameters-reference)**: Descriptions of variables in `config.yaml`.
+* 🛡️ **[Safety Envelope Guards](DETAILS.md#8-safety-behavior)**: Trigger bounds and automatic shutdown triggers.
+* 🩺 **[Troubleshooting & Diagnostics](DETAILS.md#9-troubleshooting-guide)**: Common errors, detection adjustments, and networking resolutions.

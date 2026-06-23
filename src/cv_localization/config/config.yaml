@@ -49,11 +49,6 @@ tracking:
   prediction_weight: 0.8       # Blend predicted position vs last observed pixel
   missed_track_cost_px: 187.5  # Prefer stale pose over a very unlikely blob match
 
-# ---- Live MA-VLCM Dataset Collection ----
-vlcm_collection:
-  sample_rate_hz: 20.0         # WebDataset frame/state sampling rate
-  crop_to_workspace: true      # Save only the calibrated workspace region
-  image_size_px: 224           # Saved overhead.png size is image_size_px square
 
 # ---- EKF Fusion ----
 fusion:

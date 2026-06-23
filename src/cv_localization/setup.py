@@ -27,8 +27,6 @@ setup(
     entry_points={
         'console_scripts': [
             'cv_mppi_direct_gui = cv_localization.cv_mppi_direct_gui:main',
-            'cv_rl_direct_controller = cv_localization.cv_rl_direct_controller:main',
-            'tb3_vlcm_live_collector = cv_localization.tb3_vlcm_live_collector:main',
         ],
     },
 )
