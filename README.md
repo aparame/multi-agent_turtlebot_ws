@@ -15,11 +15,43 @@ The system operates centrally without the overhead of AMCL, Nav2, map servers, p
 
 ---
 
+## 🎬 Multi-Agent Control in Action
+
+Here is the TurtleBot3 Burger fleet navigating conflicts and reaching target goals using our localization and control stack:
+
+### Episode 1 (0:02 - 0:28)
+![Episode 1](videos/episode_1.gif)
+
+### Episode 2 (0:39 - 1:26)
+![Episode 2](videos/episode_2.gif)
+
+### Episode 3 (1:35 - 2:09)
+![Episode 3](videos/episode_3.gif)
+
+---
+
 ## ✨ Features
 
 * **Real-time Overhead Localization**: Fuses overhead camera coordinates with local odometry yaw deltas using an Extended Kalman Filter (EKF).
 * **Scheduled Planner Mode**: Generates conflict-free joint schedules offline using Conflict-Based Search (CBS) or Prioritized Planning, tracked by a path follower and priority-aware ORCA local velocity filter.
 * **Interactive Operator GUI**: Facilitates easy point-and-click robot localization, initial heading setup, target assignment, and real-time path visualization.
+
+---
+
+## 🛠️ TurtleBot3 Hardware Setup (From Scratch)
+
+If you are setting up the TurtleBot3 Burger robots from a clean state:
+
+1. **SBC Setup**: Install the Ubuntu Server IoT image and ROS 2 Humble on each robot's Raspberry Pi by following the [ROBOTIS TurtleBot3 Quick Start / SBC Setup Guide](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/).
+2. **OpenCR Setup**: Flash the standard TurtleBot3 Burger firmware onto the OpenCR micro-controller following the [OpenCR Setup Guide](https://emanual.robotis.com/docs/en/platform/turtlebot3/opencr_setup/).
+3. **Wi-Fi Connection**: Configure each robot's network client to auto-connect to the operator workspace router SSID (**`netgear11`**).
+4. **Environment Variables**: Configure the network env vars in the `~/.bashrc` on each robot (replacing `192.168.1.XX` with the robot's IP):
+   ```bash
+   export ROS_DOMAIN_ID=30
+   export TURTLEBOT3_MODEL=burger
+   export ROS_LOCALHOST_ONLY=0
+   ```
+5. **Validation**: Test SSH connection from your operator PC and verify that running `ros2 launch turtlebot3_bringup robot.launch.py` on the robot successfully publishes `/odom` and registers on the network.
 
 ---
 
